@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>로그인</h1>
+
+    {% if error_message %}
+        <p style="color:red;">{{ error_message }}</p>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+        <p>로그인 성공</p>
+    {% else %}
+        <form method="POST">
+            {% csrf_token %}
+            <label for="email">이메일:</label>
+            <input type="email" name="email" required><br>
+
+            <label for="password">비밀번호:</label>
+            <input type="password" name="password" required><br>
+
+            <button type="submit">로그인</button>
+            <br>
+            <button type="submit">회원가입</button>
+        </form>
+    {% endif %}
+</body>
+</html>
