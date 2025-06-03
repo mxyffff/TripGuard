@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 from .models import User
 
 # Create your views here.
@@ -11,12 +13,16 @@ def login_view(request):
         email = request.POST["email"]
         password = request.POST["password"]
 
-        user = authenticate(username=email, password=password)
-
-        if user is not None:
-            login(request, user)
+        try:
+            validate_email(email)
+        except ValidationError:
+            error_message = "올바른 이메일 형식이 아닙니다. 다시 입력해 주세요."
         else:
-            error_message = "이메일 또는 비밀번호를 확인해 주세요."
+            user = authenticate(username=email, password=password)
+            if user is not None:
+                login(request, user)
+            else:
+                error_message = "이메일 또는 비밀번호가 잘못되었습니다. 다시 입력해 주세요."
 
     return render(request, "users/login.html", {
         "error_message": error_message,
