@@ -6,8 +6,10 @@
 <body>
     <h1>로그인</h1>
 
-    {% if error_message %}
-        <p style="color:red;">{{ error_message }}</p>
+    {% if messages %}
+        {% for message in messages %}
+          <p style="color:red;">{{ message }}</p>
+        {% endfor %}
     {% endif %}
 
     {% if user.is_authenticated %}

@@ -18,11 +18,13 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
+    name = models.CharField(max_length=30)
+    nickname = models.CharField(max_length=20)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['name', 'nickname']
 
     objects = UserManager()
 
