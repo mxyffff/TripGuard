@@ -37,31 +37,44 @@ def keyword_warning_view(request, slug):
         written_dt__gte=one_year_ago
     )
 
-    # 주제별 키워드 정의 - 딕셔너리
-    topics = {
-        "travel": ["여행", "심사", "안전", "파업"], # 여행 주의 키워드
-        "theft": ["소매치기", "절도", "치안", "범죄", "분실", "도난"], # 소매치기, 절도 관련 키워드
-        "disaster": ["지진", "홍수", "산불", "화산", "화재", "폭우", "폭설"], # 자연재해 키워드
-        "protest": ["시위", "데모", "폭동"], # 시위 키워드
+    # 대표 키워드별 하위 키워드 매핑
+    topic_keywords = {
+        "여행": ["여행", "심사", "안전", "파업", "군사", "분쟁", "전쟁", "군대"],
+        "범죄": ["소매치기", "절도", "치안", "범죄", "분실", "도난"],
+        "자연재해": ["지진", "홍수", "태풍", "산불", "화산", "화재", "폭우", "폭설"],
+        "시위": ["시위", "데모", "폭동"]
     }
 
-    # 각 키워드에 해당하는 공지 필터링
-    filtered_notices = {}
-    for topic, keywords in topics.items(): # 딕셔너리 순회 (topic : key, kewords(키워드 리스트) : value)
-        q = Q() # Q 객체 초기화
+    category_map = {} # 최종 결과를 담을 딕셔너리
+    seen_titles = set() # 중복 제거용: 이미 출력한 title을 기억
+    for category, keywords in topic_keywords.items(): # 대표 키워드(category)별로 반복
+        q = Q() # 각 카테고리마다 내부 키워드들에 대해 Q 객체를 생성
         for kw in keywords:
-            q |= Q(content__icontains=kw) # 키워드별 누적(content: 필드, __icontains: 대소문자 구분X)
-        filtered_notices[topic] = base_queryset.filter(q).order_by("-written_dt") # 최신순 정렬
+            q |= Q(content__icontains=kw) # content에 각 키워드가 포함된 공지를 모두 찾음 (OR 조건)
+        # 키워드가 포함된 필터링된 공지를 가져오고, 최신순 정렬
+        matches = base_queryset.filter(q).order_by("-written_dt")
+        # 이 category에 속한 title들을 저장할 리스트
+        titles = []
+        for title in matches.values_list("title", flat=True): # 공지들의 title만 가져옴
+            if title not in seen_titles: # 아직 출력한 적 없는 title만
+                titles.append(title)
+                seen_titles.add(title) # 중복 방지용으로 저장
+        if titles:
+            category_map[category] = titles # 결과 저장 (여행: [...], 범죄: [...], ...)
+
+    # CountrySafety 공지 (우측 하단 출력용) 최신순
+    country_safeties = CountrySafety.objects.filter(
+        country_en_name__iexact=country_en_name
+    ).order_by("-written_dt")
 
     return render(request, "countries/countries_detail.html", {
         "embassies": embassies,
         "country_en_name": country_en_name,
-        "country_name":country_name,
-        "travel_notices": filtered_notices["travel"],
-        "theft_notices": filtered_notices["theft"],
-        "disaster_notices": filtered_notices["disaster"],
-        "protest_notices": filtered_notices["protest"],
+        "country_name": country_name,
+        "category_map": category_map,
+        "country_safeties": country_safeties,
     })
+
 
 def country_list_api(request):
     countries = Embassy.objects.values("country_name", "country_en_name", "slug").distinct()
