@@ -9,6 +9,8 @@ from requests.adapters import HTTPAdapter
 from urllib3.poolmanager import PoolManager
 
 # 안전 정보 API - [안전 공지]
+
+# 커스텀 TLS 어댑터 (SSL 오류)
 class TLSv1_2HttpAdapter(HTTPAdapter):
     def init_poolmanager(self, *args, **kwargs):
         context = ssl.create_default_context()
@@ -18,19 +20,22 @@ class TLSv1_2HttpAdapter(HTTPAdapter):
         return super().init_poolmanager(*args, **kwargs)
 
 class Command(BaseCommand):
-    help = 'Fetch country safety data from the Ministry of Foreign Affairs API'
+    help = '외교부 API(getCountrySafetyList)로부터 지역 안전 공지를 가져온다.'
 
     # API 요청
     def handle(self, *args, **kwargs):
         service_key = 't6G5D0EXlmcbAUoDA9t04kUw9N83jcIrQ3qcANfLy0aTuOnhhy%2BF7uGeFQD8s1lKym8BYzsGy0G6ToGC6zNk2A%3D%3D'
         url = f'https://apis.data.go.kr/1262000/CountrySafetyService/getCountrySafetyList?serviceKey={service_key}&numOfRows=100&pageNo=1'
 
-        self.stdout.write(self.style.NOTICE("외교부 API 요청 중..."))
+        self.stdout.write(self.style.NOTICE("안전 공지 API 요청 중..."))
 
+        # 세션 설정 및 SSL 버그 우회
         session = requests.Session()
         session.mount("https://", TLSv1_2HttpAdapter())
 
         response = session.get(url)
+
+        # JSON 구조로 변환
         data_dict = xmltodict.parse(response.content)
         json_data = json.loads(json.dumps(data_dict))
 

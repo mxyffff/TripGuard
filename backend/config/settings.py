@@ -13,9 +13,14 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = BASE_DIR / "templates"
+# 프로젝트 루트 디렉토리 (TripGuard/)
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+
+# 백엔드 디렉토리 (TripGuard/backend/)
+BASE_DIR = ROOT_DIR / "backend"
+
+# 템플릿 디렉토리 (TripGuard/templates/)
+TEMPLATES_DIR = ROOT_DIR / "templates"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -117,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR.parent, 'static'),
+   ROOT_DIR / 'static'
 ]
 STATIC_URL = '/static/'
 

@@ -14,7 +14,7 @@ class CountrySafety(models.Model):
     def __str__(self):
         return f"{self.country_name} - {self.title}"
 
-# 안전공지 api 모델 - [유의지역 정보]
+# 안전 공지 api 모델 - [유의 지역 정보]
 class SafetyNotice(models.Model):
     notice_id = models.CharField(max_length=30, unique=True)  # sfty_notice_id
     country_name = models.CharField(max_length=50)            # country_nm
