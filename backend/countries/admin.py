@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CountrySafety, SafetyNotice
+from .models import CountrySafety, SafetyNotice, Embassy, EmbassyHomepage
 
 
 @admin.register(CountrySafety)
@@ -12,3 +12,12 @@ class CountrySafetyAdmin(admin.ModelAdmin):
 class SafetyNoticeAdmin(admin.ModelAdmin):
     list_display = ("notice_id", "country_name", "country_en_name", "title", "written_dt")
     search_fields = ("country_name", "country_en_name", "title", "content")
+
+@admin.register(Embassy)
+class EmbassyAdmin(admin.ModelAdmin):
+    list_display = ("country_name", "embassy_name", "tel_no", "urgency_tel")
+    search_fields = ('country_name', 'country_en_name')  # 검색창에서 검색 가능한 필드
+
+@admin.register(EmbassyHomepage)
+class EmbassyHomepageAdmin(admin.ModelAdmin):
+    list_display = ("embassy", "url")

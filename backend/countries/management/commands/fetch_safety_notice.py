@@ -12,18 +12,18 @@ from urllib3.poolmanager import PoolManager
 
 # 안전 공지 api 모델 - [유의 지역 정보]
 
-# 커스텀 TLS 어댑터 (SSL 오류)
+# SSL 오류 방지용 커스텀 어댑터
 class TLSv1_2HttpAdapter(HTTPAdapter):
     def init_poolmanager(self, *args, **kwargs):
         context = ssl.create_default_context()
-        context.set_ciphers("DEFAULT@SECLEVEL=1")
-        context.options |= ssl.OP_NO_TLSv1_3
+        context.set_ciphers("DEFAULT@SECLEVEL=1")  # 낮은 보안 수준 허용
+        context.options |= ssl.OP_NO_TLSv1_3  # TLS 1.3 비활성화
         kwargs['ssl_context'] = context
         return super().init_poolmanager(*args, **kwargs)
 
 # BaseCommand 상속
 class Command(BaseCommand):
-    help = '외교부 API(getCountrySafetyNoticeList)를 통해 유의 지역 공지 데이터를 가져온다.'
+    help = '외교부 API(getCountrySafetyList)를 통해 유의 지역 공지 데이터를 가져온다.'
 
     def handle(self, *args, **kwargs):
         service_key = 't6G5D0EXlmcbAUoDA9t04kUw9N83jcIrQ3qcANfLy0aTuOnhhy%2BF7uGeFQD8s1lKym8BYzsGy0G6ToGC6zNk2A%3D%3D'
@@ -33,33 +33,35 @@ class Command(BaseCommand):
 
         self.stdout.write(self.style.NOTICE("유의 지역 정보 API 요청 중..."))
 
-        # 세션 설정 및 SSL 버그 우회
+        # 세션 설정 및 TLS 우회 어댑터 등록
         session = requests.Session()
         session.mount("https://", TLSv1_2HttpAdapter())
-        response = session.get(url)
-
-        # api 상태 확인용 디버깅 코드
-        print("응답 상태 코드:", response.status_code)
-        print("응답 내용 (앞 300자):", response.text[:300])
-        if response.status_code != 200:
-            self.stderr.write("❌외교부 API 응답 오류. JSON 파싱 중단.")
-            return
 
         try:
-            data = response.json()
-            items = data["response"]["body"]["items"]["item"]
+            response = session.get(url)  # API 요청 실행
+            self.stdout.write(f"응답 상태 코드: {response.status_code}")  # 응답 상태 코드 출력
+
+            # 200이 아닐 경우 에러 처리
+            if response.status_code != 200:
+                self.stderr.write("❌ API 요청 실패 (status != 200)")
+                return
+
+            data = response.json() # JSON 응답 파싱
+            items = data["response"]["body"]["items"]["item"] # 안전 공지 데이터 추출
+
         except Exception as e:
-            self.stderr.write(f"❌JSON 파싱 실패: {e}")
+            # 요청 실패 또는 JSON 파싱 중 에러 처리
+            self.stderr.write(f"❌ 요청 또는 JSON 파싱 실패: {e}")
             return
 
-        items = data["response"]["body"]["items"]["item"]
-
-        # item이 dict 한 개일 경우 list로 감싸기
+        # 단일 객체로 응답된 경우 리스트로 반환
         if isinstance(items, dict):
             items = [items]
 
+        # DB 저장 건수 초기화
         count = 0
 
+        # 각 재외공관 item에 대해 DB 저장 반복
         for item in items:
             # 필수값 확인
             if not item.get("country_nm") or not item.get("country_eng_nm"):
@@ -70,6 +72,7 @@ class Command(BaseCommand):
             if raw_category not in ["주의", "안내"]:
                 raw_category = "미지정"
 
+            # DB에 저장 (있으면 업데이트, 없으면 생성)
             SafetyNotice.objects.update_or_create(
                 notice_id=item.get("sfty_notice_id"),
                 defaults={
