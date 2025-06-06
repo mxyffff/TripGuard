@@ -1,14 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>국가 상세 정보</title>
+    <style>
+        .layout {
+            display: grid;
+            grid-template-areas:
+                "map info"
+                "tabs safety";
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin: 20px;
+        }
+        #map-area {
+            grid-area: map;
+            background: #f2f2f2;
+            height: 300px;
+        }
+        #country-info {
+            grid-area: info;
+            background: #fafafa;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .tab-wrapper {
+            grid-area: tabs;
+        }
+        .safety-section {
+            grid-area: safety;
+        }
+        .tab-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
 </head>
+
 <body>
-<div class="tabs">
-    {% include "countries/includes/tab_warning.html" %}
-    {% include "countries/includes/tab_reviews.html" %}
-    {% include "countries/includes/tab_embassy.html" %}
+<div class="layout">
+    <!-- 국가 지도 표시 영역 (좌측 상단) -->
+    <div id="map-area">
+        <!-- 프론트엔드가 지도 API (예: 구글맵, 네이버지도 등)를 활용해 지도 삽입 예정 -->
+    </div>
+
+    <!-- 국가 기본 정보 카드 영역 (우측 상단) -->
+    <div id="country-info">
+        <!-- 프론트에서 직접 국가 기본 정보 표시 (예: 국기, 수도 등) 예정 -->
+    </div>
+
+    <!-- 탭 영역 (좌측 하단) -->
+    <div class="tab-wrapper">
+        <!-- 탭 버튼 메뉴 -->
+        <div class="tab-buttons">
+            <div onclick="showTab('embassy')">재외공관</div>
+            <div onclick="showTab('warning')">유의지역</div>
+            <div onclick="showTab('review')">후기</div>
+        </div>
+
+        <!-- 탭1: 재외공관 정보 출력 -->
+        <div id="embassy" class="tab-content active">
+            {% if embassies %}
+                {% for embassy in embassies %}
+                    <h3>{{ embassy.embassy_name }}</h3>
+                    <table>
+                        <tr><td>주소</td><td>{{ embassy.address }}</td></tr>
+                        <tr><td>전화번호</td><td>{{ embassy.tel_no|default:"정보 없음" }}</td></tr>
+                        <tr><td>긴급전화번호</td><td>{{ embassy.urgency_tel|default:"정보 없음" }}</td></tr>
+                        <tr>
+                            <td>홈페이지</td>
+                            <td>
+                                {% if embassy.homepage_url %}
+                                    <a href="{{ embassy.homepage_url }}" target="_blank">{{ embassy.homepage_url }}</a>
+                                {% else %}
+                                    해당 정보 없음
+                                {% endif %}
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- 개별 대사관의 위도/경도 정보를 dataset 속성에 저장 -->
+                    <div class="map-container"
+                         style="width:100%; height:300px; background:#eee; margin-bottom: 30px;"
+                         data-lat="{{ embassy.lat|default:'' }}"
+                         data-lng="{{ embassy.lng|default:'' }}">
+                        지도가 여기에 표시됩니다 (프론트 구현)
+                    </div>
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <p>해당 국가의 대사관 정보가 없습니다.</p>
+            {% endif %}
+        </div>
+
+        <!-- 탭2: 유의지역 키워드별 공지 요약 -->
+        <div id="warning" class="tab-content">
+            <!-- 필터링 기준 안내 문구 -->
+            <p style="font-size: 14px; color: #555; margin-bottom: 10px;">※ 최근 1년 이내의 유의사항 공지만 표시됩니다.</p>
+
+            {% if category_map %}
+                {% for category, titles in category_map.items %}
+                    <div style="margin-bottom: 15px;">
+                        <!-- 대표 키워드 표시: 여행, 범죄, 자연재해, 시위 -->
+                        <span style="display:inline-block; background-color:#eef3ff; padding:6px 12px; border-radius:15px;">
+                            {{ category }}
+                        </span>
+                        <!-- 해당 키워드에 대응되는 공지 제목 목록 -->
+                        <ul style="margin-top:8px;">
+                            {% for t in titles %}
+                                <li style="font-size: 14px;">{{ t }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>유의지역 관련 공지가 없습니다.</p>
+            {% endif %}
+        </div>
+
+        <!-- 탭3: 후기 탭 (현재 미완성) -->
+        <div id="review" class="tab-content">
+            <p>리뷰 기능은 현재 준비 중입니다.</p>
+        </div>
+    </div>
+
+    <!-- 우측 하단: CountrySafety 기반 안전공지 목록 -->
+    <div class="safety-section">
+        <h2>안전 공지</h2>
+        {% if country_safeties %}
+            <ul>
+                {% for safety in country_safeties %}
+                    <li style="margin-bottom: 12px;">
+                        <span style="font-weight:bold; color: {% if '주의' in safety.title %}red{% else %}blue{% endif %};">
+                            {{ safety.category }}
+                        </span>
+                        <span style="margin-left: 10px;">
+                            {{ safety.title }}
+                        </span>
+                        <br><small>{{ safety.written_dt }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>안전 공지 정보가 없습니다.</p>
+        {% endif %}
+    </div>
 </div>
+
+<script>
+// 탭 클릭 시 해당 콘텐츠만 보여주도록 설정
+function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+}
+</script>
+
 </body>
 </html>
