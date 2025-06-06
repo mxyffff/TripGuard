@@ -5,6 +5,9 @@ from countries.models import SafetyNotice, CountrySafety, Embassy, EmbassyHomepa
 from datetime import datetime, timedelta
 from django.db.models import Case, When, Value, IntegerField
 
+from reviews.models import Review
+
+
 def keyword_warning_view(request, slug):
     # 대소문자 상관없이 소문자로 변환
     slug = slug.lower()
@@ -67,12 +70,18 @@ def keyword_warning_view(request, slug):
         country_en_name__iexact=country_en_name
     ).order_by("-written_dt")
 
+    # 댓글 조회
+    # 최신순 + user FK join
+    reviews = Review.objects.filter(embassy=embassy).select_related('user').order_by('-created_at')
+
     return render(request, "countries/countries_detail.html", {
         "embassies": embassies,
+        "embassy": embassy, # 후기 등록 시 필요
         "country_en_name": country_en_name,
         "country_name": country_name,
         "category_map": category_map,
         "country_safeties": country_safeties,
+        "reviews": reviews, # 후기 목록 템플릿 전달
     })
 
 
