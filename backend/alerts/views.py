@@ -1,8 +1,37 @@
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404
+from .models import Alert
 
-# Create your views here.
-from django.shortcuts import render
-from .models import TravelAlert
+def alert_geojson(request):
+    features = []
 
-def travel_alert_list(request):
-    alerts = TravelAlert.objects.all()
-    return render(request, 'alerts/list.html', {'alerts': alerts})
+    for alert in Alert.objects.all():
+        features.append({
+            "type": "Feature",
+            "properties": {
+                "country_name": alert.country_name,
+                "alarm_level": alert.alarm_level,
+                "country_code": alert.country_code,
+            },
+
+        })
+
+    return JsonResponse({
+        "type": "FeatureCollection",
+        "features": features
+    })
+
+def alert_detail(request, country_code):
+    alert = get_object_or_404(Alert, country_code=country_code.upper())
+
+    return JsonResponse({
+        "country_name": alert.country_name,
+        "country_code": alert.country_code,
+        "alarm_level": alert.alarm_level,
+        "continent_name": alert.continent_name,
+        "written_dt": alert.written_dt,
+        "region_type": alert.region_type,
+        "remark": alert.remark,
+        "map_url": alert.map_url,
+        "flag_url": alert.flag_url
+    })
