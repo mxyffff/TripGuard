@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
+LOGIN_URL = None
+
 # 프로젝트 루트 디렉토리 (TripGuard/)
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
