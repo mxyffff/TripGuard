@@ -24,4 +24,5 @@ urlpatterns = [
     path('countries/', include('countries.urls')),
     path('auth/', include('users.urls', namespace="users")),
     path("reviews/", include("reviews.urls", namespace="reviews")),
+    path('alerts/', include('alerts.urls')),  # ← alerts_returnjson에서 가져온 부분
 ]

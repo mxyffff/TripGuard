@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 import os
 
+
 # 프로젝트 루트 디렉토리 (TripGuard/)
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
@@ -39,13 +40,16 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "countries",
     "reviews",
+    "users",
+    "alerts",
+    "rest_framework",
+    "xmltodict",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +72,9 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.debug',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],

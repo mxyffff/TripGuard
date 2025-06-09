@@ -1,0 +1,2087 @@
+[
+{
+  "model": "alerts.alert",
+  "pk": 1,
+  "fields": {
+    "country_name": "가나",
+    "country_code": "GH",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/15/20220318_161935742.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/15/20220318_161935687.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 2,
+  "fields": {
+    "country_name": "가봉",
+    "country_code": "GA",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/16/20220318_161654164.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/16/20241008_140438527.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 3,
+  "fields": {
+    "country_name": "가이아나",
+    "country_code": "GY",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2024-08-01",
+    "region_type": "전체",
+    "remark": "전지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/17/20220318_162257070.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/17/20220318_162257006.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 4,
+  "fields": {
+    "country_name": "감비아",
+    "country_code": "GM",
+    "alarm_level": 1,
+    "continent_name": "아프리카",
+    "written_dt": "2024-06-28",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/18/20220318_161955458.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/18/20241008_151214282.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 5,
+  "fields": {
+    "country_name": "과테말라",
+    "country_code": "GT",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/21/20220318_162216930.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/21/20220318_162216873.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 6,
+  "fields": {
+    "country_name": "그리스",
+    "country_code": "GR",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2025-03-14",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/24/20220720_160223155.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/24/20220720_160223089.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 7,
+  "fields": {
+    "country_name": "기니",
+    "country_code": "GN",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/26/20220318_162017591.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/26/20241008_151806611.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 8,
+  "fields": {
+    "country_name": "기니비사우",
+    "country_code": "GW",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/27/20220318_162237718.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/27/20241008_152117576.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 9,
+  "fields": {
+    "country_name": "나우루",
+    "country_code": "NR",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/29/20220318_164920505.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/29/20241015_102346850.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 10,
+  "fields": {
+    "country_name": "나이지리아",
+    "country_code": "NG",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/30/20220318_164734033.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/30/20241008_142959407.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 11,
+  "fields": {
+    "country_name": "남수단",
+    "country_code": "SS",
+    "alarm_level": 3,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-04",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/31/20220318_165928347.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/31/20220318_165928295.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 12,
+  "fields": {
+    "country_name": "네팔연방",
+    "country_code": "NP",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2022-07-26",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/35/20220318_164857221.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/35/20220318_164857163.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 13,
+  "fields": {
+    "country_name": "니제르",
+    "country_code": "NE",
+    "alarm_level": 3,
+    "continent_name": "아프리카",
+    "written_dt": "2023-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/40/20220318_164713283.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/40/20241008_154630391.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 14,
+  "fields": {
+    "country_name": "니카라과",
+    "country_code": "NI",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/41/20220318_164751614.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/41/20220318_164751555.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 15,
+  "fields": {
+    "country_name": "덴마크",
+    "country_code": "DK",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-07-26",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/42/20220318_160958055.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/42/20220318_160957995.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 16,
+  "fields": {
+    "country_name": "도미니카공화국",
+    "country_code": "DO",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/43/20220318_161126301.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/43/20220318_161126239.bmp"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 17,
+  "fields": {
+    "country_name": "동티모르",
+    "country_code": "TL",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2022-07-26",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/46/20220318_170256975.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/46/20241007_145653937.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 18,
+  "fields": {
+    "country_name": "라오스",
+    "country_code": "LA",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "4단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/47/20220318_163332653.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/47/20241014_152703854.jpg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 19,
+  "fields": {
+    "country_name": "라이베리아",
+    "country_code": "LR",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/48/20220318_163516098.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/48/20241008_143511484.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 20,
+  "fields": {
+    "country_name": "러시아",
+    "country_code": "RU",
+    "alarm_level": 3,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "북카프카즈 지역(체첸/다게스탄/세베로오세티아/카바르디노발카르/잉귀시/까라차예보체르케스카야/아디게이) 및 우크라이나 접경지역(4단계 제외 로스토프, 벨고로드, 보로네시, 브랸스크 주 및 오룔 주 일부(샤블리키노, 드미트롭스크, 사스코보, 크로믜, 트로스나 5개 지역))",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/50/20220729_092800180.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/50/20220729_092800113.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 21,
+  "fields": {
+    "country_name": "레바논",
+    "country_code": "LB",
+    "alarm_level": 3,
+    "continent_name": "중동",
+    "written_dt": "2025-05-30",
+    "region_type": "일부",
+    "remark": "4단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/51/20220318_163352303.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/51/20241014_140148527.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 22,
+  "fields": {
+    "country_name": "레소토",
+    "country_code": "LS",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2024-02-23",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/52/20220318_163534085.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/52/20220318_163534027.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 23,
+  "fields": {
+    "country_name": "루마니아",
+    "country_code": "RO",
+    "alarm_level": 2,
+    "continent_name": "유럽",
+    "written_dt": "2023-11-24",
+    "region_type": "일부",
+    "remark": "우크라이나 접경 20KM지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/54/20220318_165414583.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/54/20220318_165414526.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 24,
+  "fields": {
+    "country_name": "르완다",
+    "country_code": "RW",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/56/20220318_165509497.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/56/20220318_165509439.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 25,
+  "fields": {
+    "country_name": "리비아",
+    "country_code": "LY",
+    "alarm_level": 4,
+    "continent_name": "중동",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/57/20220318_163646123.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/57/20241010_170641759.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 26,
+  "fields": {
+    "country_name": "리투아니아",
+    "country_code": "LT",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/58/20220318_163553726.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/58/20220318_163553668.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 27,
+  "fields": {
+    "country_name": "리히텐슈타인",
+    "country_code": "LI",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/59/20220318_163437039.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/59/20220318_163436978.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 28,
+  "fields": {
+    "country_name": "마다가스카르",
+    "country_code": "MG",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/60/20220318_163839489.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/60/20241008_144513040.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 29,
+  "fields": {
+    "country_name": "마셜제도",
+    "country_code": "MH",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/62/20220318_163922768.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/62/20241015_100857244.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 30,
+  "fields": {
+    "country_name": "마이크로네시아연방",
+    "country_code": "FM",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/64/20220318_161549221.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/64/20241015_100418139.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 31,
+  "fields": {
+    "country_name": "말라위",
+    "country_code": "MW",
+    "alarm_level": 1,
+    "continent_name": "아프리카",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/65/20220318_164519103.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/65/20220318_164519041.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 32,
+  "fields": {
+    "country_name": "말레이시아",
+    "country_code": "MY",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/66/20220318_164600106.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/66/20241007_150435112.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 33,
+  "fields": {
+    "country_name": "말리",
+    "country_code": "ML",
+    "alarm_level": 3,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-04",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/67/20220318_164251088.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/67/20241008_134739784.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 34,
+  "fields": {
+    "country_name": "멕시코",
+    "country_code": "MX",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/69/20220318_164538614.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/69/20220318_164538562.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 35,
+  "fields": {
+    "country_name": "모로코",
+    "country_code": "MA",
+    "alarm_level": 1,
+    "continent_name": "중동",
+    "written_dt": "2024-06-28",
+    "region_type": "일부",
+    "remark": "서사하라 이외 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/71/20220318_163711211.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/71/20241010_171035728.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 36,
+  "fields": {
+    "country_name": "모리타니아",
+    "country_code": "MR",
+    "alarm_level": 2,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "누악쇼트, 누아디브, 인시리, 트라르자 및 아다르(우아단까지 일부지역)",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/73/20220318_164400235.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/73/20241010_171327327.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 37,
+  "fields": {
+    "country_name": "모잠비크",
+    "country_code": "MZ",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/74/20220318_164624210.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/74/20220318_164624153.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 38,
+  "fields": {
+    "country_name": "몰디브",
+    "country_code": "MV",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2024-06-28",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/78/20220318_164502090.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/78/20241017_093250875.jpg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 39,
+  "fields": {
+    "country_name": "몰타",
+    "country_code": "MT",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/79/20220318_164417989.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/79/20220318_164417927.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 40,
+  "fields": {
+    "country_name": "몽골",
+    "country_code": "MN",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2024-06-28",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/80/20220318_164338981.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/80/20220318_164338924.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 41,
+  "fields": {
+    "country_name": "미얀마",
+    "country_code": "MM",
+    "alarm_level": 3,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "4단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/82/20220318_164314806.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/82/20241014_154110971.jpg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 42,
+  "fields": {
+    "country_name": "미합중국",
+    "country_code": "US",
+    "alarm_level": 1,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "하와이 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/81/20220504_170107750.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/81/20220504_170107685.jpg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 43,
+  "fields": {
+    "country_name": "바누아투",
+    "country_code": "VU",
+    "alarm_level": 2,
+    "continent_name": "아주",
+    "written_dt": "2022-08-22",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/83/20220318_170812205.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/83/20241015_103512684.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 44,
+  "fields": {
+    "country_name": "바레인",
+    "country_code": "BH",
+    "alarm_level": 1,
+    "continent_name": "중동",
+    "written_dt": "2024-06-28",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/84/20220318_155707134.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/84/20241010_171926748.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 45,
+  "fields": {
+    "country_name": "방글라데시",
+    "country_code": "BD",
+    "alarm_level": 2,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/88/20220318_155428268.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/88/20241015_093118741.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 46,
+  "fields": {
+    "country_name": "베냉",
+    "country_code": "BJ",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/90/20220318_155757087.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/90/20241008_135529018.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 47,
+  "fields": {
+    "country_name": "베네수엘라볼리바르",
+    "country_code": "VE",
+    "alarm_level": 3,
+    "continent_name": "미주",
+    "written_dt": "2022-08-04",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/91/20220318_170734674.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/91/20220318_170734617.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 48,
+  "fields": {
+    "country_name": "베트남",
+    "country_code": "VN",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/92/20220318_170753544.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/92/20241014_152016729.jpg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 49,
+  "fields": {
+    "country_name": "벨기에",
+    "country_code": "BE",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-08-22",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/93/20220318_155559374.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/93/20220318_155559315.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 50,
+  "fields": {
+    "country_name": "벨라루스",
+    "country_code": "BY",
+    "alarm_level": 3,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "4단계, 특별여행주의보 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/94/20220318_160027626.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/94/20220318_160027564.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 51,
+  "fields": {
+    "country_name": "벨리즈",
+    "country_code": "BZ",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/95/20220318_160049872.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/95/20220318_160049812.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 52,
+  "fields": {
+    "country_name": "보스니아헤르체고비나",
+    "country_code": "BA",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/96/20220318_155341115.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/96/20220318_155341050.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 53,
+  "fields": {
+    "country_name": "보츠와나",
+    "country_code": "BW",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2024-02-23",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/97/20220318_160007056.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/97/20220318_160006984.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 54,
+  "fields": {
+    "country_name": "볼리비아",
+    "country_code": "BO",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/98/20220318_155840777.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/98/20241007_155421689.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 55,
+  "fields": {
+    "country_name": "부룬디",
+    "country_code": "BI",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "부줌부라시",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/99/20220318_155734180.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/99/20220318_155734115.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 56,
+  "fields": {
+    "country_name": "부르키나파소",
+    "country_code": "BF",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "일부",
+    "remark": "와가두구, 보보디울라소",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/100/20220318_155621338.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/100/20241008_154932218.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 57,
+  "fields": {
+    "country_name": "부탄",
+    "country_code": "BT",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2024-06-28",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/101/20220318_155946707.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/101/20241015_094217785.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 58,
+  "fields": {
+    "country_name": "브라질",
+    "country_code": "BR",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/105/20220318_155901080.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/105/20241007_154456184.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 59,
+  "fields": {
+    "country_name": "사우디아라비아",
+    "country_code": "SA",
+    "alarm_level": 2,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/108/20220318_165528112.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/108/20241010_172156601.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 60,
+  "fields": {
+    "country_name": "사이프러스",
+    "country_code": "CY",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "남부 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/109/20220318_160811593.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/109/20220318_160811530.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 61,
+  "fields": {
+    "country_name": "산마리노",
+    "country_code": "SM",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/111/20220318_165809569.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/111/20220318_165809508.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 62,
+  "fields": {
+    "country_name": "상투메프린시페",
+    "country_code": "ST",
+    "alarm_level": 1,
+    "continent_name": "아프리카",
+    "written_dt": "2022-07-26",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/112/20220318_170013595.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/112/20241008_141844291.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 63,
+  "fields": {
+    "country_name": "세네갈",
+    "country_code": "SN",
+    "alarm_level": 1,
+    "continent_name": "아프리카",
+    "written_dt": "2024-06-28",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/114/20220318_165832709.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/114/20241008_150925061.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 64,
+  "fields": {
+    "country_name": "소말리아",
+    "country_code": "SO",
+    "alarm_level": 4,
+    "continent_name": "아프리카",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/121/20220318_165847471.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/121/20220318_165847410.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 65,
+  "fields": {
+    "country_name": "솔로몬제도",
+    "country_code": "SB",
+    "alarm_level": 2,
+    "continent_name": "아주",
+    "written_dt": "2022-08-22",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/122/20220318_165547504.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/122/20241015_103712808.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 66,
+  "fields": {
+    "country_name": "수단",
+    "country_code": "SD",
+    "alarm_level": 4,
+    "continent_name": "아프리카",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/123/20220318_165622710.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/123/20220318_165622650.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 67,
+  "fields": {
+    "country_name": "수리남",
+    "country_code": "SR",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2024-08-01",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/124/20220318_165905899.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/124/20220318_165905843.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 68,
+  "fields": {
+    "country_name": "스리랑카",
+    "country_code": "LK",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2024-06-28",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/125/20220318_163457032.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/125/20241017_092809373.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 69,
+  "fields": {
+    "country_name": "스위스",
+    "country_code": "CH",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/127/20220318_160312019.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/127/20220318_160311962.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 70,
+  "fields": {
+    "country_name": "스페인",
+    "country_code": "ES",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2023-03-07",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/128/20220318_161418927.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/128/20220318_161418873.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 71,
+  "fields": {
+    "country_name": "슬로베니아",
+    "country_code": "SI",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/130/20220318_165717468.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/130/20220318_165717405.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 72,
+  "fields": {
+    "country_name": "시리아",
+    "country_code": "SY",
+    "alarm_level": 4,
+    "continent_name": "중동",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/131/20220318_170052136.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/131/20241014_141728679.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 73,
+  "fields": {
+    "country_name": "시에라리온",
+    "country_code": "SL",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/132/20220318_165752847.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/132/20241008_143820367.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 74,
+  "fields": {
+    "country_name": "아르메니아",
+    "country_code": "AM",
+    "alarm_level": 2,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3, 4단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/136/20220318_154859646.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/136/20220318_154859591.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 75,
+  "fields": {
+    "country_name": "아르헨티나",
+    "country_code": "AR",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/137/20220318_155042465.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/137/20241007_160214251.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 76,
+  "fields": {
+    "country_name": "아이슬란드",
+    "country_code": "IS",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-07-26",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/138/20220318_162816120.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/138/20220318_162816057.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 77,
+  "fields": {
+    "country_name": "아이티",
+    "country_code": "HT",
+    "alarm_level": 4,
+    "continent_name": "미주",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/139/20220318_162444433.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/139/20220318_162444377.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 78,
+  "fields": {
+    "country_name": "아제르바이잔",
+    "country_code": "AZ",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3, 4단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/141/20220318_155301089.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/141/20220318_155301025.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 79,
+  "fields": {
+    "country_name": "아프가니스탄",
+    "country_code": "AF",
+    "alarm_level": 4,
+    "continent_name": "아주",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/142/20220318_154306963.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/142/20220318_154306906.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 80,
+  "fields": {
+    "country_name": "알바니아",
+    "country_code": "AL",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/144/20220322_100356109.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/144/20220322_100356049.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 81,
+  "fields": {
+    "country_name": "알제리",
+    "country_code": "DZ",
+    "alarm_level": 2,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "카빌리 지역 6개주 산악지역(부메르데스, 부아라, 티지 우주, 베자이아, 보르즈부아레리즈, 지젤) 포함 3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/145/20220318_161209401.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/145/20241010_172610036.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 82,
+  "fields": {
+    "country_name": "앙골라",
+    "country_code": "AO",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/146/20220318_155000889.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/146/20220318_155000833.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 83,
+  "fields": {
+    "country_name": "에리트레아",
+    "country_code": "ER",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/149/20220318_161350306.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/149/20220318_161350250.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 84,
+  "fields": {
+    "country_name": "에콰도르",
+    "country_code": "EC",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/152/20220318_161233284.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/152/20241007_161447173.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 85,
+  "fields": {
+    "country_name": "에티오피아",
+    "country_code": "ET",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2023-09-04",
+    "region_type": "일부",
+    "remark": "아디스아바바 시, 디레다와 시, 하라르 주, SNNPR 주, SWEPR 주, 시다마 주, 오로미아 주 일부(3단계 지역 제외), 아파르 주(3단계 지역 제외)",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/153/20220318_161440418.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/153/20220318_161440363.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 86,
+  "fields": {
+    "country_name": "영국",
+    "country_code": "GB",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/155/20220318_161717593.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/155/20220318_161717544.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 87,
+  "fields": {
+    "country_name": "예멘",
+    "country_code": "YE",
+    "alarm_level": 4,
+    "continent_name": "중동",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/159/20220318_170906908.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/159/20241010_172819613.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 88,
+  "fields": {
+    "country_name": "오스트리아",
+    "country_code": "AT",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/161/20220318_155125132.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/161/20220318_155125077.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 89,
+  "fields": {
+    "country_name": "온두라스",
+    "country_code": "HN",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/162/20220323_174948028.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/162/20241011_134901771.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 90,
+  "fields": {
+    "country_name": "요르단",
+    "country_code": "JO",
+    "alarm_level": 1,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "2단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/164/20220318_162932552.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/164/20241014_141450551.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 91,
+  "fields": {
+    "country_name": "우간다",
+    "country_code": "UG",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/165/20220318_170547368.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/165/20220318_170547309.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 92,
+  "fields": {
+    "country_name": "우크라이나",
+    "country_code": "UA",
+    "alarm_level": 4,
+    "continent_name": "유럽",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/168/20220729_092922491.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/168/20220729_092922428.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 93,
+  "fields": {
+    "country_name": "이라크",
+    "country_code": "IQ",
+    "alarm_level": 4,
+    "continent_name": "중동",
+    "written_dt": "2025-01-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/169/20220318_162732597.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/169/20241014_141212609.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 94,
+  "fields": {
+    "country_name": "이란",
+    "country_code": "IR",
+    "alarm_level": 2,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/170/20220318_162755264.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/170/20241014_140831017.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 95,
+  "fields": {
+    "country_name": "이스라엘",
+    "country_code": "IL",
+    "alarm_level": 2,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3, 4단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/171/20220318_162634261.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/171/20241014_140436919.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 96,
+  "fields": {
+    "country_name": "이집트",
+    "country_code": "EG",
+    "alarm_level": 1,
+    "continent_name": "중동",
+    "written_dt": "2023-08-04",
+    "region_type": "일부",
+    "remark": "다합•샴엘셰이크지역, 카이로 등 나일강 유역 도시지역, 마르트루~지중해 유역 ",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/172/20220318_161328752.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/172/20241014_140640284.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 97,
+  "fields": {
+    "country_name": "이탈리아",
+    "country_code": "IT",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/173/20220318_162836899.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/173/20220318_162836837.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 98,
+  "fields": {
+    "country_name": "인도",
+    "country_code": "IN",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/174/20220318_162705712.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/174/20220318_162705650.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 99,
+  "fields": {
+    "country_name": "인도네시아",
+    "country_code": "ID",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "2단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/175/20220318_162536777.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/175/20241007_150612520.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 100,
+  "fields": {
+    "country_name": "일본",
+    "country_code": "JP",
+    "alarm_level": 3,
+    "continent_name": "아주",
+    "written_dt": "2024-06-28",
+    "region_type": "일부",
+    "remark": "후쿠시마 원전 반경 30km 이내 및 일본 정부 지정 피난지시구역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/176/20220318_162955800.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/176/20220318_162955741.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 101,
+  "fields": {
+    "country_name": "자메이카",
+    "country_code": "JM",
+    "alarm_level": 3,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "킹스턴, 세인트앤드류, 세인트캐서린",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/177/20220318_162858343.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/177/20220318_162858284.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 102,
+  "fields": {
+    "country_name": "잠비아",
+    "country_code": "ZM",
+    "alarm_level": 1,
+    "continent_name": "아프리카",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/178/20220318_170942055.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/178/20220318_170941997.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 103,
+  "fields": {
+    "country_name": "적도기니",
+    "country_code": "GQ",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/180/20220318_162122072.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/180/20241008_142341672.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 104,
+  "fields": {
+    "country_name": "조지아",
+    "country_code": "GE",
+    "alarm_level": 2,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/181/20220318_161818257.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/181/20220318_161818196.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 105,
+  "fields": {
+    "country_name": "중국",
+    "country_code": "CN",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "특별여행주의보 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/182/20220329_151915875.gif",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/182/20241007_182058339.jpeg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 106,
+  "fields": {
+    "country_name": "중앙아프리카",
+    "country_code": "CF",
+    "alarm_level": 3,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-04",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/183/20220318_160205139.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/183/20241008_153408662.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 107,
+  "fields": {
+    "country_name": "지부티",
+    "country_code": "DJ",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/184/20220318_160928524.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/184/20220318_160928466.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 108,
+  "fields": {
+    "country_name": "짐바브웨",
+    "country_code": "ZW",
+    "alarm_level": 1,
+    "continent_name": "아프리카",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/186/20220318_171000132.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/186/20220318_171000065.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 109,
+  "fields": {
+    "country_name": "차드",
+    "country_code": "TD",
+    "alarm_level": 3,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-04",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/187/20220318_170138196.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/187/20241008_153738085.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 110,
+  "fields": {
+    "country_name": "칠레",
+    "country_code": "CL",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/189/20220318_160418331.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/189/20241007_160538203.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 111,
+  "fields": {
+    "country_name": "카메룬",
+    "country_code": "CM",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/190/20220318_160445909.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/190/20241008_152946961.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 112,
+  "fields": {
+    "country_name": "캄보디아",
+    "country_code": "KH",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/194/20220318_163118195.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/194/20220318_163118134.jpg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 113,
+  "fields": {
+    "country_name": "케냐",
+    "country_code": "KE",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/196/20220318_163022087.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/196/20220318_163022023.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 114,
+  "fields": {
+    "country_name": "코모로",
+    "country_code": "KM",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/198/20220318_163203259.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/198/20241008_150411037.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 115,
+  "fields": {
+    "country_name": "코소보",
+    "country_code": "XK",
+    "alarm_level": 2,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/199/20220318_170850841.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/199/20220318_170850786.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 116,
+  "fields": {
+    "country_name": "코스타리카",
+    "country_code": "CR",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/200/20220329_145838673.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/200/20220329_145838618.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 117,
+  "fields": {
+    "country_name": "코트디부아르",
+    "country_code": "CI",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/201/20220318_160333980.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/201/20241008_175748903.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 118,
+  "fields": {
+    "country_name": "콜롬비아",
+    "country_code": "CO",
+    "alarm_level": 3,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "베네수엘라 국경지역 20km/ 나리뇨 주(뚜마코)/ 바예델카우카 주(깔리 시 제외)/ 아라우카 주, 카우카 주/(*는 일부: 안티오키아 주*, 초코 주*/ 카케타 주*)  / 노르떼 데 산딴데르(Norte de Santander) 주",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/202/20220318_160540088.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/202/20220318_160540028.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 119,
+  "fields": {
+    "country_name": "콩고",
+    "country_code": "CG",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/203/20220318_160245623.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/203/20241008_155946095.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 120,
+  "fields": {
+    "country_name": "콩고민주공화국",
+    "country_code": "CD",
+    "alarm_level": 3,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "중앙아프리카공화국과의 국경 50km 이내 지역/ 바우엘레주, 오트우엘레주, 이투리주, 마니에마주, 카사이주, 카사이상트랄주, 카사이오리앙탈주/ 舊 탕가니카주 북부 지역(일부: 루알라바주, 오트로마미주, 오트카탕가주)",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/204/20220318_160137134.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/204/20241008_155445771.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 121,
+  "fields": {
+    "country_name": "쿠웨이트",
+    "country_code": "KW",
+    "alarm_level": 1,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "2단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/206/20220318_163249092.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/206/20241010_173524080.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 122,
+  "fields": {
+    "country_name": "키리바시",
+    "country_code": "KI",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2024-11-04",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/210/20220318_163139428.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/210/20241015_095249744.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 123,
+  "fields": {
+    "country_name": "타지키스탄",
+    "country_code": "TJ",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/212/20220318_170239708.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/212/20220318_170239649.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 124,
+  "fields": {
+    "country_name": "탄자니아",
+    "country_code": "TZ",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/213/20220318_170507062.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/213/20220318_170507002.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 125,
+  "fields": {
+    "country_name": "태국",
+    "country_code": "TH",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "2, 3단계 및 특별여행주의보 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/214/20220318_170222131.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/214/20241014_152319731.jpg"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 126,
+  "fields": {
+    "country_name": "토고",
+    "country_code": "TG",
+    "alarm_level": 2,
+    "continent_name": "아프리카",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/217/20220318_170156387.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/217/20241008_135946885.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 127,
+  "fields": {
+    "country_name": "투르크메니스탄",
+    "country_code": "TM",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2023-08-04",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/219/20220318_170314397.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/219/20220318_170314338.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 128,
+  "fields": {
+    "country_name": "튀니지",
+    "country_code": "TN",
+    "alarm_level": 1,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "튀니스와 수도권 지역/비제르트 주/나불 주/수스 주/모나스티르 주 마흐디아 주/스팍스 주/제르바 주",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/221/20220318_170333330.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/221/20241010_173715586.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 129,
+  "fields": {
+    "country_name": "튀르키예공화국",
+    "country_code": "TR",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/216/20220318_170408729.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/216/20220318_170408650.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 130,
+  "fields": {
+    "country_name": "트리니다드토바고",
+    "country_code": "TT",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/222/20220318_170425311.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/222/20220318_170425254.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 131,
+  "fields": {
+    "country_name": "파나마",
+    "country_code": "PA",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/223/20220318_165042209.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/223/20220318_165042149.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 132,
+  "fields": {
+    "country_name": "파라과이",
+    "country_code": "PY",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2022-08-02",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/224/20220318_165336860.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/224/20241007_160923342.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 133,
+  "fields": {
+    "country_name": "파키스탄",
+    "country_code": "PK",
+    "alarm_level": 2,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "이슬라마바드, 페이살라바드, 라왈핀디, 라호르, 훈자, 길깃, 스카루드",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/225/20220318_165158836.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/225/20220318_165158778.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 134,
+  "fields": {
+    "country_name": "파푸아뉴기니",
+    "country_code": "PG",
+    "alarm_level": 2,
+    "continent_name": "아주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/226/20220318_165121056.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/226/20241015_102836490.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 135,
+  "fields": {
+    "country_name": "팔레스타인",
+    "country_code": "PS",
+    "alarm_level": 2,
+    "continent_name": "중동",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3, 4단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/228/20201125_104126431.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/228/20241014_141645251.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 136,
+  "fields": {
+    "country_name": "페루",
+    "country_code": "PE",
+    "alarm_level": 2,
+    "continent_name": "미주",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "3단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/229/20220318_165102191.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/229/20241007_161726639.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 137,
+  "fields": {
+    "country_name": "폴란드",
+    "country_code": "PL",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2025-05-21",
+    "region_type": "일부",
+    "remark": "2단계 지정 지역을 제외한 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/231/20220318_165216551.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/231/20220318_165216491.png"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 138,
+  "fields": {
+    "country_name": "프랑스",
+    "country_code": "FR",
+    "alarm_level": 1,
+    "continent_name": "유럽",
+    "written_dt": "2022-11-29",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/232/20220318_161621329.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/232/20220318_161621275.gif"
+  }
+},
+{
+  "model": "alerts.alert",
+  "pk": 139,
+  "fields": {
+    "country_name": "피지",
+    "country_code": "FJ",
+    "alarm_level": 1,
+    "continent_name": "아주",
+    "written_dt": "2023-11-24",
+    "region_type": "전체",
+    "remark": "전 지역",
+    "map_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/maps/235/20220318_161522173.png",
+    "flag_url": "https://opendata.mofa.go.kr:8444/fileDownload/images/country_images/flags/235/20241015_094546888.png"
+  }
+}
+]
