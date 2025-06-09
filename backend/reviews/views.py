@@ -11,7 +11,7 @@ from .models import Review, Helpfulness
 @csrf_exempt
 @require_POST
 @login_required
-def create_review_api(request, embassy_id):
+def create_review_api(request, slug):
     """
     [POST] 특정 공관에 대한 후기를 작성하는 API
 
@@ -23,7 +23,14 @@ def create_review_api(request, embassy_id):
         - 로그인한 사용자만 가능
         - 후기 내용(content)이 공백이 아니어야 함
     """
-    embassy = get_object_or_404(Embassy, id=embassy_id)
+    embassies = Embassy.objects.filter(slug=slug)
+    if not embassies.exists():
+        return JsonResponse({"error": "해당 slug의 공관이 존재하지 않습니다."}, status=404)
+
+    embassy = (
+            embassies.filter(embassy_name__icontains="대사관").first()
+            or embassies.first()
+    )
 
     # POST 요청에서 content 추출 (공백 제거)
     content = request.POST.get("content", "").strip()
