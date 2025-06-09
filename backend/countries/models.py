@@ -12,6 +12,15 @@ class CountrySafety(models.Model):
     file_url = models.URLField(blank=True, null=True)  # 첨부파일 경로 (선택값)
     written_dt = models.DateField() # wrtDt (작성일)
 
+    def save(self, *args, **kwargs):
+        # 기존 객체가 존재하면 country_name/en_name은 덮어쓰지 않음
+        if self.pk:
+            original = CountrySafety.objects.filter(pk=self.pk).first()
+            if original:
+                self.country_name = original.country_name
+                self.country_en_name = original.country_en_name
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return f"{self.country_name} - {self.title}"
 
@@ -26,6 +35,15 @@ class SafetyNotice(models.Model):
     written_dt = models.DateField()                           # wrt_dt
     file_url = models.URLField(blank=True, null=True)         # file_download_url (있을 수도 있음)
 
+    def save(self, *args, **kwargs):
+        # 기존 객체가 존재하면 country_name/en_name은 덮어쓰지 않음
+        if self.pk:
+            original = SafetyNotice.objects.filter(pk=self.pk).first()
+            if original:
+                self.country_name = original.country_name
+                self.country_en_name = original.country_en_name
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return f"{self.country_name} - {self.title}"
 
@@ -35,8 +53,8 @@ class Embassy(models.Model):
     country_name = models.CharField(max_length=50)  # 국가명 (한글)
     country_en_name = models.CharField(max_length=50)  # 국가명 (영문)
 
-    # slug 추가 (url 검색 문자열 설정)
-    slug = models.SlugField(max_length=100, null=True, blank=True)
+    # slug 추가 (path 경로명 전용 필드. 국가 단위로 구분)
+    slug = models.SlugField(max_length=100, blank=True, null=True)  # 국가 단위 slug (공관마다 중복 허용!)
 
     embassy_name = models.CharField(max_length=100)  # 대사관명
     address = models.TextField()  # 대사관 주소
@@ -46,14 +64,24 @@ class Embassy(models.Model):
     lng = models.FloatField(blank=True, null=True)  # 경도
 
     def save(self, *args, **kwargs):
+        # country_name, country_en_name은 수동 보호!
+        if self.pk:
+            original = Embassy.objects.filter(pk=self.pk).first()
+            if original:
+                self.country_name = original.country_name
+                self.country_en_name = original.country_en_name
+
+        # 슬러그는 국가 기준으로 하나만 생성되게 처리
         if not self.slug:
-            base_slug = slugify(self.country_en_name)
-            slug = base_slug
-            counter = 1
-            while Embassy.objects.filter(slug=slug).exclude(pk=self.pk).exists():
-                slug = f"{base_slug}-{counter}"
-                counter += 1
-            self.slug = slug
+            # 같은 국가명을 가진 공관 중 slug가 이미 있는 게 있으면 그걸 공유
+            existing = Embassy.objects.filter(country_en_name__iexact=self.country_en_name, slug__isnull=False).exclude(
+                pk=self.pk).first()
+            if existing:
+                self.slug = existing.slug
+            else:
+                # 없으면 새로 생성
+                self.slug = slugify(self.country_en_name or self.country_name)
+
         super().save(*args, **kwargs)
 
     def __str__(self):

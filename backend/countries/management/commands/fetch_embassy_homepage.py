@@ -5,16 +5,18 @@ from urllib3.poolmanager import PoolManager
 from django.core.management.base import BaseCommand
 from countries.models import Embassy, EmbassyHomepage
 
+
 # 재외공관 홈페이지 api
 
 # SSL 오류 방지용 커스텀 어댑터
 class TLSv1_2HttpAdapter(HTTPAdapter):
     def init_poolmanager(self, *args, **kwargs):
         context = ssl.create_default_context()
-        context.set_ciphers("DEFAULT@SECLEVEL=1") # 낮은 보안 수준 허용
-        context.options |= ssl.OP_NO_TLSv1_3 # TLS 1.3 비활성화
+        context.set_ciphers("DEFAULT@SECLEVEL=1")  # 낮은 보안 수준 허용
+        context.options |= ssl.OP_NO_TLSv1_3  # TLS 1.3 비활성화
         kwargs['ssl_context'] = context
         return super().init_poolmanager(*args, **kwargs)
+
 
 class Command(BaseCommand):
     help = '외교부 API(getEmbassyHomepageList2)를 통해 대사관 홈페이지 정보를 가져온다.'
@@ -64,15 +66,18 @@ class Command(BaseCommand):
             # 연결된 Embassy가 존재하는 경우만 저장
             try:
                 embassy = Embassy.objects.get(embassy_cd=embassy_cd)
-                EmbassyHomepage.objects.update_or_create(
-                    embassy=embassy,
-                    defaults={
-                        "url": homepage_url,
-                    }
-                )
-                count += 1
+
+                # get_or_create(): 이미 수동으로 저장된 Homepage가 있다면 덮어쓰지 않음
+                homepage, created = EmbassyHomepage.objects.get_or_create(embassy=embassy)
+                if created: # 새로 생성된 경우에만 저장
+                    homepage.url = homepage_url
+                    homepage.save()
+                    count += 1
+                else:
+                    self.stdout.write(f"✅ 이미 수동 입력된 홈페이지 존재: {embassy.embassy_name} (변경하지 않음)")
+
             except Embassy.DoesNotExist:
+                self.stderr.write(f"⚠️ 공관 없음 - 코드: {embassy_cd}, URL: {homepage_url}")
                 continue  # 일치하는 공관이 없으면 스킵
 
         self.stdout.write(self.style.SUCCESS(f"✅ {count}건의 대사관 홈페이지 정보를 저장했습니다."))
-

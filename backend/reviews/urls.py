@@ -9,7 +9,7 @@ urlpatterns = [
     # - POST 요청: /reviews/create/3/
     # - body: content=<내용>
     # - 3은 공관(Embassy)의 ID
-    path("create/<int:embassy_id>/", views.create_review_api, name="create"),
+    path("create/<slug:slug>/", views.create_review_api, name="create"),
 
     # [2] 후기 삭제 API
     # - POST 요청: /reviews/delete/5/
