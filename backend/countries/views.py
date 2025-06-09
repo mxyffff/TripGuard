@@ -15,7 +15,6 @@ def country_detail_api(request, slug):
     # slug는 국가를 식별하는 고유 문자열 (예: "china")
     # 소문자로 변환하여 대소문자 차이로 인한 오류 방지
     slug = slug.lower()
-
     # slug에 해당하는 모든 재외공관(Embassy)을 가져옴
     embassies = Embassy.objects.filter(slug=slug)
 
@@ -23,33 +22,32 @@ def country_detail_api(request, slug):
     if not embassies.exists():
         raise Http404("해당 국가의 공관 정보가 없습니다.")
 
-    # 대표 공관 하나를 선택 (대사관이 있으면 그걸 우선)
+    # 대표 공관: '대사관'이 들어간 이름이 우선, 없으면 첫 번째 공관
     representative = (
             embassies.filter(embassy_name__icontains="대사관").first()
             or embassies.first()
     )
 
-    # 이후 country_en_name과 country_name은 대표 공관 기준으로 가져옴
+    # 대표 공관 기준 국가명 추출
     country_en = representative.country_en_name
     country_ko = representative.country_name
 
-    # 같은 국가의 다른 공관들을 모두 가져옴
+    # 동일 국가의 공관 전체 재조회 (정렬 우선순위 지정)
     # '대사관'이 들어간 이름을 우선 정렬하기 위해 Case/When을 사용
-    embassies = Embassy.objects.filter(
+    embassies = Embassy.objects.filter( # 공관 목록을 필터링
         country_en_name__iexact=country_en  # 영문 국가명이 같은 공관들 필터 (대소문자 구분 X)
-    ).annotate( # 추가 필드
-        sort_priority=Case(
-            When(embassy_name__icontains="대사관", then=Value(0)),  # 대사관 우선
-            default=Value(1),
+    ).annotate( # 정렬 기준을 위한 임시 컬럼 추가
+        sort_priority=Case( # sort_priority라는 Case 필드 생성
+            When(embassy_name__icontains="대사관", then=Value(0)),  # 대사관 0번째 - 우선
+            default=Value(1), # 그외는 모두 1번째
             output_field=IntegerField()
         )
-    ).order_by("sort_priority", "embassy_name")
+    ).order_by("sort_priority", "embassy_name") # 원하는 정렬 순서 적용
 
     # 각 공관 데이터를 JSON 형태로 정리
     embassy_list = []
     for e in embassies:
-        # 관련된 homepage가 있으면 가져오고, 없으면 None 처리
-        homepage_url = e.homepage.url if hasattr(e, 'homepage') else None
+        homepage_url = getattr(e.homepage, "url", None)  # homepage가 없으면 None
 
         embassy_list.append({
             "id": e.id,
@@ -64,7 +62,6 @@ def country_detail_api(request, slug):
 
     # 최근 1년 이내의 유의 공지사항을 가져오기 위해 기준 날짜 계산
     one_year_ago = datetime.today() - timedelta(days=365)
-
     # 공지사항 필터링 (해당 국가 + 최근 1년 이내 작성된 것만)
     base_queryset = SafetyNotice.objects.filter(
         country_en_name__iexact=country_en,
@@ -80,20 +77,20 @@ def country_detail_api(request, slug):
     }
 
     # 키워드별로 공지사항을 분류하고 title만 추출
-    category_map = {}
-    seen_titles = set()  # 중복 제거용
-    for category, keywords in topic_keywords.items():
-        q = Q()
+    category_map = {} # 결과 저장할 딕셔너리
+    seen_titles = set()  # 중복 제거용 제목 모음
+    for category, keywords in topic_keywords.items(): # 키워드 분류 순회
+        q = Q() # 검색 조건 누적용 q 객체
         for kw in keywords:
             q |= Q(content__icontains=kw)  # 키워드가 포함된 공지를 모두 찾음
-        matches = base_queryset.filter(q).order_by("-written_dt")
-        titles = []
-        for title in matches.values_list("title", flat=True): # 공지 중복 방지
+        matches = base_queryset.filter(q).order_by("-written_dt") # q 조건 적용
+        titles = [] # 해당 카테고리의 제목들 저장할 리스트
+        for title in matches.values_list("title", flat=True): # 공지 중복 방지 (필터링 된 공지에서 title, content 중 title만 가져옴)
             if title not in seen_titles:
                 titles.append(title)
                 seen_titles.add(title)
         if titles:
-            category_map[category] = titles
+            category_map[category] = titles # 카테고리 딕셔너리에 title 리스트 저장
 
     # 국가별 최신 공지사항 (CountrySafety 모델)
     safety_notices = CountrySafety.objects.filter(
@@ -136,6 +133,7 @@ def country_detail_api(request, slug):
         "reviews": review_data
     }, json_dumps_params={'ensure_ascii': False})  # 한글 깨짐 방지 설정
 
+# 국가명별 slug 변수를 확인해볼 수 있는 api 함수
 def country_list_api(request):
     countries = Embassy.objects.values("country_name", "country_en_name", "slug").distinct()
     return JsonResponse(list(countries), safe=False)
