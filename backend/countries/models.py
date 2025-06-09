@@ -12,6 +12,15 @@ class CountrySafety(models.Model):
     file_url = models.URLField(blank=True, null=True)  # 첨부파일 경로 (선택값)
     written_dt = models.DateField() # wrtDt (작성일)
 
+    def save(self, *args, **kwargs):
+        # 기존 객체가 존재하면 country_name/en_name은 덮어쓰지 않음
+        if self.pk:
+            original = CountrySafety.objects.filter(pk=self.pk).first()
+            if original:
+                self.country_name = original.country_name
+                self.country_en_name = original.country_en_name
+        super().save(*args, **kwargs)
+
     def __str__(self):
         return f"{self.country_name} - {self.title}"
 
@@ -25,6 +34,15 @@ class SafetyNotice(models.Model):
     category = models.CharField(max_length=20)                # ctgy_nm ("안내", "주의" 등)
     written_dt = models.DateField()                           # wrt_dt
     file_url = models.URLField(blank=True, null=True)         # file_download_url (있을 수도 있음)
+
+    def save(self, *args, **kwargs):
+        # 기존 객체가 존재하면 country_name/en_name은 덮어쓰지 않음
+        if self.pk:
+            original = SafetyNotice.objects.filter(pk=self.pk).first()
+            if original:
+                self.country_name = original.country_name
+                self.country_en_name = original.country_en_name
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.country_name} - {self.title}"
