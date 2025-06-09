@@ -16,6 +16,7 @@
 ### ✅ 사용 방법
 
 #### 1. 마이그레이션 먼저 실행
+**python manage.py makemigrations** <br>
 **python manage.py migrate**
 
 #### 2. seed 파일 로드
