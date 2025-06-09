@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse, HttpResponseForbidden
+from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
@@ -7,7 +8,7 @@ from django.utils import timezone
 from countries.models import Embassy
 from .models import Review, Helpfulness
 
-
+@csrf_exempt
 @require_POST
 @login_required
 def create_review_api(request, embassy_id):
@@ -49,7 +50,7 @@ def create_review_api(request, embassy_id):
         }
     })
 
-
+@csrf_exempt
 @require_POST
 @login_required
 def delete_review_api(request, review_id):
@@ -69,7 +70,7 @@ def delete_review_api(request, review_id):
 
     return JsonResponse({"message": "후기 삭제 완료"})
 
-
+@csrf_exempt
 @require_POST
 @login_required
 def update_review_api(request, review_id):
@@ -105,7 +106,7 @@ def update_review_api(request, review_id):
         }
     })
 
-
+@csrf_exempt
 @require_POST
 @login_required
 def toggle_helpful_api(request, review_id):
