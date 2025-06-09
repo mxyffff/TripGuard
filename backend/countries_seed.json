@@ -1,1586 +1,1778 @@
 [
 {
-  "model": "countries.embassy",
-  "pk": 1,
-  "fields": {
-    "embassy_cd": "gh",
-    "country_name": "가나",
-    "country_en_name": "Ghana",
-    "slug": "ghana",
-    "embassy_name": "주 가나 대한민국 대사관",
-    "address": "No.10, Fifth Avenue Extension, Cantonments, P.O.Box GP 13700, Accra, Ghana",
-    "tel_no": "(233) 302-771-705",
-    "urgency_tel": "(233) 244-321-858",
-    "lat": 5.575495,
-    "lng": -0.185161
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 2,
-  "fields": {
-    "embassy_cd": "ga",
-    "country_name": "가봉",
-    "country_en_name": "Gabon",
-    "slug": "gabon",
-    "embassy_name": "주 가봉 대한민국 대사관",
-    "address": "B.P.2620, Libreville, Gabon",
-    "tel_no": "(241) 6530-1900",
-    "urgency_tel": "(241) 6607-0640",
-    "lat": 0.477587266,
-    "lng": 9.393928461
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 3,
-  "fields": {
-    "embassy_cd": "gt",
-    "country_name": "과테말라",
-    "country_en_name": "Guatemala",
-    "slug": "guatemala",
-    "embassy_name": "주 과테말라 대한민국 대사관",
-    "address": "5a. Ave. 5-55, Zona 14, Edificio Europlaza Torre 3, Nivel 7, Ciudad de Guatemala, Guatemala C.A",
-    "tel_no": "(502) 2382 - 4051",
-    "urgency_tel": "(502) 4013-5184",
-    "lat": 14.587905,
-    "lng": -90.513744
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 4,
-  "fields": {
-    "embassy_cd": "gr",
-    "country_name": "그리스",
-    "country_en_name": "Greece",
-    "slug": "greece",
-    "embassy_name": "주 그리스 대한민국 대사관",
-    "address": "Embassy of the Republic of Korea , Athens Tower A  building , 19th Floor, 2-4 Messogion Avenue, 115 27, Athens, Greece",
-    "tel_no": "(30) 210-698-4080",
-    "urgency_tel": "(30) 694-611-7098",
-    "lat": 37.984663,
-    "lng": 23.760519
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 5,
-  "fields": {
-    "embassy_cd": "ao",
-    "country_name": "앙골라",
-    "country_en_name": "Angola",
-    "slug": "angola",
-    "embassy_name": "주 앙골라 대한민국 대사관",
-    "address": "Condominio Zenith, Torre 1, 3&deg; Andar, Via AL 16, Talatona, Luanda, Angola",
-    "tel_no": "(244) 222-006-067",
-    "urgency_tel": "(244) 938-880-573",
-    "lat": -8.920868,
-    "lng": 13.202023
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 6,
-  "fields": {
-    "embassy_cd": "ng",
-    "country_name": "나이지리아",
-    "country_en_name": "Nigeria",
-    "slug": "nigeria",
-    "embassy_name": "주 나이지리아 대한민국 대사관",
-    "address": "No.9 Ovia cresent, Off Pope John Paul Ⅱ street, Off Gana street, Maitama, Abuja",
-    "tel_no": "(234) 810-389-0991",
-    "urgency_tel": "(234) 90-8650-2916",
-    "lat": 9.084108,
-    "lng": 7.49347
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 7,
-  "fields": {
-    "embassy_cd": "ng-lagos",
-    "country_name": "나이지리아",
-    "country_en_name": "Nigeria",
-    "slug": "nigeria-1",
-    "embassy_name": "주 라고스 대한민국 분관",
-    "address": "Plot 10A&amp;B Layi Ajayi Bembe Street, Parkview Estate, Ikoyi, Lagos",
-    "tel_no": "(234) 1-271-6295",
-    "urgency_tel": "(234) 906-877-4619",
-    "lat": 6.459111,
-    "lng": 3.448935
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 8,
-  "fields": {
-    "embassy_cd": "za",
-    "country_name": "남아프리카공화국",
-    "country_en_name": "South Africa",
-    "slug": "south-africa",
-    "embassy_name": "주 남아프리카공화국 대한민국 대사관",
-    "address": "265 Melk Street, Nieuw Muckleneuk, Pretoria 0181, South Africa",
-    "tel_no": "(27) 12-460-2508",
-    "urgency_tel": "(27) 66-332-5897",
-    "lat": -25.773293,
-    "lng": 28.226605
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 9,
-  "fields": {
-    "embassy_cd": "nl",
-    "country_name": "네덜란드",
-    "country_en_name": "Netherlands",
-    "slug": "netherlands",
-    "embassy_name": "주 네덜란드 대한민국 대사관",
-    "address": "Verlengde Tolweg 8, 2517 JV The Hague, Netherlands",
-    "tel_no": "(31) 70-740-0214",
-    "urgency_tel": "(31) 64-264-8412",
-    "lat": 52.093582,
-    "lng": 4.28729
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 10,
-  "fields": {
-    "embassy_cd": "np",
-    "country_name": "네팔연방",
-    "country_en_name": "Nepal",
-    "slug": "nepal",
-    "embassy_name": "주 네팔 대한민국 대사관",
-    "address": "P.O.Box 1058 Ravibhawan, Kathmandu, Nepal",
-    "tel_no": "(977) 1-427-0172",
-    "urgency_tel": "(977) 98510-33178",
-    "lat": 27.694457,
-    "lng": 85.292486
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 11,
-  "fields": {
-    "embassy_cd": "no",
-    "country_name": "노르웨이",
-    "country_en_name": "Norway",
-    "slug": "norway",
-    "embassy_name": "주 노르웨이 대한민국 대사관",
-    "address": "Inkognitogata 3 0258 Oslo Norway",
-    "tel_no": "(47) 2254-7090",
-    "urgency_tel": "(47) 9026-3544",
-    "lat": 59.919738,
-    "lng": 10.724114
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 12,
-  "fields": {
-    "embassy_cd": "nz",
-    "country_name": "뉴질랜드",
-    "country_en_name": "New Zealand",
-    "slug": "new-zealand",
-    "embassy_name": "주 뉴질랜드 대한민국 대사관",
-    "address": "11th Floor, Harbour Tower, 2 Hunter Street, Wellington 6011, New Zealand",
-    "tel_no": "(64) 4-473-9073",
-    "urgency_tel": "(64) 21-0269-3271",
-    "lat": -41.28572,
-    "lng": 174.777313
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 13,
-  "fields": {
-    "embassy_cd": "nz-auckland",
-    "country_name": "뉴질랜드",
-    "country_en_name": "New Zealand",
-    "slug": "new-zealand-1",
-    "embassy_name": "주 오클랜드 대한민국 분관",
-    "address": "Level 12, Tower 1, 205 Queen Street, Auckland Central , New Zealand",
-    "tel_no": "(64) 9-379-0818",
-    "urgency_tel": "(64) 27-646-0404",
-    "lat": -36.853372,
-    "lng": 174.763702
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 14,
-  "fields": {
-    "embassy_cd": "ni",
-    "country_name": "니카라과",
-    "country_en_name": "Nicaragua",
-    "slug": "nicaragua",
-    "embassy_name": "주 니카라과 대한민국 대사관",
-    "address": "De la rotonda universitaria 100mts al norte, 100mts al oeste, mano derecha, Managua, Nicaragua",
-    "tel_no": "(505) 2267-6777",
-    "urgency_tel": "(505) 8855-0037",
-    "lat": 12.11508210394372,
-    "lng": -86.27426720012927
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 15,
-  "fields": {
-    "embassy_cd": "tw",
-    "country_name": "대만",
-    "country_en_name": "Taiwan",
-    "slug": "taiwan",
-    "embassy_name": "주 타이베이 대한민국 대표부",
-    "address": "Rm. 1506, No.333, Sec. 1, Kee-lung Rd., Taipei, Taiwan",
-    "tel_no": "(886) 2-2758-8320",
-    "urgency_tel": "(886) 912-069-230",
-    "lat": 25.034346,
-    "lng": 121.560907
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 16,
-  "fields": {
-    "embassy_cd": "dk",
-    "country_name": "덴마크",
-    "country_en_name": "Denmark",
-    "slug": "denmark",
-    "embassy_name": "주 덴마크 대한민국 대사관",
-    "address": "Svanemoellevej 104, 2900 Hellerup, Denmark",
-    "tel_no": "(45) 3946-0400",
-    "urgency_tel": "(45) 2521-7461",
-    "lat": 55.731206,
-    "lng": 12.573892
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 17,
-  "fields": {
-    "embassy_cd": "do",
-    "country_name": "도미니카공화국",
-    "country_en_name": "Dominican Republic",
-    "slug": "dominican-republic",
-    "embassy_name": "주 도미니카공화국 대한민국 대사관",
-    "address": "Torre Empresarial Forum, Piso 14, Avenida 27 de Febrero No.495, El Millon, Santo Domingo, Republica Dominicana",
-    "tel_no": "(1-809) 482-6505",
-    "urgency_tel": "(1-809) 383-9091",
-    "lat": 18.45281,
-    "lng": -69.960545
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 18,
-  "fields": {
-    "embassy_cd": "de",
-    "country_name": "독일",
-    "country_en_name": "Germany",
-    "slug": "germany",
-    "embassy_name": "주 독일 대한민국 대사관",
-    "address": "Stuelerstr 8/10, 10787, Berlin, Germany",
-    "tel_no": "(49) 30-260-650",
-    "urgency_tel": "(49) 173-407-6943",
-    "lat": 52.50901,
-    "lng": 13.346508
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 19,
-  "fields": {
-    "embassy_cd": "de-bonn",
-    "country_name": "독일",
-    "country_en_name": "Germany",
-    "slug": "germany-1",
-    "embassy_name": "주 독일 연방공화국 대한민국 대사관 본분관",
-    "address": "Godesberger Allee 142-148, 53175 Bonn, Germany",
-    "tel_no": "(49) 228-943-790",
-    "urgency_tel": "(49) 170-337-9105",
-    "lat": 50.69869,
-    "lng": 7.1566
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 20,
-  "fields": {
-    "embassy_cd": "de-frankfurt",
-    "country_name": "독일",
-    "country_en_name": "Germany",
-    "slug": "germany-2",
-    "embassy_name": "주 프랑크푸르트 대한민국 총영사관",
-    "address": "Generalkonsulat der Republik Korea, Lyoner Str. 34, 60528 Frankfurt am Main, Germany",
-    "tel_no": "(49) 69-956-7520",
-    "urgency_tel": "(49) 173-363-4854",
-    "lat": 50.07833,
-    "lng": 8.62353
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 21,
-  "fields": {
-    "embassy_cd": "de-hamburg",
-    "country_name": "독일",
-    "country_en_name": "Germany",
-    "slug": "germany-3",
-    "embassy_name": "주 함부르크 대한민국 총영사관",
-    "address": "Kaiser-Wilhelm-Str 9, 20355 Hamburg. Germany",
-    "tel_no": "(49) 40-650-677-600",
-    "urgency_tel": "(49) 170-340-1498",
-    "lat": 53.552942,
-    "lng": 9.98393
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 22,
-  "fields": {
-    "embassy_cd": "tl",
-    "country_name": "동티모르",
-    "country_en_name": "Timor-Leste",
-    "slug": "timor-leste",
-    "embassy_name": "주 동티모르 대한민국 대사관",
-    "address": "P.O.Box 230, Avenida de Portugal, Motael, Dili, Timor-Leste",
-    "tel_no": "(670) 332-1635",
-    "urgency_tel": "(670) 7723-5068",
-    "lat": -8.548387,
-    "lng": 125.561151
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 23,
-  "fields": {
-    "embassy_cd": "la",
-    "country_name": "라오스",
-    "country_en_name": "Laos",
-    "slug": "laos",
-    "embassy_name": "주 라오스 대한민국 대사관",
-    "address": "Lao-Thai Friendship Road, Watnak Village, Sisattanak District, Vientiane, Lao P.D.R, P.O.Box 7567",
-    "tel_no": "(856) 21-255-770",
-    "urgency_tel": "(856) 20-5839-0080",
-    "lat": 17.9701505,
-    "lng": 102.5968525
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 24,
-  "fields": {
-    "embassy_cd": "lv",
-    "country_name": "라트비아",
-    "country_en_name": "Latvia",
-    "slug": "latvia",
-    "embassy_name": "주 라트비아 대한민국 대사관",
-    "address": "Jura Alunana iela 2-3, Riga, Latvia",
-    "tel_no": "(371) 6732-4274",
-    "urgency_tel": "(371) 2573-5627",
-    "lat": 56.9560582,
-    "lng": 24.1096265
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 25,
-  "fields": {
-    "embassy_cd": "ru",
-    "country_name": "러시아",
-    "country_en_name": "Russia",
-    "slug": "russia",
-    "embassy_name": "주 러시아 대한민국 대사관",
-    "address": "St. Plyushchikha 56 bldg 1, Moscow",
-    "tel_no": "(7) 495-783-2727",
-    "urgency_tel": "(7) 495-783-2727",
-    "lat": 55.737956,
-    "lng": 37.57501
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 26,
-  "fields": {
-    "embassy_cd": "ru-irkutsk",
-    "country_name": "러시아",
-    "country_en_name": "Russia",
-    "slug": "russia-1",
-    "embassy_name": "주 이르쿠츠크 대한민국 총영사관",
-    "address": "3rd. Floor, 44, Gegarin Boulevard, lrkustk Russia",
-    "tel_no": "(7) 3952-250-301",
-    "urgency_tel": "(7) 964-650-9403",
-    "lat": 52.282376,
-    "lng": 104.273833
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 27,
-  "fields": {
-    "embassy_cd": "ru-sakhalin",
-    "country_name": "러시아",
-    "country_en_name": "Russia",
-    "slug": "russia-2",
-    "embassy_name": "주 블라디보스톡 대한민국 총영사관 유즈노사할린스크 출장소",
-    "address": "283 Bm Lennin St., Yuzhno-Sakhalinsk, Russia",
-    "tel_no": "(7) 4242-462-430",
-    "urgency_tel": "(7) 984-132-8098",
-    "lat": 46.950357,
-    "lng": 142.731927
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 28,
-  "fields": {
-    "embassy_cd": "ru-stpetersburg",
-    "country_name": "러시아",
-    "country_en_name": "Russia",
-    "slug": "russia-3",
-    "embassy_name": "주 상트페테르부르크 대한민국 총영사관",
-    "address": "191104 Nekrasova Street Bldg. 32-A, Saint Petersburg, Russia",
-    "tel_no": "(7) 812-448-1909",
-    "urgency_tel": "(7) 905-255-5496",
-    "lat": 59.939155,
-    "lng": 30.358574
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 29,
-  "fields": {
-    "embassy_cd": "ru-vladivostok",
-    "country_name": "러시아",
-    "country_en_name": "Russia",
-    "slug": "russia-4",
-    "embassy_name": "주 블라디보스톡 대한민국 총영사관",
-    "address": "Pologaya Street 19, Vladivostok, 690091, Russia",
-    "tel_no": "(7) 423-240-2222",
-    "urgency_tel": "(7) 914-072-8347",
-    "lat": 43.122694,
-    "lng": 131.880936
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 30,
-  "fields": {
-    "embassy_cd": "lb",
-    "country_name": "레바논",
-    "country_en_name": "Lebanon",
-    "slug": "lebanon",
-    "embassy_name": "주 레바논 대한민국 대사관",
-    "address": "Bldg.4, Elias Sarkis Road 1209, Yarzeh, Baabda, Lebanon",
-    "tel_no": "(961) 5-922-846",
-    "urgency_tel": "(961) 81-007-491",
-    "lat": 33.84007,
-    "lng": 35.547211
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 31,
-  "fields": {
-    "embassy_cd": "ro",
-    "country_name": "루마니아",
-    "country_en_name": "Romania",
-    "slug": "romania",
-    "embassy_name": "주 루마니아 대한민국 대사관",
-    "address": "Sky Tower Building S.R.L, Calea Floreasca, No.246C. Etaj 33, Sector 1, Bucharest, Romania",
-    "tel_no": "(40) 21-230-7198",
-    "urgency_tel": "(40) 741-185-558",
-    "lat": 44.47797222222223,
-    "lng": 26.10472222222222
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 32,
-  "fields": {
-    "embassy_cd": "rw",
-    "country_name": "르완다",
-    "country_en_name": "Rwanda",
-    "slug": "rwanda",
-    "embassy_name": "주 르완다 대한민국 대사관",
-    "address": "P.O. Box 6404, 34 KG 13 Ave(Golf Course Road), Nyarutarama, Kigali, Rwanda",
-    "tel_no": "(250) 252-577-577",
-    "urgency_tel": "(250) 783-834-627",
-    "lat": -1.938502,
-    "lng": 30.10031
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 33,
-  "fields": {
-    "embassy_cd": "ly",
-    "country_name": "리비아",
-    "country_en_name": "Libya",
-    "slug": "libya",
-    "embassy_name": "주 리비아 대한민국 대사관",
-    "address": "P. O. Box 4781/5160, Abounawas Area, Gargaresh St., Tripoli, Libya",
-    "tel_no": "(216) 71-274-759",
-    "urgency_tel": "(216) 27-385-369",
-    "lat": 32.866323,
-    "lng": 13.091041
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 34,
-  "fields": {
-    "embassy_cd": "mg",
-    "country_name": "마다가스카르",
-    "country_en_name": "Madagascar",
-    "slug": "madagascar",
-    "embassy_name": "주 마다가스카르 대한민국 대사관",
-    "address": "Immeuble Fitaratra-9eme Etage Nord, Ankorondrano, 101 Antananarivo, Madagascar",
-    "tel_no": "(261) 20-222-2933",
-    "urgency_tel": "(261) 32-781-0874",
-    "lat": -18.884792,
-    "lng": 47.522183
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 35,
-  "fields": {
-    "embassy_cd": "my",
-    "country_name": "말레이시아",
-    "country_en_name": "Malaysia",
-    "slug": "malaysia",
-    "embassy_name": "주 말레이시아 대한민국 대사관",
-    "address": "No. 9 &amp; 11, Jalan Nipah, Off Jalan Ampang, 55000 Kuala Lumpur, Malaysia",
-    "tel_no": "(60) 3-4251-2336",
-    "urgency_tel": "(60) 17-623-8343",
-    "lat": 3.163,
-    "lng": 101.738
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 36,
-  "fields": {
-    "embassy_cd": "mx",
-    "country_name": "멕시코",
-    "country_en_name": "Mexico",
-    "slug": "mexico",
-    "embassy_name": "주 멕시코 대한민국 대사관",
-    "address": "Lopez Diaz de Armendariz 110, Col. Lomas Virreyes, Alc. Miguel Hidalgo, CDMX",
-    "tel_no": "(52) 55-5202-9866",
-    "urgency_tel": "(52) 55-8581-2808",
-    "lat": 19.416351,
-    "lng": -99.213946
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 37,
-  "fields": {
-    "embassy_cd": "ma",
-    "country_name": "모로코",
-    "country_en_name": "Morocco",
-    "slug": "morocco",
-    "embassy_name": "주 모로코 대한민국 대사관",
-    "address": "41 Avenue Mehdi Ben Barka, Souissi, Rabat - Maroc",
-    "tel_no": "(212) 537-75-1767",
-    "urgency_tel": "(212)  66-277-2408",
-    "lat": 33.978091,
-    "lng": -6.840522
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 38,
-  "fields": {
-    "embassy_cd": "mz",
-    "country_name": "모잠비크",
-    "country_en_name": "Mazambique",
-    "slug": "mazambique",
-    "embassy_name": "주 모잠비크공화국 대한민국 대사관",
-    "address": "Av.Marginal 141, Torres Rani 7&ordm; Andar, Maputo, Mozambique",
-    "tel_no": "(258) 21-495-625",
-    "urgency_tel": "(258) 84-518-1272",
-    "lat": -25.957806,
-    "lng": 32.602585
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 39,
-  "fields": {
-    "embassy_cd": "mn",
-    "country_name": "몽골",
-    "country_en_name": "Mongolia",
-    "slug": "mongolia",
-    "embassy_name": "주 몽골 대한민국 대사관",
-    "address": "Mahatma Gandhi street-39, Khan-Uul district-15, Ulaanbaatar-17011, Mongolia",
-    "tel_no": "(976) 7007-1020",
-    "urgency_tel": "(976) 9911-4119",
-    "lat": 47.914228,
-    "lng": 106.927335
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 40,
-  "fields": {
-    "embassy_cd": "mm",
-    "country_name": "미얀마",
-    "country_en_name": "Myanmar",
-    "slug": "myanmar",
-    "embassy_name": "주 미얀마연방공화국 대한민국 대사관",
-    "address": "No.97 University Avenue, Bahan Township, Yangon, Union of Myanmar",
-    "tel_no": "(95) 1-527-142",
-    "urgency_tel": "(95) 9-4211-58030",
-    "lat": 16.823726,
-    "lng": 96.146075
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 41,
-  "fields": {
-    "embassy_cd": "us",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 미국 대한민국 대사관",
-    "address": "2320 Massachusetts Avenue, N.W., Washington, D.C. 20008, U.S.A.",
-    "tel_no": "(1) 202-939-5600",
-    "urgency_tel": "(1) 202-939-5653",
-    "lat": 38.91209,
-    "lng": -77.051264
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 42,
-  "fields": {
-    "embassy_cd": "us-anchorage",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 앵커리지 대한민국 출장소",
-    "address": "800 E. Dimond Blvd, Suite 3-695, Anchorage, AK 99515, U.S.A.",
-    "tel_no": "(1) 907-339-7955",
-    "urgency_tel": "(1) 907-331-7135",
-    "lat": 61.142386,
-    "lng": -149.867276
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 43,
-  "fields": {
-    "embassy_cd": "us-atlanta",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 애틀랜타 대한민국 총영사관",
-    "address": "229 Peachtree St., Suite 2100, International tower, Atlanta, GA 30303. USA",
-    "tel_no": "(1) 404-522-1611",
-    "urgency_tel": "(1) 470-880-1986",
-    "lat": 33.76020746,
-    "lng": -84.38661598
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 44,
-  "fields": {
-    "embassy_cd": "us-boston",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 보스턴 대한민국 총영사관",
-    "address": "300 Washington Street, 2nd Floor. Newton, MA 02458, U.S.A.",
-    "tel_no": "(1) 617-641-2830",
-    "urgency_tel": "(1) 617-264-0404",
-    "lat": 42.357228,
-    "lng": -71.186603
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 45,
-  "fields": {
-    "embassy_cd": "us-chicago",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 시카고 대한민국 총영사관",
-    "address": "NBC Tower Suite 2700, 455 North Cityfront Plaza Drive, Chicago, Illinois 60611 U.S.A.",
-    "tel_no": "(1) 312-822-9485",
-    "urgency_tel": "(1) 312-405-4425",
-    "lat": 41.895927,
-    "lng": -87.612389
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 46,
-  "fields": {
-    "embassy_cd": "us-dallas",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 휴스턴 대한민국 총영사관 댈러스 출장소",
-    "address": "14001 N Dallas Parkway Ste.450, Dallas, TX 75240",
-    "tel_no": "(1) 972-701-0180",
-    "urgency_tel": "(1) 214-796-3959",
-    "lat": 32.93664,
-    "lng": -96.822985
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 47,
-  "fields": {
-    "embassy_cd": "us-hagatna",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 하갓냐 대한민국 출장소",
-    "address": "153 Zoilo Street, Tamuning, Guam 96913",
-    "tel_no": "(1) 671-647-6488",
-    "urgency_tel": "(1) 671-688-5886",
-    "lat": 13.498961,
-    "lng": 144.777238
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 48,
-  "fields": {
-    "embassy_cd": "us-honolulu",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 호놀룰루 대한민국 총영사관",
-    "address": "2756 Pali Highway Honolulu, Hawaii 96817, U.S.A",
-    "tel_no": "(1) 808-595-6109",
-    "urgency_tel": "(1) 808-265-9349",
-    "lat": 21.334952,
-    "lng": -157.84187
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 49,
-  "fields": {
-    "embassy_cd": "us-houston",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 휴스턴 대한민국 총영사관",
-    "address": "1990 Post Oak Blvd. Suite 1250, Houston, TX 77056",
-    "tel_no": "(1) 713-961-0186",
-    "urgency_tel": "(1) 281-785-4231",
-    "lat": 29.745657,
-    "lng": -95.462634
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 50,
-  "fields": {
-    "embassy_cd": "us-losangeles",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 로스앤젤레스 대한민국 총영사관",
-    "address": "Korean Consulate General in Los Angeles 3243 Wilshire Blvd, Los Angeles, CA 90010",
-    "tel_no": "(1) 213-385-9300",
-    "urgency_tel": "(1) 213-700-1147",
-    "lat": 34.062062,
-    "lng": -118.292648
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 51,
-  "fields": {
-    "embassy_cd": "us-newyork",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 뉴욕 대한민국 총영사관",
-    "address": "460 Park Ave. New York, NY10022",
-    "tel_no": "(1) 646-674-6000",
-    "urgency_tel": "(1) 646-965-3639",
-    "lat": 40.761975,
-    "lng": -73.970658
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 52,
-  "fields": {
-    "embassy_cd": "us-sanfrancisco",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 샌프란시스코 대한민국 총영사관",
-    "address": "3500 Clay street San Francisco, CA 94118, U.S.A",
-    "tel_no": "(1) 415-921-2251",
-    "urgency_tel": "(1) 415-265-4859",
-    "lat": 37.778723,
-    "lng": -122.42004
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 53,
-  "fields": {
-    "embassy_cd": "us-seattle",
-    "country_name": "미국",
-    "country_en_name": "USA",
-    "slug": "usa",
-    "embassy_name": "주 시애틀 대한민국 총영사관",
-    "address": "115 W Mercer St. Seattle, WA 98119",
-    "tel_no": "(1) 206-441-1011",
-    "urgency_tel": "(1) 206-947-8293",
-    "lat": 47.614745,
-    "lng": -122.339339
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 54,
-  "fields": {
-    "embassy_cd": "bh",
-    "country_name": "바레인",
-    "country_en_name": "Bahrain",
-    "slug": "bahrain",
-    "embassy_name": "주 바레인 대한민국 대사관",
-    "address": "Villa 401, Road 915, Block 309, Salmaniya, Manama, Kingdom of Bahrain",
-    "tel_no": "(973) 1753-1120",
-    "urgency_tel": "(973) 6674-4737",
-    "lat": 26.221415,
-    "lng": 50.580087
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 55,
-  "fields": {
-    "embassy_cd": "bd",
-    "country_name": "방글라데시",
-    "country_en_name": "Bangladesh",
-    "slug": "bangladesh",
-    "embassy_name": "주 방글라데시 대한민국 대사관",
-    "address": "4, Madani Avenue, Baridhara, Dhaka-1212 Bangladesh",
-    "tel_no": "(880) 2-5881-2088",
-    "urgency_tel": "(880) 17-5563-9618",
-    "lat": 23.798038,
-    "lng": 90.421481
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 56,
-  "fields": {
-    "embassy_cd": "ve",
-    "country_name": "베네수엘라볼리바르",
-    "country_en_name": "Venezuela",
-    "slug": "venezuela",
-    "embassy_name": "주 베네수엘라 대한민국 대사관",
-    "address": "Av. Francisco de Miranda, Centro Lido, Torre B, Piso 9, Ofic. 91-92-B, El Rosal, Caracas, Venezuela",
-    "tel_no": "(58) 212-954-1270",
-    "urgency_tel": "(58) 412-261-0754",
-    "lat": 10.491337,
-    "lng": -66.861998
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 57,
-  "fields": {
-    "embassy_cd": "vn",
-    "country_name": "베트남",
-    "country_en_name": "Vietnam",
-    "slug": "vietnam",
-    "embassy_name": "주 베트남 대한민국 대사관",
-    "address": "SQ4, Do Nhuan, Khu Ngaoi Giao Doan, Xuan Tao, Bac Tu Liem, Hanoi, Vietnam",
-    "tel_no": "(84) 24-3771-0404",
-    "urgency_tel": "(84) 90-402-6126",
-    "lat": 21.067095,
-    "lng": 105.796723
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 58,
-  "fields": {
-    "embassy_cd": "vn-danang",
-    "country_name": "베트남",
-    "country_en_name": "Vietnam",
-    "slug": "vietnam-1",
-    "embassy_name": "주 다낭 대한민국 총영사관",
-    "address": "Tang 3-4, Lo A1-2 Chuong Duong, P.Khue My, Q.Ngu Hanh Son, T.P Da Nang, Vietnam",
-    "tel_no": "(84) 23-6356-6100",
-    "urgency_tel": "(84) 93-112-0404",
-    "lat": 16.027969,
-    "lng": 108.237979
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 59,
-  "fields": {
-    "embassy_cd": "vn-hochiminh",
-    "country_name": "베트남",
-    "country_en_name": "Vietnam",
-    "slug": "vietnam-2",
-    "embassy_name": "주 호치민 대한민국 총영사관",
-    "address": "107 Nguyen Du Street, Districr 1, Hochiminh City, Vietnam",
-    "tel_no": "(84) 28-3822-5757",
-    "urgency_tel": "(84) 93-850-0238",
-    "lat": 10.774473,
-    "lng": 106.69567
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 60,
-  "fields": {
-    "embassy_cd": "be",
-    "country_name": "벨기에",
-    "country_en_name": "Belgium",
-    "slug": "belgium",
-    "embassy_name": "주 벨기에 유럽연합 대한민국 대사관",
-    "address": "Chaussee de la Hulpe 175, 1170 Brussels, Belgium",
-    "tel_no": "(32) 2-675-5777",
-    "urgency_tel": "(32) 476-45-75-06",
-    "lat": 50.796035,
-    "lng": 4.402728
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 61,
-  "fields": {
-    "embassy_cd": "by",
-    "country_name": "벨라루스",
-    "country_en_name": "Belarus",
-    "slug": "belarus",
-    "embassy_name": "주 벨라루스 대한민국 대사관",
-    "address": "220002, Minsk, Storozhovskaya str.10",
-    "tel_no": "(375) 17-215-0170",
-    "urgency_tel": "(375) 29-369-1320",
-    "lat": 53.910452,
-    "lng": 27.558342
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 62,
-  "fields": {
-    "embassy_cd": "bo",
-    "country_name": "볼리비아",
-    "country_en_name": "Bolivia",
-    "slug": "bolivia",
-    "embassy_name": "주 볼리비아 대한민국 대사관",
-    "address": "Av. Jose Ballivi&aacute;n N. 555, Calle 11-12, Edif. El Dorial Piso 3-4, Calacoto, La Paz, Bolivia",
-    "tel_no": "(591) 2-211-0361",
-    "urgency_tel": "(591) 7673-3334",
-    "lat": -16.540091,
-    "lng": -68.08616
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 63,
-  "fields": {
-    "embassy_cd": "bg",
-    "country_name": "불가리아",
-    "country_en_name": "Bulgaria",
-    "slug": "bulgaria",
-    "embassy_name": "주 불가리아 대한민국 대사관",
-    "address": "2V Srebarna Street MobiArt Building, Floor 4, Sofia, Bulgaria",
-    "tel_no": "(359) 2-971-2181",
-    "urgency_tel": "(359) 887-503-270",
-    "lat": 42.671014,
-    "lng": 23.351161
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 64,
-  "fields": {
-    "embassy_cd": "br",
-    "country_name": "브라질",
-    "country_en_name": "Brazil",
-    "slug": "brazil",
-    "embassy_name": "주 브라질 대한민국 대사관",
-    "address": "SEN 801, Lote 14, Asa Norte, Brasilia - DF, 70800-915, Brazil",
-    "tel_no": "(55) 61-3321-2500",
-    "urgency_tel": "(55) 61-99658-2421",
-    "lat": -15.776487,
-    "lng": -47.796623
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 65,
-  "fields": {
-    "embassy_cd": "br-saopaulo",
-    "country_name": "브라질",
-    "country_en_name": "Brazil",
-    "slug": "brazil-1",
-    "embassy_name": "주 상파울루 대한민국 총영사관",
-    "address": "Av. paulista, 37, 9 andar, Cerqueira Cesar CEP: 01311-902, Sao Paulo, SP Brasil",
-    "tel_no": "(55) 11-3141-1278",
-    "urgency_tel": "(55) 11-97188-5194",
-    "lat": -23.570884,
-    "lng": -46.644843
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 66,
-  "fields": {
-    "embassy_cd": "bn",
-    "country_name": "브루나이",
-    "country_en_name": "Brunei",
-    "slug": "brunei",
-    "embassy_name": "주 브루나이 대한민국 대사관",
-    "address": "Lot No 24160, Simpang 336, Diplomatic Enclave, Jalan Kebangsaan, Kampong Kianggeh, Bandar Seri Begawan, Brunei",
-    "tel_no": "(673) 233-0248",
-    "urgency_tel": "(673) 729-1336",
-    "lat": 4.9208489,
-    "lng": 114.9577357
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 67,
-  "fields": {
-    "embassy_cd": "sa",
-    "country_name": "사우디아라비아",
-    "country_en_name": "Saudi Arabia",
-    "slug": "saudi-arabia",
-    "embassy_name": "주 사우디아라비아 대한민국 대사관",
-    "address": "Diplometic Quarter, P.O.Box 94399, Riyadh 11693, Saudi Arabia",
-    "tel_no": "(966) 11-488-2211",
-    "urgency_tel": "(966) 50-080-1065",
-    "lat": 24.683989,
-    "lng": 46.626642
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 68,
-  "fields": {
-    "embassy_cd": "sa-jeddah",
-    "country_name": "사우디아라비아",
-    "country_en_name": "Saudi Arabia",
-    "slug": "saudi-arabia-1",
-    "embassy_name": "주 젯다 대한민국 총영사관",
-    "address": "P.O.BOX 55503, Jeddah 21544 Kingdom of Saudl Arabia Rawdah Center 2nd, Rawdah District, Jeddah, Kingdom of Saudl Arabia",
-    "tel_no": "(966) 12-668-1990",
-    "urgency_tel": "(966) 55-668-3432",
-    "lat": 21.334072,
-    "lng": 39.093873
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 69,
-  "fields": {
-    "embassy_cd": "sn",
-    "country_name": "세네갈",
-    "country_en_name": "Senegal",
-    "slug": "senegal",
-    "embassy_name": "주 세네갈 대한민국 대사관",
-    "address": "Ambassade de la Republique de Coree, Villa Hamoudy, Rue Aime Cesaire, Fann Residence, B.P.5850, Dakar, Senegal",
-    "tel_no": "(221) 33-824-06-72",
-    "urgency_tel": "(221) 77-639-5109",
-    "lat": 14.695506,
-    "lng": -17.467318
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 70,
-  "fields": {
-    "embassy_cd": "rs",
-    "country_name": "세르비아",
-    "country_en_name": "Serbia",
-    "slug": "serbia",
-    "embassy_name": "주 세르비아 대한민국 대사관",
-    "address": "MILOSA SAVCICA 4, 11000 Belgrade, Serbia",
-    "tel_no": "(381) 11-3674-225",
-    "urgency_tel": "(381) 63-108-1397",
-    "lat": 44.78293,
-    "lng": 20.45104
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 71,
-  "fields": {
-    "embassy_cd": "sd",
-    "country_name": "수단",
-    "country_en_name": "Sudan",
-    "slug": "sudan",
-    "embassy_name": "주 수단 대한민국 대사관",
-    "address": "House No55, Al-Jazira St.56, Khartoum2, P.O.Box 2414, Khartoum, Sudan",
-    "tel_no": "(249) 1-8358-0031",
-    "urgency_tel": "(249) 9-1217-2813",
-    "lat": 15.501577,
-    "lng": 32.572596
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 72,
-  "fields": {
-    "embassy_cd": "lk",
-    "country_name": "스리랑카",
-    "country_en_name": "Sri Lanka",
-    "slug": "sri-lanka",
-    "embassy_name": "주 스리랑카 대한민국 대사관",
-    "address": "No. 98, Dharmapala Mawatha, Colombo 7, Sri Lanka",
-    "tel_no": "(94) 11-269-9036",
-    "urgency_tel": "(94) 77-332-5676",
-    "lat": 6.918141,
-    "lng": 79.847301
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 73,
-  "fields": {
-    "embassy_cd": "se",
-    "country_name": "스웨덴",
-    "country_en_name": "Sweden",
-    "slug": "sweden",
-    "embassy_name": "주 스웨덴 대한민국 대사관",
-    "address": "Laboratoriegatan 10, P.O.Box 27237, 102 53 Stockholm, Sweden",
-    "tel_no": "(46) 8-5458-9400",
-    "urgency_tel": "(46) 73-564-1648",
-    "lat": 59.332817,
-    "lng": 18.103148
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 74,
-  "fields": {
-    "embassy_cd": "ch",
-    "country_name": "스위스",
-    "country_en_name": "Swiss",
-    "slug": "swiss",
-    "embassy_name": "주 스위스 대한민국 대사관",
-    "address": "Embassy of the Republic of Korea, Kalcheggweg 38, 3006 Bern, Switzerland",
-    "tel_no": "(41) 31-356-2444",
-    "urgency_tel": "(41) 79-897-4086",
-    "lat": 46.936967,
-    "lng": 7.46239
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 75,
-  "fields": {
-    "embassy_cd": "es",
-    "country_name": "스페인",
-    "country_en_name": "Spain",
-    "slug": "spain",
-    "embassy_name": "주 스페인 대한민국 대사관",
-    "address": "Calle Gonzalez Amigo 15, 28033 Madrid, Spain",
-    "tel_no": "(34) 91-353-2000",
-    "urgency_tel": "(34) 648-924-695",
-    "lat": 40.465724,
-    "lng": -3.666792
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 76,
-  "fields": {
-    "embassy_cd": "es-barcelona",
-    "country_name": "스페인",
-    "country_en_name": "Spain",
-    "slug": "spain-1",
-    "embassy_name": "주 바르셀로나 대한민국 총영사관",
-    "address": "Paseo de Gracia 103, 3층, 08008, Barcelona",
-    "tel_no": "(34) 93-487-3153",
-    "urgency_tel": "(34) 696-146-176",
-    "lat": 41.395953,
-    "lng": 2.160005
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 77,
-  "fields": {
-    "embassy_cd": "es-las",
-    "country_name": "스페인",
-    "country_en_name": "Spain",
-    "slug": "spain-2",
-    "embassy_name": "주 라스팔마스 대한민국 분관",
-    "address": "Luis Doreste Silva 60-1, 35004 Las Palmas de Gran Canaria, SPAIN",
-    "tel_no": "(34) 928-230-499",
-    "urgency_tel": "(34) 680-77-0404",
-    "lat": 28.120204,
-    "lng": -15.424954
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 78,
-  "fields": {
-    "embassy_cd": "sk",
-    "country_name": "슬로바키아",
-    "country_en_name": "Slovakia",
-    "slug": "slovakia",
-    "embassy_name": "주 슬로바키아 대한민국 대사관",
-    "address": "Sturova 16, 811 02 Bratislava",
-    "tel_no": "(421) 2-3307-0711",
-    "urgency_tel": "(421) 904-934-053",
-    "lat": 48.1423175,
-    "lng": 17.1145299
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 79,
-  "fields": {
-    "embassy_cd": "sg",
-    "country_name": "싱가포르",
-    "country_en_name": "Singapore",
-    "slug": "singapore",
-    "embassy_name": "주 싱가포르 대한민국 대사관",
-    "address": "47 Scotts Road, #08-00 Goldbell Tower, Singapore 228233",
-    "tel_no": "(65) 6256-1188",
-    "urgency_tel": "(65) 9654-3528",
-    "lat": 1.312146,
-    "lng": 103.837197
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 80,
-  "fields": {
-    "embassy_cd": "ae",
-    "country_name": "아랍에미리트",
-    "country_en_name": "United Arab Emirates : UAE",
-    "slug": "united-arab-emirates-uae",
-    "embassy_name": "주 아랍에미리트 대한민국 대사관",
-    "address": "33rd AirPort Road, Abu Dhabi, United Arab Emirates",
-    "tel_no": "(971) 2-441-1520",
-    "urgency_tel": "(971) 50-133-7362",
-    "lat": 24.424774,
-    "lng": 54.441364
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 81,
-  "fields": {
-    "embassy_cd": "ae-dubai",
-    "country_name": "아랍에미리트",
-    "country_en_name": "United Arab Emirates : UAE",
-    "slug": "united-arab-emirates-uae-1",
-    "embassy_name": "주 두바이 대한민국 총영사관",
-    "address": "Villa #39, Street 24b, Area 342, Jumeirah2, Dubai, United Arab Emirates",
-    "tel_no": "(971) 4-344-9200",
-    "urgency_tel": "(971) 50-553-2816",
-    "lat": 25.19898,
-    "lng": 55.24589
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 82,
-  "fields": {
-    "embassy_cd": "ar",
-    "country_name": "아르헨티나",
-    "country_en_name": "Argentina",
-    "slug": "argentina",
-    "embassy_name": "주 아르헨티나 대한민국 대사관",
-    "address": "Av. del Libertador 2395 , C.A.B.A  (1425),  Argentina",
-    "tel_no": "(54) 11-4802-8865",
-    "urgency_tel": "(54) 911-4141-1450",
-    "lat": -34.579598,
-    "lng": -58.405488
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 83,
-  "fields": {
-    "embassy_cd": "ie",
-    "country_name": "아일랜드",
-    "country_en_name": "Ireland",
-    "slug": "ireland",
-    "embassy_name": "주 아일랜드 대한민국 대사관",
-    "address": "15 Clyde Road, Ballsbridge, Dublin 4, Ireland",
-    "tel_no": "(353) 1-660-8800",
-    "urgency_tel": "(353) 87-234-9226",
-    "lat": 53.328858,
-    "lng": -6.237402
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 84,
-  "fields": {
-    "embassy_cd": "az",
-    "country_name": "아제르바이잔",
-    "country_en_name": "Azerbaijan",
-    "slug": "azerbaijan",
-    "embassy_name": "주 아제르바이잔공화국 대한민국 대사관",
-    "address": "Nasimi district, H.Aliyev St., Cross1, House 12, Baku, Azerbaijan",
-    "tel_no": "(994) 12-596-7901",
-    "urgency_tel": "(994) 51-877-9607",
-    "lat": 49.822154,
-    "lng": 40.393465
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 85,
-  "fields": {
-    "embassy_cd": "af",
-    "country_name": "아프가니스탄",
-    "country_en_name": "Afghanistan",
-    "slug": "afghanistan",
-    "embassy_name": "주 아프가니스탄 대한민국 대사관",
-    "address": "House No.34, Street No.10, Wazir Akbar Khan, Kabul, Afghanistan",
-    "tel_no": "(974) 4463-9555",
-    "urgency_tel": "(974) 6673-4250",
-    "lat": 34.535451,
-    "lng": 69.187373
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 86,
-  "fields": {
-    "embassy_cd": "dz",
-    "country_name": "알제리",
-    "country_en_name": "Algeria",
-    "slug": "algeria",
-    "embassy_name": "주 알제리 대한민국 대사관",
-    "address": "Ambassade de la R&eacute;publique de Cor&eacute;e, 5 Chemin Mackley (El Bakri), Ben Aknoun, Alger",
-    "tel_no": "(213) 23-18-77-19",
-    "urgency_tel": "(213) 770-11-44-00",
-    "lat": 36.755049,
-    "lng": 3.02583
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 87,
-  "fields": {
-    "embassy_cd": "ec",
-    "country_name": "에콰도르",
-    "country_en_name": "Ecuador",
-    "slug": "ecuador",
-    "embassy_name": "주 에콰도르 대한민국 대사관",
-    "address": "Embajada de la Rep&uacute;blica de Corea, Av. Amazonas y Union de Periodistas Edificio Eurocenter, Piso 4, Quito, Ecuador",
-    "tel_no": "(593) 2-352-0874",
-    "urgency_tel": "(593) 981-122-191",
-    "lat": -0.204792,
-    "lng": -78.484813
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 88,
-  "fields": {
-    "embassy_cd": "et",
-    "country_name": "에티오피아",
-    "country_en_name": "ETC",
-    "slug": "etc",
-    "embassy_name": "주 에티오피아 대한민국 대사관",
-    "address": "Embassy of the Repulic of Korea House No. 856, Kebele 04, Nefas Silk Lafto, Addis Ababa, Ethiopia",
-    "tel_no": "(251) 113-72-81-11",
-    "urgency_tel": "(251) 907-66-04-04",
-    "lat": 9.051879,
-    "lng": 38.727486
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 89,
-  "fields": {
-    "embassy_cd": "sv",
-    "country_name": "엘살바도르",
-    "country_en_name": "El Salvador",
-    "slug": "el-salvador",
-    "embassy_name": "주 엘살바도르 대한민국 대사관",
-    "address": "Cl, Mirador y 87 Avenida Norte, Edif, Torre Futura ,Nivel 14, Local 05, Complejo WTC,Col, Escalon, San Salvador,El Salvador",
-    "tel_no": "(503) 2263-9145",
-    "urgency_tel": "(503) 7609-1117",
-    "lat": 13.708722,
-    "lng": -89.240969
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 90,
-  "fields": {
-    "embassy_cd": "gb",
-    "country_name": "영국",
-    "country_en_name": "United Kingdom",
-    "slug": "united-kingdom",
-    "embassy_name": "주 영국 대한민국 대사관",
-    "address": "60 Buckingham Gate, London, SW1E 6AJ, United Kingdom",
-    "tel_no": "(44) 20-7227-5500",
-    "urgency_tel": "(44) 78-7650-6895",
-    "lat": 51.497987,
-    "lng": -0.136127
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 91,
-  "fields": {
-    "embassy_cd": "ye",
-    "country_name": "예멘",
-    "country_en_name": "Yemen",
-    "slug": "yemen",
-    "embassy_name": "주 예멘 대한민국 대사관",
-    "address": "P.O.BOX 5005, House No.4(Off Iran Street), Hadda Area, Sana, Republic of Yemen",
-    "tel_no": "(966) 11-488-2211",
-    "urgency_tel": "(966) 53-717-8300",
-    "lat": 15.303638,
-    "lng": 44.191799
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 92,
-  "fields": {
-    "embassy_cd": "om",
-    "country_name": "오만",
-    "country_en_name": "Oman",
-    "slug": "oman",
-    "embassy_name": "주 오만 대한민국 대사관",
-    "address": "Plot.42, Jamiat Al Duwal Al Arabia Street, Muscat, Sultanate of Oman",
-    "tel_no": "(968) 2469-1490",
-    "urgency_tel": "(968) 9823-2554",
-    "lat": 23.604299,
-    "lng": 58.429706
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 93,
-  "fields": {
-    "embassy_cd": "at",
-    "country_name": "오스트리아",
-    "country_en_name": "Austria",
-    "slug": "austria",
-    "embassy_name": "주 오스트리아 대한민국 대사관 겸 주 빈 국제기구대표부",
-    "address": "Gregor-Mendel Strasse 25, A-1180 Vienna, Austria",
-    "tel_no": "(43) 1-478-1991",
-    "urgency_tel": "(43) 664-527-0743",
-    "lat": 48.233009,
-    "lng": 16.337525
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 94,
-  "fields": {
-    "embassy_cd": "hn",
-    "country_name": "온두라스",
-    "country_en_name": "Honduras",
-    "slug": "honduras",
-    "embassy_name": "주 온두라스 대한민국 대사관",
-    "address": "Edificio Plaza Azul 5to piso, Col. Lomas del Guijarro, Tegucigalpa, Honduras",
-    "tel_no": "(504) 2235-5561",
-    "urgency_tel": "(504) 9442-4972",
-    "lat": 14.086267,
-    "lng": -87.186093
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 95,
-  "fields": {
-    "embassy_cd": "jo",
-    "country_name": "요르단",
-    "country_en_name": "Jordan",
-    "slug": "jordan",
-    "embassy_name": "주 요르단 대한민국 대사관",
-    "address": "P.O.Box 3060, Bahjat Homsi st. 7, Amman 11181, Jordan",
-    "tel_no": "(962) 6-593-0745",
-    "urgency_tel": "(962) 79-750-0358",
-    "lat": 31.95622,
-    "lng": 35.89159
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 96,
-  "fields": {
-    "embassy_cd": "ug",
-    "country_name": "우간다",
-    "country_en_name": "Uganda",
-    "slug": "uganda",
-    "embassy_name": "주 우간다 대한민국 대사관",
-    "address": "Plot 14 Ternan Avenue, Kampala, Uganda",
-    "tel_no": "(256) 414-500-197",
-    "urgency_tel": "(256) 774-478-376",
-    "lat": 0.320245,
-    "lng": 32.583
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 97,
-  "fields": {
-    "embassy_cd": "uy",
-    "country_name": "우루과이",
-    "country_en_name": "Uruguay",
-    "slug": "uruguay",
-    "embassy_name": "주 우루과이 대한민국 대사관",
-    "address": "Av. Luis Alberto de Herrera 1248, Torre II, Piso10(World Trade Center), Montevideo, Uruguay",
-    "tel_no": "(598) 2628-9374",
-    "urgency_tel": "(598) 94-111-593",
-    "lat": -34.904111,
-    "lng": -56.136127
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 98,
-  "fields": {
-    "embassy_cd": "cn001",
-    "country_name": "중국",
-    "country_en_name": "China",
-    "slug": "china",
-    "embassy_name": "주 중국 대한민국 대사관",
-    "address": "No. 60, East 3rd Ring Middle Road, Chaoyang District, Beijing, 100022, China",
-    "tel_no": "(86) 10-8531-0700",
-    "urgency_tel": "(86) 139-1079-0380",
-    "lat": 39.9062,
-    "lng": 116.4613
-  }
-},
-{
-  "model": "countries.embassy",
-  "pk": 99,
-  "fields": {
-    "embassy_cd": "jp001",
-    "country_name": "일본",
-    "country_en_name": "Japan",
-    "slug": "japan",
-    "embassy_name": "주 일본 대한민국 대사관",
-    "address": "4-4-10, Minami-Azabu, Minato-ku, Tokyo 106-0047, Japan",
-    "tel_no": "(81) 3-3452-7611",
-    "urgency_tel": "(81) 80-3550-4926",
-    "lat": 35.6481,
-    "lng": 139.7303
-  }
+    "model": "countries.embassy",
+    "pk": 1,
+    "fields": {
+        "embassy_cd": "gh",
+        "country_name": "가나",
+        "country_en_name": "Ghana",
+        "slug": "ghana",
+        "embassy_name": "주 가나 대한민국 대사관",
+        "address": "No.10, Fifth Avenue Extension, Cantonments, P.O.Box GP 13700, Accra, Ghana",
+        "tel_no": "(233) 302-771-705",
+        "urgency_tel": "(233) 244-321-858",
+        "lat": 5.575495,
+        "lng": -0.185161
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 2,
+    "fields": {
+        "embassy_cd": "ga",
+        "country_name": "가봉",
+        "country_en_name": "Gabon",
+        "slug": "gabon",
+        "embassy_name": "주 가봉 대한민국 대사관",
+        "address": "B.P.2620, Libreville, Gabon",
+        "tel_no": "(241) 6530-1900",
+        "urgency_tel": "(241) 6607-0640",
+        "lat": 0.477587266,
+        "lng": 9.393928461
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 3,
+    "fields": {
+        "embassy_cd": "gt",
+        "country_name": "과테말라",
+        "country_en_name": "Guatemala",
+        "slug": "guatemala",
+        "embassy_name": "주 과테말라 대한민국 대사관",
+        "address": "5a. Ave. 5-55, Zona 14, Edificio Europlaza Torre 3, Nivel 7, Ciudad de Guatemala, Guatemala C.A",
+        "tel_no": "(502) 2382 - 4051",
+        "urgency_tel": "(502) 4013-5184",
+        "lat": 14.587905,
+        "lng": -90.513744
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 4,
+    "fields": {
+        "embassy_cd": "gr",
+        "country_name": "그리스",
+        "country_en_name": "Greece",
+        "slug": "greece",
+        "embassy_name": "주 그리스 대한민국 대사관",
+        "address": "Embassy of the Republic of Korea , Athens Tower A  building , 19th Floor, 2-4 Messogion Avenue, 115 27, Athens, Greece",
+        "tel_no": "(30) 210-698-4080",
+        "urgency_tel": "(30) 694-611-7098",
+        "lat": 37.984663,
+        "lng": 23.760519
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 5,
+    "fields": {
+        "embassy_cd": "ao",
+        "country_name": "앙골라",
+        "country_en_name": "Angola",
+        "slug": "angola",
+        "embassy_name": "주 앙골라 대한민국 대사관",
+        "address": "Condominio Zenith, Torre 1, 3&deg; Andar, Via AL 16, Talatona, Luanda, Angola",
+        "tel_no": "(244) 222-006-067",
+        "urgency_tel": "(244) 938-880-573",
+        "lat": -8.920868,
+        "lng": 13.202023
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 6,
+    "fields": {
+        "embassy_cd": "ng",
+        "country_name": "나이지리아",
+        "country_en_name": "Nigeria",
+        "slug": "nigeria",
+        "embassy_name": "주 나이지리아 대한민국 대사관",
+        "address": "No.9 Ovia cresent, Off Pope John Paul Ⅱ street, Off Gana street, Maitama, Abuja",
+        "tel_no": "(234) 810-389-0991",
+        "urgency_tel": "(234) 90-8650-2916",
+        "lat": 9.084108,
+        "lng": 7.49347
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 7,
+    "fields": {
+        "embassy_cd": "ng-lagos",
+        "country_name": "나이지리아",
+        "country_en_name": "Nigeria",
+        "slug": "nigeria-1",
+        "embassy_name": "주 라고스 대한민국 분관",
+        "address": "Plot 10A&amp;B Layi Ajayi Bembe Street, Parkview Estate, Ikoyi, Lagos",
+        "tel_no": "(234) 1-271-6295",
+        "urgency_tel": "(234) 906-877-4619",
+        "lat": 6.459111,
+        "lng": 3.448935
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 8,
+    "fields": {
+        "embassy_cd": "za",
+        "country_name": "남아프리카공화국",
+        "country_en_name": "South Africa",
+        "slug": "south-africa",
+        "embassy_name": "주 남아프리카공화국 대한민국 대사관",
+        "address": "265 Melk Street, Nieuw Muckleneuk, Pretoria 0181, South Africa",
+        "tel_no": "(27) 12-460-2508",
+        "urgency_tel": "(27) 66-332-5897",
+        "lat": -25.773293,
+        "lng": 28.226605
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 9,
+    "fields": {
+        "embassy_cd": "nl",
+        "country_name": "네덜란드",
+        "country_en_name": "Netherlands",
+        "slug": "netherlands",
+        "embassy_name": "주 네덜란드 대한민국 대사관",
+        "address": "Verlengde Tolweg 8, 2517 JV The Hague, Netherlands",
+        "tel_no": "(31) 70-740-0214",
+        "urgency_tel": "(31) 64-264-8412",
+        "lat": 52.093582,
+        "lng": 4.28729
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 10,
+    "fields": {
+        "embassy_cd": "np",
+        "country_name": "네팔연방",
+        "country_en_name": "Nepal",
+        "slug": "nepal",
+        "embassy_name": "주 네팔 대한민국 대사관",
+        "address": "P.O.Box 1058 Ravibhawan, Kathmandu, Nepal",
+        "tel_no": "(977) 1-427-0172",
+        "urgency_tel": "(977) 98510-33178",
+        "lat": 27.694457,
+        "lng": 85.292486
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 11,
+    "fields": {
+        "embassy_cd": "no",
+        "country_name": "노르웨이",
+        "country_en_name": "Norway",
+        "slug": "norway",
+        "embassy_name": "주 노르웨이 대한민국 대사관",
+        "address": "Inkognitogata 3 0258 Oslo Norway",
+        "tel_no": "(47) 2254-7090",
+        "urgency_tel": "(47) 9026-3544",
+        "lat": 59.919738,
+        "lng": 10.724114
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 12,
+    "fields": {
+        "embassy_cd": "nz",
+        "country_name": "뉴질랜드",
+        "country_en_name": "New Zealand",
+        "slug": "new-zealand",
+        "embassy_name": "주 뉴질랜드 대한민국 대사관",
+        "address": "11th Floor, Harbour Tower, 2 Hunter Street, Wellington 6011, New Zealand",
+        "tel_no": "(64) 4-473-9073",
+        "urgency_tel": "(64) 21-0269-3271",
+        "lat": -41.28572,
+        "lng": 174.777313
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 13,
+    "fields": {
+        "embassy_cd": "nz-auckland",
+        "country_name": "뉴질랜드",
+        "country_en_name": "New Zealand",
+        "slug": "new-zealand-1",
+        "embassy_name": "주 오클랜드 대한민국 분관",
+        "address": "Level 12, Tower 1, 205 Queen Street, Auckland Central , New Zealand",
+        "tel_no": "(64) 9-379-0818",
+        "urgency_tel": "(64) 27-646-0404",
+        "lat": -36.853372,
+        "lng": 174.763702
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 14,
+    "fields": {
+        "embassy_cd": "ni",
+        "country_name": "니카라과",
+        "country_en_name": "Nicaragua",
+        "slug": "nicaragua",
+        "embassy_name": "주 니카라과 대한민국 대사관",
+        "address": "De la rotonda universitaria 100mts al norte, 100mts al oeste, mano derecha, Managua, Nicaragua",
+        "tel_no": "(505) 2267-6777",
+        "urgency_tel": "(505) 8855-0037",
+        "lat": 12.11508210394372,
+        "lng": -86.27426720012927
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 15,
+    "fields": {
+        "embassy_cd": "tw",
+        "country_name": "대만",
+        "country_en_name": "Taiwan",
+        "slug": "taiwan",
+        "embassy_name": "주 타이베이 대한민국 대표부",
+        "address": "Rm. 1506, No.333, Sec. 1, Kee-lung Rd., Taipei, Taiwan",
+        "tel_no": "(886) 2-2758-8320",
+        "urgency_tel": "(886) 912-069-230",
+        "lat": 25.034346,
+        "lng": 121.560907
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 16,
+    "fields": {
+        "embassy_cd": "dk",
+        "country_name": "덴마크",
+        "country_en_name": "Denmark",
+        "slug": "denmark",
+        "embassy_name": "주 덴마크 대한민국 대사관",
+        "address": "Svanemoellevej 104, 2900 Hellerup, Denmark",
+        "tel_no": "(45) 3946-0400",
+        "urgency_tel": "(45) 2521-7461",
+        "lat": 55.731206,
+        "lng": 12.573892
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 17,
+    "fields": {
+        "embassy_cd": "do",
+        "country_name": "도미니카공화국",
+        "country_en_name": "Dominican Republic",
+        "slug": "dominican-republic",
+        "embassy_name": "주 도미니카공화국 대한민국 대사관",
+        "address": "Torre Empresarial Forum, Piso 14, Avenida 27 de Febrero No.495, El Millon, Santo Domingo, Republica Dominicana",
+        "tel_no": "(1-809) 482-6505",
+        "urgency_tel": "(1-809) 383-9091",
+        "lat": 18.45281,
+        "lng": -69.960545
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 18,
+    "fields": {
+        "embassy_cd": "de",
+        "country_name": "독일",
+        "country_en_name": "Germany",
+        "slug": "germany",
+        "embassy_name": "주 독일 대한민국 대사관",
+        "address": "Stuelerstr 8/10, 10787, Berlin, Germany",
+        "tel_no": "(49) 30-260-650",
+        "urgency_tel": "(49) 173-407-6943",
+        "lat": 52.50901,
+        "lng": 13.346508
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 19,
+    "fields": {
+        "embassy_cd": "de-bonn",
+        "country_name": "독일",
+        "country_en_name": "Germany",
+        "slug": "germany-1",
+        "embassy_name": "주 독일 연방공화국 대한민국 대사관 본분관",
+        "address": "Godesberger Allee 142-148, 53175 Bonn, Germany",
+        "tel_no": "(49) 228-943-790",
+        "urgency_tel": "(49) 170-337-9105",
+        "lat": 50.69869,
+        "lng": 7.1566
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 20,
+    "fields": {
+        "embassy_cd": "de-frankfurt",
+        "country_name": "독일",
+        "country_en_name": "Germany",
+        "slug": "germany-2",
+        "embassy_name": "주 프랑크푸르트 대한민국 총영사관",
+        "address": "Generalkonsulat der Republik Korea, Lyoner Str. 34, 60528 Frankfurt am Main, Germany",
+        "tel_no": "(49) 69-956-7520",
+        "urgency_tel": "(49) 173-363-4854",
+        "lat": 50.07833,
+        "lng": 8.62353
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 21,
+    "fields": {
+        "embassy_cd": "de-hamburg",
+        "country_name": "독일",
+        "country_en_name": "Germany",
+        "slug": "germany-3",
+        "embassy_name": "주 함부르크 대한민국 총영사관",
+        "address": "Kaiser-Wilhelm-Str 9, 20355 Hamburg. Germany",
+        "tel_no": "(49) 40-650-677-600",
+        "urgency_tel": "(49) 170-340-1498",
+        "lat": 53.552942,
+        "lng": 9.98393
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 22,
+    "fields": {
+        "embassy_cd": "tl",
+        "country_name": "동티모르",
+        "country_en_name": "Timor-Leste",
+        "slug": "timor-leste",
+        "embassy_name": "주 동티모르 대한민국 대사관",
+        "address": "P.O.Box 230, Avenida de Portugal, Motael, Dili, Timor-Leste",
+        "tel_no": "(670) 332-1635",
+        "urgency_tel": "(670) 7723-5068",
+        "lat": -8.548387,
+        "lng": 125.561151
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 23,
+    "fields": {
+        "embassy_cd": "la",
+        "country_name": "라오스",
+        "country_en_name": "Laos",
+        "slug": "laos",
+        "embassy_name": "주 라오스 대한민국 대사관",
+        "address": "Lao-Thai Friendship Road, Watnak Village, Sisattanak District, Vientiane, Lao P.D.R, P.O.Box 7567",
+        "tel_no": "(856) 21-255-770",
+        "urgency_tel": "(856) 20-5839-0080",
+        "lat": 17.9701505,
+        "lng": 102.5968525
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 24,
+    "fields": {
+        "embassy_cd": "lv",
+        "country_name": "라트비아",
+        "country_en_name": "Latvia",
+        "slug": "latvia",
+        "embassy_name": "주 라트비아 대한민국 대사관",
+        "address": "Jura Alunana iela 2-3, Riga, Latvia",
+        "tel_no": "(371) 6732-4274",
+        "urgency_tel": "(371) 2573-5627",
+        "lat": 56.9560582,
+        "lng": 24.1096265
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 25,
+    "fields": {
+        "embassy_cd": "ru",
+        "country_name": "러시아",
+        "country_en_name": "Russia",
+        "slug": "russia",
+        "embassy_name": "주 러시아 대한민국 대사관",
+        "address": "St. Plyushchikha 56 bldg 1, Moscow",
+        "tel_no": "(7) 495-783-2727",
+        "urgency_tel": "(7) 495-783-2727",
+        "lat": 55.737956,
+        "lng": 37.57501
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 26,
+    "fields": {
+        "embassy_cd": "ru-irkutsk",
+        "country_name": "러시아",
+        "country_en_name": "Russia",
+        "slug": "russia-1",
+        "embassy_name": "주 이르쿠츠크 대한민국 총영사관",
+        "address": "3rd. Floor, 44, Gegarin Boulevard, lrkustk Russia",
+        "tel_no": "(7) 3952-250-301",
+        "urgency_tel": "(7) 964-650-9403",
+        "lat": 52.282376,
+        "lng": 104.273833
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 27,
+    "fields": {
+        "embassy_cd": "ru-sakhalin",
+        "country_name": "러시아",
+        "country_en_name": "Russia",
+        "slug": "russia-2",
+        "embassy_name": "주 블라디보스톡 대한민국 총영사관 유즈노사할린스크 출장소",
+        "address": "283 Bm Lennin St., Yuzhno-Sakhalinsk, Russia",
+        "tel_no": "(7) 4242-462-430",
+        "urgency_tel": "(7) 984-132-8098",
+        "lat": 46.950357,
+        "lng": 142.731927
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 28,
+    "fields": {
+        "embassy_cd": "ru-stpetersburg",
+        "country_name": "러시아",
+        "country_en_name": "Russia",
+        "slug": "russia-3",
+        "embassy_name": "주 상트페테르부르크 대한민국 총영사관",
+        "address": "191104 Nekrasova Street Bldg. 32-A, Saint Petersburg, Russia",
+        "tel_no": "(7) 812-448-1909",
+        "urgency_tel": "(7) 905-255-5496",
+        "lat": 59.939155,
+        "lng": 30.358574
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 29,
+    "fields": {
+        "embassy_cd": "ru-vladivostok",
+        "country_name": "러시아",
+        "country_en_name": "Russia",
+        "slug": "russia-4",
+        "embassy_name": "주 블라디보스톡 대한민국 총영사관",
+        "address": "Pologaya Street 19, Vladivostok, 690091, Russia",
+        "tel_no": "(7) 423-240-2222",
+        "urgency_tel": "(7) 914-072-8347",
+        "lat": 43.122694,
+        "lng": 131.880936
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 30,
+    "fields": {
+        "embassy_cd": "lb",
+        "country_name": "레바논",
+        "country_en_name": "Lebanon",
+        "slug": "lebanon",
+        "embassy_name": "주 레바논 대한민국 대사관",
+        "address": "Bldg.4, Elias Sarkis Road 1209, Yarzeh, Baabda, Lebanon",
+        "tel_no": "(961) 5-922-846",
+        "urgency_tel": "(961) 81-007-491",
+        "lat": 33.84007,
+        "lng": 35.547211
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 31,
+    "fields": {
+        "embassy_cd": "ro",
+        "country_name": "루마니아",
+        "country_en_name": "Romania",
+        "slug": "romania",
+        "embassy_name": "주 루마니아 대한민국 대사관",
+        "address": "Sky Tower Building S.R.L, Calea Floreasca, No.246C. Etaj 33, Sector 1, Bucharest, Romania",
+        "tel_no": "(40) 21-230-7198",
+        "urgency_tel": "(40) 741-185-558",
+        "lat": 44.47797222222223,
+        "lng": 26.10472222222222
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 32,
+    "fields": {
+        "embassy_cd": "rw",
+        "country_name": "르완다",
+        "country_en_name": "Rwanda",
+        "slug": "rwanda",
+        "embassy_name": "주 르완다 대한민국 대사관",
+        "address": "P.O. Box 6404, 34 KG 13 Ave(Golf Course Road), Nyarutarama, Kigali, Rwanda",
+        "tel_no": "(250) 252-577-577",
+        "urgency_tel": "(250) 783-834-627",
+        "lat": -1.938502,
+        "lng": 30.10031
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 33,
+    "fields": {
+        "embassy_cd": "ly",
+        "country_name": "리비아",
+        "country_en_name": "Libya",
+        "slug": "libya",
+        "embassy_name": "주 리비아 대한민국 대사관",
+        "address": "P. O. Box 4781/5160, Abounawas Area, Gargaresh St., Tripoli, Libya",
+        "tel_no": "(216) 71-274-759",
+        "urgency_tel": "(216) 27-385-369",
+        "lat": 32.866323,
+        "lng": 13.091041
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 34,
+    "fields": {
+        "embassy_cd": "mg",
+        "country_name": "마다가스카르",
+        "country_en_name": "Madagascar",
+        "slug": "madagascar",
+        "embassy_name": "주 마다가스카르 대한민국 대사관",
+        "address": "Immeuble Fitaratra-9eme Etage Nord, Ankorondrano, 101 Antananarivo, Madagascar",
+        "tel_no": "(261) 20-222-2933",
+        "urgency_tel": "(261) 32-781-0874",
+        "lat": -18.884792,
+        "lng": 47.522183
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 35,
+    "fields": {
+        "embassy_cd": "my",
+        "country_name": "말레이시아",
+        "country_en_name": "Malaysia",
+        "slug": "malaysia",
+        "embassy_name": "주 말레이시아 대한민국 대사관",
+        "address": "No. 9 &amp; 11, Jalan Nipah, Off Jalan Ampang, 55000 Kuala Lumpur, Malaysia",
+        "tel_no": "(60) 3-4251-2336",
+        "urgency_tel": "(60) 17-623-8343",
+        "lat": 3.163,
+        "lng": 101.738
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 36,
+    "fields": {
+        "embassy_cd": "mx",
+        "country_name": "멕시코",
+        "country_en_name": "Mexico",
+        "slug": "mexico",
+        "embassy_name": "주 멕시코 대한민국 대사관",
+        "address": "Lopez Diaz de Armendariz 110, Col. Lomas Virreyes, Alc. Miguel Hidalgo, CDMX",
+        "tel_no": "(52) 55-5202-9866",
+        "urgency_tel": "(52) 55-8581-2808",
+        "lat": 19.416351,
+        "lng": -99.213946
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 37,
+    "fields": {
+        "embassy_cd": "ma",
+        "country_name": "모로코",
+        "country_en_name": "Morocco",
+        "slug": "morocco",
+        "embassy_name": "주 모로코 대한민국 대사관",
+        "address": "41 Avenue Mehdi Ben Barka, Souissi, Rabat - Maroc",
+        "tel_no": "(212) 537-75-1767",
+        "urgency_tel": "(212)  66-277-2408",
+        "lat": 33.978091,
+        "lng": -6.840522
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 38,
+    "fields": {
+        "embassy_cd": "mz",
+        "country_name": "모잠비크",
+        "country_en_name": "Mazambique",
+        "slug": "mazambique",
+        "embassy_name": "주 모잠비크공화국 대한민국 대사관",
+        "address": "Av.Marginal 141, Torres Rani 7&ordm; Andar, Maputo, Mozambique",
+        "tel_no": "(258) 21-495-625",
+        "urgency_tel": "(258) 84-518-1272",
+        "lat": -25.957806,
+        "lng": 32.602585
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 39,
+    "fields": {
+        "embassy_cd": "mn",
+        "country_name": "몽골",
+        "country_en_name": "Mongolia",
+        "slug": "mongolia",
+        "embassy_name": "주 몽골 대한민국 대사관",
+        "address": "Mahatma Gandhi street-39, Khan-Uul district-15, Ulaanbaatar-17011, Mongolia",
+        "tel_no": "(976) 7007-1020",
+        "urgency_tel": "(976) 9911-4119",
+        "lat": 47.914228,
+        "lng": 106.927335
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 40,
+    "fields": {
+        "embassy_cd": "mm",
+        "country_name": "미얀마",
+        "country_en_name": "Myanmar",
+        "slug": "myanmar",
+        "embassy_name": "주 미얀마연방공화국 대한민국 대사관",
+        "address": "No.97 University Avenue, Bahan Township, Yangon, Union of Myanmar",
+        "tel_no": "(95) 1-527-142",
+        "urgency_tel": "(95) 9-4211-58030",
+        "lat": 16.823726,
+        "lng": 96.146075
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 41,
+    "fields": {
+        "embassy_cd": "us",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 미국 대한민국 대사관",
+        "address": "2320 Massachusetts Avenue, N.W., Washington, D.C. 20008, U.S.A.",
+        "tel_no": "(1) 202-939-5600",
+        "urgency_tel": "(1) 202-939-5653",
+        "lat": 38.91209,
+        "lng": -77.051264
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 42,
+    "fields": {
+        "embassy_cd": "us-anchorage",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 앵커리지 대한민국 출장소",
+        "address": "800 E. Dimond Blvd, Suite 3-695, Anchorage, AK 99515, U.S.A.",
+        "tel_no": "(1) 907-339-7955",
+        "urgency_tel": "(1) 907-331-7135",
+        "lat": 61.142386,
+        "lng": -149.867276
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 43,
+    "fields": {
+        "embassy_cd": "us-atlanta",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 애틀랜타 대한민국 총영사관",
+        "address": "229 Peachtree St., Suite 2100, International tower, Atlanta, GA 30303. USA",
+        "tel_no": "(1) 404-522-1611",
+        "urgency_tel": "(1) 470-880-1986",
+        "lat": 33.76020746,
+        "lng": -84.38661598
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 44,
+    "fields": {
+        "embassy_cd": "us-boston",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 보스턴 대한민국 총영사관",
+        "address": "300 Washington Street, 2nd Floor. Newton, MA 02458, U.S.A.",
+        "tel_no": "(1) 617-641-2830",
+        "urgency_tel": "(1) 617-264-0404",
+        "lat": 42.357228,
+        "lng": -71.186603
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 45,
+    "fields": {
+        "embassy_cd": "us-chicago",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 시카고 대한민국 총영사관",
+        "address": "NBC Tower Suite 2700, 455 North Cityfront Plaza Drive, Chicago, Illinois 60611 U.S.A.",
+        "tel_no": "(1) 312-822-9485",
+        "urgency_tel": "(1) 312-405-4425",
+        "lat": 41.895927,
+        "lng": -87.612389
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 46,
+    "fields": {
+        "embassy_cd": "us-dallas",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 휴스턴 대한민국 총영사관 댈러스 출장소",
+        "address": "14001 N Dallas Parkway Ste.450, Dallas, TX 75240",
+        "tel_no": "(1) 972-701-0180",
+        "urgency_tel": "(1) 214-796-3959",
+        "lat": 32.93664,
+        "lng": -96.822985
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 47,
+    "fields": {
+        "embassy_cd": "us-hagatna",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 하갓냐 대한민국 출장소",
+        "address": "153 Zoilo Street, Tamuning, Guam 96913",
+        "tel_no": "(1) 671-647-6488",
+        "urgency_tel": "(1) 671-688-5886",
+        "lat": 13.498961,
+        "lng": 144.777238
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 48,
+    "fields": {
+        "embassy_cd": "us-honolulu",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 호놀룰루 대한민국 총영사관",
+        "address": "2756 Pali Highway Honolulu, Hawaii 96817, U.S.A",
+        "tel_no": "(1) 808-595-6109",
+        "urgency_tel": "(1) 808-265-9349",
+        "lat": 21.334952,
+        "lng": -157.84187
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 49,
+    "fields": {
+        "embassy_cd": "us-houston",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 휴스턴 대한민국 총영사관",
+        "address": "1990 Post Oak Blvd. Suite 1250, Houston, TX 77056",
+        "tel_no": "(1) 713-961-0186",
+        "urgency_tel": "(1) 281-785-4231",
+        "lat": 29.745657,
+        "lng": -95.462634
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 50,
+    "fields": {
+        "embassy_cd": "us-losangeles",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 로스앤젤레스 대한민국 총영사관",
+        "address": "Korean Consulate General in Los Angeles 3243 Wilshire Blvd, Los Angeles, CA 90010",
+        "tel_no": "(1) 213-385-9300",
+        "urgency_tel": "(1) 213-700-1147",
+        "lat": 34.062062,
+        "lng": -118.292648
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 51,
+    "fields": {
+        "embassy_cd": "us-newyork",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 뉴욕 대한민국 총영사관",
+        "address": "460 Park Ave. New York, NY10022",
+        "tel_no": "(1) 646-674-6000",
+        "urgency_tel": "(1) 646-965-3639",
+        "lat": 40.761975,
+        "lng": -73.970658
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 52,
+    "fields": {
+        "embassy_cd": "us-sanfrancisco",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 샌프란시스코 대한민국 총영사관",
+        "address": "3500 Clay street San Francisco, CA 94118, U.S.A",
+        "tel_no": "(1) 415-921-2251",
+        "urgency_tel": "(1) 415-265-4859",
+        "lat": 37.778723,
+        "lng": -122.42004
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 53,
+    "fields": {
+        "embassy_cd": "us-seattle",
+        "country_name": "미국",
+        "country_en_name": "USA",
+        "slug": "usa",
+        "embassy_name": "주 시애틀 대한민국 총영사관",
+        "address": "115 W Mercer St. Seattle, WA 98119",
+        "tel_no": "(1) 206-441-1011",
+        "urgency_tel": "(1) 206-947-8293",
+        "lat": 47.614745,
+        "lng": -122.339339
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 54,
+    "fields": {
+        "embassy_cd": "bh",
+        "country_name": "바레인",
+        "country_en_name": "Bahrain",
+        "slug": "bahrain",
+        "embassy_name": "주 바레인 대한민국 대사관",
+        "address": "Villa 401, Road 915, Block 309, Salmaniya, Manama, Kingdom of Bahrain",
+        "tel_no": "(973) 1753-1120",
+        "urgency_tel": "(973) 6674-4737",
+        "lat": 26.221415,
+        "lng": 50.580087
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 55,
+    "fields": {
+        "embassy_cd": "bd",
+        "country_name": "방글라데시",
+        "country_en_name": "Bangladesh",
+        "slug": "bangladesh",
+        "embassy_name": "주 방글라데시 대한민국 대사관",
+        "address": "4, Madani Avenue, Baridhara, Dhaka-1212 Bangladesh",
+        "tel_no": "(880) 2-5881-2088",
+        "urgency_tel": "(880) 17-5563-9618",
+        "lat": 23.798038,
+        "lng": 90.421481
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 56,
+    "fields": {
+        "embassy_cd": "ve",
+        "country_name": "베네수엘라볼리바르",
+        "country_en_name": "Venezuela",
+        "slug": "venezuela",
+        "embassy_name": "주 베네수엘라 대한민국 대사관",
+        "address": "Av. Francisco de Miranda, Centro Lido, Torre B, Piso 9, Ofic. 91-92-B, El Rosal, Caracas, Venezuela",
+        "tel_no": "(58) 212-954-1270",
+        "urgency_tel": "(58) 412-261-0754",
+        "lat": 10.491337,
+        "lng": -66.861998
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 57,
+    "fields": {
+        "embassy_cd": "vn",
+        "country_name": "베트남",
+        "country_en_name": "Vietnam",
+        "slug": "vietnam",
+        "embassy_name": "주 베트남 대한민국 대사관",
+        "address": "SQ4, Do Nhuan, Khu Ngaoi Giao Doan, Xuan Tao, Bac Tu Liem, Hanoi, Vietnam",
+        "tel_no": "(84) 24-3771-0404",
+        "urgency_tel": "(84) 90-402-6126",
+        "lat": 21.067095,
+        "lng": 105.796723
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 58,
+    "fields": {
+        "embassy_cd": "vn-danang",
+        "country_name": "베트남",
+        "country_en_name": "Vietnam",
+        "slug": "vietnam-1",
+        "embassy_name": "주 다낭 대한민국 총영사관",
+        "address": "Tang 3-4, Lo A1-2 Chuong Duong, P.Khue My, Q.Ngu Hanh Son, T.P Da Nang, Vietnam",
+        "tel_no": "(84) 23-6356-6100",
+        "urgency_tel": "(84) 93-112-0404",
+        "lat": 16.027969,
+        "lng": 108.237979
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 59,
+    "fields": {
+        "embassy_cd": "vn-hochiminh",
+        "country_name": "베트남",
+        "country_en_name": "Vietnam",
+        "slug": "vietnam-2",
+        "embassy_name": "주 호치민 대한민국 총영사관",
+        "address": "107 Nguyen Du Street, Districr 1, Hochiminh City, Vietnam",
+        "tel_no": "(84) 28-3822-5757",
+        "urgency_tel": "(84) 93-850-0238",
+        "lat": 10.774473,
+        "lng": 106.69567
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 60,
+    "fields": {
+        "embassy_cd": "be",
+        "country_name": "벨기에",
+        "country_en_name": "Belgium",
+        "slug": "belgium",
+        "embassy_name": "주 벨기에 유럽연합 대한민국 대사관",
+        "address": "Chaussee de la Hulpe 175, 1170 Brussels, Belgium",
+        "tel_no": "(32) 2-675-5777",
+        "urgency_tel": "(32) 476-45-75-06",
+        "lat": 50.796035,
+        "lng": 4.402728
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 61,
+    "fields": {
+        "embassy_cd": "by",
+        "country_name": "벨라루스",
+        "country_en_name": "Belarus",
+        "slug": "belarus",
+        "embassy_name": "주 벨라루스 대한민국 대사관",
+        "address": "220002, Minsk, Storozhovskaya str.10",
+        "tel_no": "(375) 17-215-0170",
+        "urgency_tel": "(375) 29-369-1320",
+        "lat": 53.910452,
+        "lng": 27.558342
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 62,
+    "fields": {
+        "embassy_cd": "bo",
+        "country_name": "볼리비아",
+        "country_en_name": "Bolivia",
+        "slug": "bolivia",
+        "embassy_name": "주 볼리비아 대한민국 대사관",
+        "address": "Av. Jose Ballivi&aacute;n N. 555, Calle 11-12, Edif. El Dorial Piso 3-4, Calacoto, La Paz, Bolivia",
+        "tel_no": "(591) 2-211-0361",
+        "urgency_tel": "(591) 7673-3334",
+        "lat": -16.540091,
+        "lng": -68.08616
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 63,
+    "fields": {
+        "embassy_cd": "bg",
+        "country_name": "불가리아",
+        "country_en_name": "Bulgaria",
+        "slug": "bulgaria",
+        "embassy_name": "주 불가리아 대한민국 대사관",
+        "address": "2V Srebarna Street MobiArt Building, Floor 4, Sofia, Bulgaria",
+        "tel_no": "(359) 2-971-2181",
+        "urgency_tel": "(359) 887-503-270",
+        "lat": 42.671014,
+        "lng": 23.351161
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 64,
+    "fields": {
+        "embassy_cd": "br",
+        "country_name": "브라질",
+        "country_en_name": "Brazil",
+        "slug": "brazil",
+        "embassy_name": "주 브라질 대한민국 대사관",
+        "address": "SEN 801, Lote 14, Asa Norte, Brasilia - DF, 70800-915, Brazil",
+        "tel_no": "(55) 61-3321-2500",
+        "urgency_tel": "(55) 61-99658-2421",
+        "lat": -15.776487,
+        "lng": -47.796623
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 65,
+    "fields": {
+        "embassy_cd": "br-saopaulo",
+        "country_name": "브라질",
+        "country_en_name": "Brazil",
+        "slug": "brazil-1",
+        "embassy_name": "주 상파울루 대한민국 총영사관",
+        "address": "Av. paulista, 37, 9 andar, Cerqueira Cesar CEP: 01311-902, Sao Paulo, SP Brasil",
+        "tel_no": "(55) 11-3141-1278",
+        "urgency_tel": "(55) 11-97188-5194",
+        "lat": -23.570884,
+        "lng": -46.644843
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 66,
+    "fields": {
+        "embassy_cd": "bn",
+        "country_name": "브루나이",
+        "country_en_name": "Brunei",
+        "slug": "brunei",
+        "embassy_name": "주 브루나이 대한민국 대사관",
+        "address": "Lot No 24160, Simpang 336, Diplomatic Enclave, Jalan Kebangsaan, Kampong Kianggeh, Bandar Seri Begawan, Brunei",
+        "tel_no": "(673) 233-0248",
+        "urgency_tel": "(673) 729-1336",
+        "lat": 4.9208489,
+        "lng": 114.9577357
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 67,
+    "fields": {
+        "embassy_cd": "sa",
+        "country_name": "사우디아라비아",
+        "country_en_name": "Saudi Arabia",
+        "slug": "saudi-arabia",
+        "embassy_name": "주 사우디아라비아 대한민국 대사관",
+        "address": "Diplometic Quarter, P.O.Box 94399, Riyadh 11693, Saudi Arabia",
+        "tel_no": "(966) 11-488-2211",
+        "urgency_tel": "(966) 50-080-1065",
+        "lat": 24.683989,
+        "lng": 46.626642
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 68,
+    "fields": {
+        "embassy_cd": "sa-jeddah",
+        "country_name": "사우디아라비아",
+        "country_en_name": "Saudi Arabia",
+        "slug": "saudi-arabia-1",
+        "embassy_name": "주 젯다 대한민국 총영사관",
+        "address": "P.O.BOX 55503, Jeddah 21544 Kingdom of Saudl Arabia Rawdah Center 2nd, Rawdah District, Jeddah, Kingdom of Saudl Arabia",
+        "tel_no": "(966) 12-668-1990",
+        "urgency_tel": "(966) 55-668-3432",
+        "lat": 21.334072,
+        "lng": 39.093873
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 69,
+    "fields": {
+        "embassy_cd": "sn",
+        "country_name": "세네갈",
+        "country_en_name": "Senegal",
+        "slug": "senegal",
+        "embassy_name": "주 세네갈 대한민국 대사관",
+        "address": "Ambassade de la Republique de Coree, Villa Hamoudy, Rue Aime Cesaire, Fann Residence, B.P.5850, Dakar, Senegal",
+        "tel_no": "(221) 33-824-06-72",
+        "urgency_tel": "(221) 77-639-5109",
+        "lat": 14.695506,
+        "lng": -17.467318
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 70,
+    "fields": {
+        "embassy_cd": "rs",
+        "country_name": "세르비아",
+        "country_en_name": "Serbia",
+        "slug": "serbia",
+        "embassy_name": "주 세르비아 대한민국 대사관",
+        "address": "MILOSA SAVCICA 4, 11000 Belgrade, Serbia",
+        "tel_no": "(381) 11-3674-225",
+        "urgency_tel": "(381) 63-108-1397",
+        "lat": 44.78293,
+        "lng": 20.45104
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 71,
+    "fields": {
+        "embassy_cd": "sd",
+        "country_name": "수단",
+        "country_en_name": "Sudan",
+        "slug": "sudan",
+        "embassy_name": "주 수단 대한민국 대사관",
+        "address": "House No55, Al-Jazira St.56, Khartoum2, P.O.Box 2414, Khartoum, Sudan",
+        "tel_no": "(249) 1-8358-0031",
+        "urgency_tel": "(249) 9-1217-2813",
+        "lat": 15.501577,
+        "lng": 32.572596
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 72,
+    "fields": {
+        "embassy_cd": "lk",
+        "country_name": "스리랑카",
+        "country_en_name": "Sri Lanka",
+        "slug": "sri-lanka",
+        "embassy_name": "주 스리랑카 대한민국 대사관",
+        "address": "No. 98, Dharmapala Mawatha, Colombo 7, Sri Lanka",
+        "tel_no": "(94) 11-269-9036",
+        "urgency_tel": "(94) 77-332-5676",
+        "lat": 6.918141,
+        "lng": 79.847301
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 73,
+    "fields": {
+        "embassy_cd": "se",
+        "country_name": "스웨덴",
+        "country_en_name": "Sweden",
+        "slug": "sweden",
+        "embassy_name": "주 스웨덴 대한민국 대사관",
+        "address": "Laboratoriegatan 10, P.O.Box 27237, 102 53 Stockholm, Sweden",
+        "tel_no": "(46) 8-5458-9400",
+        "urgency_tel": "(46) 73-564-1648",
+        "lat": 59.332817,
+        "lng": 18.103148
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 74,
+    "fields": {
+        "embassy_cd": "ch",
+        "country_name": "스위스",
+        "country_en_name": "Swiss",
+        "slug": "swiss",
+        "embassy_name": "주 스위스 대한민국 대사관",
+        "address": "Embassy of the Republic of Korea, Kalcheggweg 38, 3006 Bern, Switzerland",
+        "tel_no": "(41) 31-356-2444",
+        "urgency_tel": "(41) 79-897-4086",
+        "lat": 46.936967,
+        "lng": 7.46239
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 75,
+    "fields": {
+        "embassy_cd": "es",
+        "country_name": "스페인",
+        "country_en_name": "Spain",
+        "slug": "spain",
+        "embassy_name": "주 스페인 대한민국 대사관",
+        "address": "Calle Gonzalez Amigo 15, 28033 Madrid, Spain",
+        "tel_no": "(34) 91-353-2000",
+        "urgency_tel": "(34) 648-924-695",
+        "lat": 40.465724,
+        "lng": -3.666792
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 76,
+    "fields": {
+        "embassy_cd": "es-barcelona",
+        "country_name": "스페인",
+        "country_en_name": "Spain",
+        "slug": "spain-1",
+        "embassy_name": "주 바르셀로나 대한민국 총영사관",
+        "address": "Paseo de Gracia 103, 3층, 08008, Barcelona",
+        "tel_no": "(34) 93-487-3153",
+        "urgency_tel": "(34) 696-146-176",
+        "lat": 41.395953,
+        "lng": 2.160005
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 77,
+    "fields": {
+        "embassy_cd": "es-las",
+        "country_name": "스페인",
+        "country_en_name": "Spain",
+        "slug": "spain-2",
+        "embassy_name": "주 라스팔마스 대한민국 분관",
+        "address": "Luis Doreste Silva 60-1, 35004 Las Palmas de Gran Canaria, SPAIN",
+        "tel_no": "(34) 928-230-499",
+        "urgency_tel": "(34) 680-77-0404",
+        "lat": 28.120204,
+        "lng": -15.424954
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 78,
+    "fields": {
+        "embassy_cd": "sk",
+        "country_name": "슬로바키아",
+        "country_en_name": "Slovakia",
+        "slug": "slovakia",
+        "embassy_name": "주 슬로바키아 대한민국 대사관",
+        "address": "Sturova 16, 811 02 Bratislava",
+        "tel_no": "(421) 2-3307-0711",
+        "urgency_tel": "(421) 904-934-053",
+        "lat": 48.1423175,
+        "lng": 17.1145299
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 79,
+    "fields": {
+        "embassy_cd": "sg",
+        "country_name": "싱가포르",
+        "country_en_name": "Singapore",
+        "slug": "singapore",
+        "embassy_name": "주 싱가포르 대한민국 대사관",
+        "address": "47 Scotts Road, #08-00 Goldbell Tower, Singapore 228233",
+        "tel_no": "(65) 6256-1188",
+        "urgency_tel": "(65) 9654-3528",
+        "lat": 1.312146,
+        "lng": 103.837197
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 80,
+    "fields": {
+        "embassy_cd": "ae",
+        "country_name": "아랍에미리트",
+        "country_en_name": "United Arab Emirates : UAE",
+        "slug": "united-arab-emirates-uae",
+        "embassy_name": "주 아랍에미리트 대한민국 대사관",
+        "address": "33rd AirPort Road, Abu Dhabi, United Arab Emirates",
+        "tel_no": "(971) 2-441-1520",
+        "urgency_tel": "(971) 50-133-7362",
+        "lat": 24.424774,
+        "lng": 54.441364
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 81,
+    "fields": {
+        "embassy_cd": "ae-dubai",
+        "country_name": "아랍에미리트",
+        "country_en_name": "United Arab Emirates : UAE",
+        "slug": "united-arab-emirates-uae-1",
+        "embassy_name": "주 두바이 대한민국 총영사관",
+        "address": "Villa #39, Street 24b, Area 342, Jumeirah2, Dubai, United Arab Emirates",
+        "tel_no": "(971) 4-344-9200",
+        "urgency_tel": "(971) 50-553-2816",
+        "lat": 25.19898,
+        "lng": 55.24589
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 82,
+    "fields": {
+        "embassy_cd": "ar",
+        "country_name": "아르헨티나",
+        "country_en_name": "Argentina",
+        "slug": "argentina",
+        "embassy_name": "주 아르헨티나 대한민국 대사관",
+        "address": "Av. del Libertador 2395 , C.A.B.A  (1425),  Argentina",
+        "tel_no": "(54) 11-4802-8865",
+        "urgency_tel": "(54) 911-4141-1450",
+        "lat": -34.579598,
+        "lng": -58.405488
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 83,
+    "fields": {
+        "embassy_cd": "ie",
+        "country_name": "아일랜드",
+        "country_en_name": "Ireland",
+        "slug": "ireland",
+        "embassy_name": "주 아일랜드 대한민국 대사관",
+        "address": "15 Clyde Road, Ballsbridge, Dublin 4, Ireland",
+        "tel_no": "(353) 1-660-8800",
+        "urgency_tel": "(353) 87-234-9226",
+        "lat": 53.328858,
+        "lng": -6.237402
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 84,
+    "fields": {
+        "embassy_cd": "az",
+        "country_name": "아제르바이잔",
+        "country_en_name": "Azerbaijan",
+        "slug": "azerbaijan",
+        "embassy_name": "주 아제르바이잔공화국 대한민국 대사관",
+        "address": "Nasimi district, H.Aliyev St., Cross1, House 12, Baku, Azerbaijan",
+        "tel_no": "(994) 12-596-7901",
+        "urgency_tel": "(994) 51-877-9607",
+        "lat": 49.822154,
+        "lng": 40.393465
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 85,
+    "fields": {
+        "embassy_cd": "af",
+        "country_name": "아프가니스탄",
+        "country_en_name": "Afghanistan",
+        "slug": "afghanistan",
+        "embassy_name": "주 아프가니스탄 대한민국 대사관",
+        "address": "House No.34, Street No.10, Wazir Akbar Khan, Kabul, Afghanistan",
+        "tel_no": "(974) 4463-9555",
+        "urgency_tel": "(974) 6673-4250",
+        "lat": 34.535451,
+        "lng": 69.187373
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 86,
+    "fields": {
+        "embassy_cd": "dz",
+        "country_name": "알제리",
+        "country_en_name": "Algeria",
+        "slug": "algeria",
+        "embassy_name": "주 알제리 대한민국 대사관",
+        "address": "Ambassade de la R&eacute;publique de Cor&eacute;e, 5 Chemin Mackley (El Bakri), Ben Aknoun, Alger",
+        "tel_no": "(213) 23-18-77-19",
+        "urgency_tel": "(213) 770-11-44-00",
+        "lat": 36.755049,
+        "lng": 3.02583
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 87,
+    "fields": {
+        "embassy_cd": "ec",
+        "country_name": "에콰도르",
+        "country_en_name": "Ecuador",
+        "slug": "ecuador",
+        "embassy_name": "주 에콰도르 대한민국 대사관",
+        "address": "Embajada de la Rep&uacute;blica de Corea, Av. Amazonas y Union de Periodistas Edificio Eurocenter, Piso 4, Quito, Ecuador",
+        "tel_no": "(593) 2-352-0874",
+        "urgency_tel": "(593) 981-122-191",
+        "lat": -0.204792,
+        "lng": -78.484813
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 88,
+    "fields": {
+        "embassy_cd": "et",
+        "country_name": "에티오피아",
+        "country_en_name": "ETC",
+        "slug": "etc",
+        "embassy_name": "주 에티오피아 대한민국 대사관",
+        "address": "Embassy of the Repulic of Korea House No. 856, Kebele 04, Nefas Silk Lafto, Addis Ababa, Ethiopia",
+        "tel_no": "(251) 113-72-81-11",
+        "urgency_tel": "(251) 907-66-04-04",
+        "lat": 9.051879,
+        "lng": 38.727486
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 89,
+    "fields": {
+        "embassy_cd": "sv",
+        "country_name": "엘살바도르",
+        "country_en_name": "El Salvador",
+        "slug": "el-salvador",
+        "embassy_name": "주 엘살바도르 대한민국 대사관",
+        "address": "Cl, Mirador y 87 Avenida Norte, Edif, Torre Futura ,Nivel 14, Local 05, Complejo WTC,Col, Escalon, San Salvador,El Salvador",
+        "tel_no": "(503) 2263-9145",
+        "urgency_tel": "(503) 7609-1117",
+        "lat": 13.708722,
+        "lng": -89.240969
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 90,
+    "fields": {
+        "embassy_cd": "gb",
+        "country_name": "영국",
+        "country_en_name": "United Kingdom",
+        "slug": "united-kingdom",
+        "embassy_name": "주 영국 대한민국 대사관",
+        "address": "60 Buckingham Gate, London, SW1E 6AJ, United Kingdom",
+        "tel_no": "(44) 20-7227-5500",
+        "urgency_tel": "(44) 78-7650-6895",
+        "lat": 51.497987,
+        "lng": -0.136127
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 91,
+    "fields": {
+        "embassy_cd": "ye",
+        "country_name": "예멘",
+        "country_en_name": "Yemen",
+        "slug": "yemen",
+        "embassy_name": "주 예멘 대한민국 대사관",
+        "address": "P.O.BOX 5005, House No.4(Off Iran Street), Hadda Area, Sana, Republic of Yemen",
+        "tel_no": "(966) 11-488-2211",
+        "urgency_tel": "(966) 53-717-8300",
+        "lat": 15.303638,
+        "lng": 44.191799
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 92,
+    "fields": {
+        "embassy_cd": "om",
+        "country_name": "오만",
+        "country_en_name": "Oman",
+        "slug": "oman",
+        "embassy_name": "주 오만 대한민국 대사관",
+        "address": "Plot.42, Jamiat Al Duwal Al Arabia Street, Muscat, Sultanate of Oman",
+        "tel_no": "(968) 2469-1490",
+        "urgency_tel": "(968) 9823-2554",
+        "lat": 23.604299,
+        "lng": 58.429706
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 93,
+    "fields": {
+        "embassy_cd": "at",
+        "country_name": "오스트리아",
+        "country_en_name": "Austria",
+        "slug": "austria",
+        "embassy_name": "주 오스트리아 대한민국 대사관 겸 주 빈 국제기구대표부",
+        "address": "Gregor-Mendel Strasse 25, A-1180 Vienna, Austria",
+        "tel_no": "(43) 1-478-1991",
+        "urgency_tel": "(43) 664-527-0743",
+        "lat": 48.233009,
+        "lng": 16.337525
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 94,
+    "fields": {
+        "embassy_cd": "hn",
+        "country_name": "온두라스",
+        "country_en_name": "Honduras",
+        "slug": "honduras",
+        "embassy_name": "주 온두라스 대한민국 대사관",
+        "address": "Edificio Plaza Azul 5to piso, Col. Lomas del Guijarro, Tegucigalpa, Honduras",
+        "tel_no": "(504) 2235-5561",
+        "urgency_tel": "(504) 9442-4972",
+        "lat": 14.086267,
+        "lng": -87.186093
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 95,
+    "fields": {
+        "embassy_cd": "jo",
+        "country_name": "요르단",
+        "country_en_name": "Jordan",
+        "slug": "jordan",
+        "embassy_name": "주 요르단 대한민국 대사관",
+        "address": "P.O.Box 3060, Bahjat Homsi st. 7, Amman 11181, Jordan",
+        "tel_no": "(962) 6-593-0745",
+        "urgency_tel": "(962) 79-750-0358",
+        "lat": 31.95622,
+        "lng": 35.89159
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 96,
+    "fields": {
+        "embassy_cd": "ug",
+        "country_name": "우간다",
+        "country_en_name": "Uganda",
+        "slug": "uganda",
+        "embassy_name": "주 우간다 대한민국 대사관",
+        "address": "Plot 14 Ternan Avenue, Kampala, Uganda",
+        "tel_no": "(256) 414-500-197",
+        "urgency_tel": "(256) 774-478-376",
+        "lat": 0.320245,
+        "lng": 32.583
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 97,
+    "fields": {
+        "embassy_cd": "uy",
+        "country_name": "우루과이",
+        "country_en_name": "Uruguay",
+        "slug": "uruguay",
+        "embassy_name": "주 우루과이 대한민국 대사관",
+        "address": "Av. Luis Alberto de Herrera 1248, Torre II, Piso10(World Trade Center), Montevideo, Uruguay",
+        "tel_no": "(598) 2628-9374",
+        "urgency_tel": "(598) 94-111-593",
+        "lat": -34.904111,
+        "lng": -56.136127
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 98,
+    "fields": {
+        "embassy_cd": "cn001",
+        "country_name": "중국",
+        "country_en_name": "China",
+        "slug": "china",
+        "embassy_name": "주 중국 대한민국 대사관",
+        "address": "No. 60, East 3rd Ring Middle Road, Chaoyang District, Beijing, 100022, China",
+        "tel_no": "(86) 10-8531-0700",
+        "urgency_tel": "(86) 139-1079-0380",
+        "lat": 39.9062,
+        "lng": 116.4613
+    }
+},
+{
+    "model": "countries.embassy",
+    "pk": 99,
+    "fields": {
+        "embassy_cd": "jp001",
+        "country_name": "일본",
+        "country_en_name": "Japan",
+        "slug": "japan",
+        "embassy_name": "주 일본 대한민국 대사관",
+        "address": "4-4-10, Minami-Azabu, Minato-ku, Tokyo 106-0047, Japan",
+        "tel_no": "(81) 3-3452-7611",
+        "urgency_tel": "(81) 80-3550-4926",
+        "lat": 35.6481,
+        "lng": 139.7303
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 1,
+    "fields": {
+        "embassy": 98,
+        "url": "https://cn.mofa.go.kr/cn-ko/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 2,
+    "fields": {
+        "embassy": 99,
+        "url": "https://jp.mofa.go.kr/jp-ko/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 3,
+    "fields": {
+        "embassy": 80,
+        "url": "http://overseas.mofa.go.kr/ae-ar/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 4,
+    "fields": {
+        "embassy": 81,
+        "url": "http://overseas.mofa.go.kr/ae-dubai-ar/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 5,
+    "fields": {
+        "embassy": 85,
+        "url": "http://overseas.mofa.go.kr/af-ko/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 6,
+    "fields": {
+        "embassy": 5,
+        "url": "http://overseas.mofa.go.kr/ao-pt/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 7,
+    "fields": {
+        "embassy": 82,
+        "url": "http://overseas.mofa.go.kr/ar-es/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 8,
+    "fields": {
+        "embassy": 93,
+        "url": "http://overseas.mofa.go.kr/at-de/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 9,
+    "fields": {
+        "embassy": 84,
+        "url": "http://overseas.mofa.go.kr/az-az/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 10,
+    "fields": {
+        "embassy": 55,
+        "url": "http://overseas.mofa.go.kr/bd-en/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 11,
+    "fields": {
+        "embassy": 60,
+        "url": "http://overseas.mofa.go.kr/be-en/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 12,
+    "fields": {
+        "embassy": 63,
+        "url": "http://overseas.mofa.go.kr/bg-bg/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 13,
+    "fields": {
+        "embassy": 54,
+        "url": "http://overseas.mofa.go.kr/bh-en/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 14,
+    "fields": {
+        "embassy": 66,
+        "url": "http://overseas.mofa.go.kr/bn-en/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 15,
+    "fields": {
+        "embassy": 62,
+        "url": "http://overseas.mofa.go.kr/bo-es/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 16,
+    "fields": {
+        "embassy": 64,
+        "url": "http://overseas.mofa.go.kr/br-pt/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 17,
+    "fields": {
+        "embassy": 65,
+        "url": "http://overseas.mofa.go.kr/br-saopaulo-pt/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 18,
+    "fields": {
+        "embassy": 61,
+        "url": "http://overseas.mofa.go.kr/by-ru/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 19,
+    "fields": {
+        "embassy": 74,
+        "url": "http://overseas.mofa.go.kr/ch-de/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 20,
+    "fields": {
+        "embassy": 18,
+        "url": "http://overseas.mofa.go.kr/de-de/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 21,
+    "fields": {
+        "embassy": 19,
+        "url": "http://overseas.mofa.go.kr/de-bonn-de/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 22,
+    "fields": {
+        "embassy": 20,
+        "url": "http://overseas.mofa.go.kr/de-frankfurt-de/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 23,
+    "fields": {
+        "embassy": 21,
+        "url": "http://overseas.mofa.go.kr/de-hamburg-de/index.do"
+    }
+},
+{
+    "model": "countries.embassyhomepage",
+    "pk": 24,
+    "fields": {
+        "embassy": 16,
+        "url": "http://overseas.mofa.go.kr/dk-da/index.do"
+    }
 }
 ]
