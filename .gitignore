@@ -1,8 +1,15 @@
+# 개발 도구 설정
 .idea/
-backend/venv/
+
+# 가상 환경
 .venv/
 venv/
 backend/.venv/
+backend/venv/
+
+# Python 컴파일 파일
 __pycache__/
 *.pyc
+
+# 로컬 DB
 db.sqlite3
