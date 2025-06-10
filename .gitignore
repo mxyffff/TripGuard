@@ -1,2 +1,23 @@
-.Ds_Store
+# 시스템 파일
 .DS_Store
+Thumbs.db
+
+# 환경 설정
+.env
+*.log
+
+# 빌드 결과물
+dist/
+build/
+
+# IDE 설정
+.vscode/
+.idea/
+
+# 패키지 관리
+node_modules/
+
+# 이미지 캐시 등
+*.png
+*.jpg
+*.jpeg
