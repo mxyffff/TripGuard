@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   searchBtn.addEventListener("click", function () {
     const keyword = searchInput.value.trim();
     if (keyword === "중국") {
-      window.location.href = "../resultPage/result.html";
+      window.location.href = "/resultPage/result.html";
     } else {
       window.location.href = "/cantFind/cantFind.html";
     }
