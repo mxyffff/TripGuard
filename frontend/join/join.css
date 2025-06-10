@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: white;
+}
+
+.container {
+  width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 상단 로그인 바 */
+.top-bar {
+  width: 1920px;
+  height: 56px;
+  padding: 0 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+}
+
+.auth-buttons a {
+    font-size: 17px;
+    color: black;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.auth-buttons a:hover {
+  color: #0366FF;
+  transition: color 0.2s ease;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  width: 1920px;
+  height: 96px;
+  padding: 0 120px;
+  background-color: #5398F5;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+    height: 28px;
+    align-items: center;
+    position: absolute;
+    display: block;
+    top: 36px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 100px;
+  padding: 0px 20px;
+  width: 770px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    flex: 1;
+    height: 20px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+.search-bar button img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    object-fit: contain;
+}
+.join-container {
+  width: 440px;
+  margin-top: 250px;
+  margin-bottom: 150px;
+  padding: 48px 66px 85px;
+  border: 1px solid #EEF5FF;
+  border-radius: 8px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
+  background-color: white;
+}
+
+.join-container h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+.form-group label {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+.required {
+    color: #ff4d4f;
+    font-size: 17px;
+    margin-right: 4px;
+}
+.form-subtitle {
+  color: #666;
+  font-size: 17px;
+  margin-top: 4px;
+  margin-bottom: 50px;
+}
+
+form input {
+  width: 440px;
+  height: 68px;
+  padding: 24px 36px;
+  box-sizing: border-box;
+  border: 1px solid #B3B3B3;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+form input:focus {
+  border: 1px solid #A2CAFF;
+  outline: none;
+}
+
+.btn-primary {
+  width: 440px;
+  height: 62px;
+  background-color: #0366FF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #0254d4; /* 더 진한 파란색 */
+  transition: background-color 0.2s ease;
+}
+
+/* 푸터 */
+.footer {
+    width: 1920px;
+    padding: 42px 320px;
+    background-color: #09254B;
+    color: #8a8a8a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-section.left {
+    margin-right: 40px;
+}
+
+.footer-section .project-title {
+    color: #2c65b1;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-section strong {
+    color: #2c65b1;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-section div {
+    font-size: 17px;
+    color: #8a8a8a;
+}
+
+.footer-line {
+    width: 100%;
+    max-width: 1330px;
+    height: 1px;
+    background-color: #8a8a8a;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 15px;
+    color: #2c65b1;
+}
