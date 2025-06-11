@@ -13,6 +13,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+   // 이메일 중복 확인을 위한 입력 이벤트
+  const emailInput = document.getElementById("email");
+  const emailStatus = document.getElementById("emailStatus");
+
+  // 이메일 입력 시 실시간으로 중복 확인
+  emailInput.addEventListener("input", async function () {
+    const email = emailInput.value.trim();
+
+    if (!email) {
+      emailStatus.textContent = "";
+      return;
+    }
+
+    try {
+      const response = await api.post("/auth/signup", new URLSearchParams({
+        action: "check_email",
+        email
+      }));
+
+      if (response.data.success) {
+        emailStatus.textContent = "사용 가능한 이메일입니다.";
+        emailStatus.style.color = "green";
+      } else {
+        emailStatus.textContent = response.data.message || "이미 사용 중인 이메일입니다.";
+        emailStatus.style.color = "red";
+      }
+    } catch (error) {
+      console.error("이메일 중복 확인 오류:", error);
+      emailStatus.textContent = "서버 오류입니다. 다시 시도해주세요.";
+      emailStatus.style.color = "red";
+    }
+  });
+
+
+  // 회원가입 버튼 이벤트
   const joinBtn = document.querySelector(".btn-primary");
   joinBtn.addEventListener("click", async function () {
     const name = document.getElementById("username").value.trim();
@@ -44,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.data.success) {
         alert("회원가입이 완료되었습니다.");
-        window.location.href = "../joinComplete/joinComplete.html";
+        window.location.href = "/joinComplete/joinComplete.html";
       } else {
         alert(response.data.message || "회원가입 실패");
       }

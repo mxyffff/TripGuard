@@ -49,9 +49,19 @@ fetch('IMG/world_map_cleaned.svg')
         resetOpacity();
         hideTooltip();
       });
+
+      // 클릭 이벤트 처리
+      el.addEventListener('click', () => {
+        if (id === 'CHN') {
+          // 중국을 클릭했을 때 nation.html 페이지로 이동
+          window.location.href = '/nation/nation.html';
+        } else {
+          // 다른 나라를 클릭했을 때, 예를 들어 오류 페이지로 이동
+          window.location.href = '/cantFind/cantFind.html';
+        }
+      });
     });
   });
-
 function highlightCountry(targetId) {
   const paths = document.querySelectorAll('#map-box path[id]');
   paths.forEach(p => {
@@ -91,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (keyword === "중국") {
       // 결과 있는 페이지로 이동 (예: result.html 또는 중국 상세 페이지 등)
-      window.location.href = "../resultPage/result.html"; 
+      window.location.href = "/nation/nation.html"; 
     } else {
       // 결과 없는 페이지로 이동
       window.location.href = "/cantFind/cantFind.html";

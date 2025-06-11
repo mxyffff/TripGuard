@@ -11,13 +11,13 @@
         <div class="container">
             <div class="top-bar">
             <div class="auth-buttons">
-                <a href="../loginPage/login.html">로그인</a>
+                <a href="/loginPage/login.html">로그인</a>
                 <a href="join.html">회원가입</a>
             </div>
         </div>
              <!-- /*네비게이션 바*/ -->
         <div class="navbar">
-            <a href="../homePage/homePage.html" class="logo">
+            <a href="/homePage/homePage.html" class="logo">
                 <img src="IMG/TripGuard.png" alt="TripGuard 로고">
             </a>
             <div class="search-bar">
@@ -44,6 +44,8 @@
                 <div class="form-group">
                     <label for="email"><span class="required">*</span>이메일</label>
                     <input type="email" id="email" placeholder="예: get@ziontutorial.com">
+                        <!-- 이메일 중복 확인 메시지 표시 -->
+                        <span id="emailStatus"></span>
                 </div>
 
                 <div class="form-group">
