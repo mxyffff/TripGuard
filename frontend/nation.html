@@ -5,28 +5,33 @@
     <link rel="stylesheet" href="css/nation.css" />
     <title>국가 상세 페이지</title>
   </head>
-  <!-- gitignore하기 -->
   <body>
     <!-- /*상단 로그인/회원가입*/ -->
-        <div class="container">
-            <div class="top-bar">
-            <div class="auth-buttons">
-                <a href="login.html">로그인</a>
-                <a href="../join/join.html">회원가입</a>
-            </div>
+    <div class="container">
+      <div class="top-bar">
+        <div class="auth-buttons">
+          <a href="login.html">로그인</a>
+          <a href="../join/join.html">회원가입</a>
         </div>
-             <!-- /*네비게이션 바*/ -->
-        <div class="navbar">
-            <a href="../homPage/homePage.html" class="logo">
-                <img src="IMG/TripGuard.png" alt="TripGuard 로고">
-            </a>
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="국가명을 검색할 수 있습니다. (예:중국)">
-                <button id="searchBtn"><img src="IMG/Search.png" alt="검색"></button>
-            </div>
-        </div>
+      </div>
+    </div>
+    <!-- /*네비게이션 바*/ -->
+    <div class="navbar">
+      <a href="../homPage/homePage.html" class="logo">
+        <img src="assets/img/TripGuard.png" alt="TripGuard 로고" />
+      </a>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="국가명을 검색할 수 있습니다. (예:중국)"
+        />
+        <button id="searchBtn">
+          <img src="assets/img/Search.png" alt="검색" />
+        </button>
+      </div>
+    </div>
 
-    <!-- 헤더 추가 -->
     <section class="nation-header">
       <h1 class="nation-title">중국</h1>
       <p class="nation-subtitle">china</p>
@@ -79,7 +84,9 @@
                     </dd>
                   </div>
                 </dl>
-                <div class="embassy-map">지도이미지</div>
+                <div class="embassy-map">
+                  <img src="assets/img/embassy1.png" alt="지도이미지" />
+                </div>
               </span>
             </div>
 
@@ -111,7 +118,9 @@
                     </dd>
                   </div>
                 </dl>
-                <div class="embassy-map">지도이미지</div>
+                <div class="embassy-map">
+                  <img src="assets/img/embassy2.png" alt="지도이미지" />
+                </div>
               </span>
             </div>
 
@@ -143,12 +152,55 @@
                     </dd>
                   </div>
                 </dl>
-                <div class="embassy-map">지도이미지</div>
+                <div class="embassy-map">
+                  <img src="assets/img/embassy3.png" alt="지도이미지" />
+                </div>
+              </span>
+            </div>
+            <div class="card">
+              <h2>🏛️주칭다오총영사관</h2>
+              <span class="embassy-wrap">
+                <dl class="embassy-list">
+                  <div class="embassy-item">
+                    <dt>주소</dt>
+                    <dd>중국 산둥성 칭다오시 청양구 춘양로 88</dd>
+                  </div>
+                  <div class="embassy-item">
+                    <dt>전화번호</dt>
+                    <dd>+86-532-8897-6001</dd>
+                  </div>
+                  <div class="embassy-item">
+                    <dt>이메일</dt>
+                    <dd>qdconsul@mofa.go.kr</dd>
+                  </div>
+                  <div class="embassy-item">
+                    <dt>홈페이지</dt>
+                    <dd>
+                      <a
+                        href="http://overseas.mofa.go.kr/cn-qingdao-ko/index.do"
+                        target="_blank"
+                        >http://overseas.mofa.go.kr/cn-qingdao-ko/index.do
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+                <div class="embassy-map">
+                  <img src="assets/img/embassy4.png" alt="지도이미지" />
+                </div>
               </span>
             </div>
           </section>
           <!-- 유의지역 탭 영역 -->
-          <section class="tab" id="danger" style="display: none"></section>
+          <section class="tab" id="danger" style="display: none">
+            <h2>소매치기 유의지역</h2>
+            <div class="location">
+              <div class="location-item">베이징</div>
+              <div class="location-item">베이징</div>
+              <div class="location-item">베이징</div>
+            </div>
+            <p class="danger-content">:내용</p>
+            <hr class="danger-hr" />
+          </section>
           <!-- 후기 탭 영역 -->
           <section class="tab" id="review" style="display: none">
             <div class="review-input">
@@ -162,72 +214,12 @@
                 <img src="assets/img/close.svg" alt="닫기" class="close-icon" />
               </div>
               <div class="input-area">
-                <input type="text" placeholder="한 줄 후기를 입력해주세요." />
-                <button class="submit-btn">등록</button>
+                <input type="text"id="review-input" placeholder="한 줄 후기를 입력해주세요." />
+                <button id="review-submit" class="submit-btn">등록</button>
               </div>
             </div>
 
-            <div class="review-list">
-              <div class="review-item">
-                <div class="user-info">
-                  <img
-                    src="assets/img/profile.svg"
-                    alt="프로필이미지"
-                    class="profile-img"
-                  />
-                  <div class="id">kali***</div>
-
-                  <div class="option-wrapper">
-                    <img
-                      src="assets/img/option.svg"
-                      alt="옵션"
-                      class="review-option"
-                      onclick="toggleOptions(this)" />
-                    <div class="option-menu" style="display: none">
-                      <button class="edit-btn">수정하기</button>
-                      <button class="delete-btn">삭제하기</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="review-content">
-                  00지역 소매치기 당할 뻔 했어요! 조심하세요!
-                </div>
-                <span class="info-wrap">
-                  <div class="review-date">2025.05.06</div>
-                  <div class="likes">
-                    도움이 돼요
-                    <img src="assets/img/like.svg" alt="도움이 돼요" />
-                    35
-                  </div>
-                </span>
-              </div>
-              <div class="review-item">
-                <div class="user-info">
-                  <img
-                    src="assets/img/profile.svg"
-                    alt="프로필이미지"
-                    class="profile-img"
-                  />
-                  <div class="id">kali***</div>
-                  <img
-                    src="assets/img/option.svg"
-                    alt="옵션"
-                    class="review-option"
-                  />
-                </div>
-                <div class="review-content">
-                  00지역 소매치기 당할 뻔 했어요! 조심하세요!
-                </div>
-                <span class="info-wrap">
-                  <div class="review-date">2025.05.06</div>
-                  <div class="likes">
-                    도움이 돼요
-                    <img src="assets/img/like.svg" alt="도움이 돼요" />
-                    35
-                  </div>
-                </span>
-              </div>
-            </div>
+            <div class="review-list" id="review-list"></div>
           </section>
         </div>
       </div>
@@ -280,34 +272,39 @@
     </div>
     <!-- wrapper닫는태그 -->
 
-      <!-- 푸터 -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section left">
-                    <div class="project-title">서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트</div>
-                    <div>4팀 TripGuard</div>
-                </div>
-            
-            <div class="footer-section">
-                <strong>PM</strong>
-                <div>첨단미디어디자인과 김주아</div>
-            </div>
-            <div class="footer-section">
-                <strong>FE</strong>
-                <div>디지털미디어학과 손예원</div>
-                <div>디지털미디어학과 주채빈</div>
-            </div>
-
-            <div class="footer-section">
-                <strong>BE</strong>
-                <div>문헌정보학과 양보윤</div>
-                <div>디지털미디어학과 이다겸</div>
-                <div>소프트웨어융합학과 박채린</div>
-            </div>
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section left">
+          <div class="project-title">
+            서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트
+          </div>
+          <div>4팀 TripGuard</div>
         </div>
-            <div class="footer-line"></div>
-            <div class="footer-copy">© 2025 서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트 4팀 TripGuard.</div>
-        </footer> 
+
+        <div class="footer-section">
+          <strong>PM</strong>
+          <div>첨단미디어디자인과 김주아</div>
+        </div>
+        <div class="footer-section">
+          <strong>FE</strong>
+          <div>디지털미디어학과 손예원</div>
+          <div>디지털미디어학과 주채빈</div>
+        </div>
+
+        <div class="footer-section">
+          <strong>BE</strong>
+          <div>문헌정보학과 양보윤</div>
+          <div>디지털미디어학과 이다겸</div>
+          <div>소프트웨어융합학과 박채린</div>
+        </div>
+      </div>
+      <div class="footer-line"></div>
+      <div class="footer-copy">
+        © 2025 서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트 4팀
+        TripGuard.
+      </div>
+    </footer>
     <script src="nation.js"></script>
   </body>
 </html>
