@@ -1,5 +1,6 @@
 # 개발 도구 설정
 .idea/
+.vscode/
 
 # 가상 환경
 .venv/
@@ -13,3 +14,24 @@ __pycache__/
 
 # 로컬 DB
 db.sqlite3
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# 환경 설정
+.env
+*.log
+
+# 빌드 결과물
+dist/
+build/
+
+
+# 패키지 관리
+node_modules/
+
+# 이미지 캐시 등
+*.png
+*.jpg
+*.jpeg

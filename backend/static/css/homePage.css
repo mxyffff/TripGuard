@@ -1,0 +1,257 @@
+/* 기본 설정 */
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: white;
+}
+
+.container {
+    width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 상단 로그인 바 */
+.top-bar {
+  width: 1920px;
+  height: 56px;
+  padding: 0 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  background-color: white;
+}
+
+.auth-buttons a {
+    font-size: 17px;
+    color: black;
+    margin-left: 30px;
+    text-decoration: none;
+}
+.auth-buttons a:hover {
+  color: #0366FF;
+  transition: color 0.2s ease;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  width: 1920px;
+  height: 96px;
+  padding: 0 120px;
+  background-color: #5398F5;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+    height: 28px;
+    align-items: center;
+    position: absolute;
+    display: block;
+    top: 36px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 100px;
+  padding: 0px 20px;
+  width: 770px;
+  height: 48px;
+  margin: 0 auto;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    flex: 1;
+    height: 20px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+.search-bar button img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    object-fit: contain;
+}
+
+/* 지도 헤더 */
+.map-header {
+    width: 1268px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.map-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.map-subtext {
+    font-size: 14px;
+    color: #717171;
+    margin: 6px 0 0 0;
+}
+
+.zoom-btn {
+    padding: 8px 24px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    font-size: 15px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.zoom-btn:hover {
+    background-color: #f3f3f3;
+    transition: background-color 0.2s;
+}
+/* 지도 색션 */
+#map-box {
+    width: 1268px;
+    height: auto;
+    margin: 20px 0;
+}
+
+#map-box svg path:hover {
+    cursor: pointer;
+}
+
+/* 여행 범례 */
+.legend {
+    width: 1920px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 80px;
+    margin-bottom: 40px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px;
+    color: #242424;
+}
+
+.legend-divider {
+    width: 1px;
+    height: 40px;
+    background-color: #e6e6e6;
+}
+
+.color {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.color.safe { background-color: #5398F5;}
+.color.caution { background-color: #FCC33C;}
+.color.STA { 
+    background-image: url("{% static 'assets/Ellipse 2.svg' %}");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 1px solid white;
+}
+.color.warning { background-color: #EBEBEB;}
+.color.danger { background-color: #242424;}
+
+/* 푸터 */
+.footer {
+    width: 1920px;
+    padding: 42px 320px;
+    background-color: #09254B;
+    color: #8a8a8a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-section.left {
+    margin-right: 40px;
+}
+
+.footer-section .project-title {
+    color: #2c65b1;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-section strong {
+    color: #2c65b1;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-section div {
+    font-size: 17px;
+    color: #8a8a8a;
+}
+
+.footer-line {
+    width: 100%;
+    max-width: 1330px;
+    height: 1px;
+    background-color: #8a8a8a;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 15px;
+    color: #2c65b1;
+}
+
+/* 툴팁 */
+#tooltip {
+    position: absolute;
+    display: block;
+    padding: 12px 16px;
+    background: white;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-weight: 500;
+    color: #242424;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1000;
+}

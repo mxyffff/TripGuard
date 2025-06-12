@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>회원가입 - TripGuard 계정</title>
+        <link rel="stylesheet" href="join.css">
+        <script defer src="join.js"></script>
+    </head>
+    <body>
+        <!-- /*상단 로그인/회원가입*/ -->
+        <div class="container">
+            <div class="top-bar">
+            <div class="auth-buttons">
+                <a href="/loginPage/login.html">로그인</a>
+                <a href="join.html">회원가입</a>
+            </div>
+        </div>
+             <!-- /*네비게이션 바*/ -->
+        <div class="navbar">
+            <a href="/homePage/homePage.html" class="logo">
+                <img src="IMG/TripGuard.png" alt="TripGuard 로고">
+            </a>
+        </div>
+
+        <main class="join-container">
+            <h2><strong>TripGuard 가입하기</strong></h2>
+            <P class="form-subtitle">회원님의 정보를 입력해 주세요.</P>
+
+            <form>
+                <div class="form-group">
+                    <label for="username"><span class="required">*</span>사용자 이름</label>
+                    <input type="text" id="username" placeholder="사용자 이름을 입력해 주세요.">
+                </div>
+
+                <div class="form-group">
+                    <label for="nickname"><span class="required">*</span>닉네임</label>
+                    <input type="text" id="nickname" placeholder="닉네임을 입력해 주세요.">
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><span class="required">*</span>이메일</label>
+                    <input type="email" id="email" placeholder="예: get@ziontutorial.com">
+                        <!-- 이메일 중복 확인 메시지 표시 -->
+                        <span id="emailStatus"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password"><span class="required">*</span>비밀번호</label>
+                    <input type="password" id="password" placeholder="8자 이상 비밀번호를 입력해 주세요.">
+                </div>
+
+                <div class="form-group">
+                    <label for="passwordConfirm"><span class="required">*</span>비밀번호 확인</label>
+                    <input type="password" id="passwordConfirm" placeholder="비밀번호를 한 번 더 입력해 주세요.">
+                </div>
+                <button type="button" class="btn-primary" onclick="location.href='../joinComplete/joinComplete.html'">가입하기</button>
+            </form>
+            </main>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section left">
+                    <div class="project-title">서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트</div>
+                    <div>4팀 TripGuard</div>
+                </div>
+            
+            <div class="footer-section">
+                <strong>PM</strong>
+                <div>첨단미디어디자인과 김주아</div>
+            </div>
+            <div class="footer-section">
+                <strong>FE</strong>
+                <div>디지털미디어학과 손예원</div>
+                <div>디지털미디어학과 주채빈</div>
+            </div>
+
+            <div class="footer-section">
+                <strong>BE</strong>
+                <div>문헌정보학과 양보윤</div>
+                <div>디지털미디어학과 이다겸</div>
+                <div>소프트웨어융합학과 박채린</div>
+            </div>
+        </div>
+            <div class="footer-line"></div>
+            <div class="footer-copy">© 2025 서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트 4팀 TripGuard.</div>
+        </footer> 
+        </div>
+    </body>
+</html>

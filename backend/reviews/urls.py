@@ -27,4 +27,5 @@ urlpatterns = [
     # - 5는 해당 review의 ID
     # - 자기 글엔 도움 안됨, 이미 눌렀으면 취소됨
     path("helpful/<int:review_id>/", views.toggle_helpful_api, name="helpful"),
+
 ]
