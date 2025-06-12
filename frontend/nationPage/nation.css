@@ -38,6 +38,7 @@
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box; /*수정부분*/
+  z-index: 1000; /*수정*/
 }
 
 .logo img {
@@ -121,6 +122,12 @@
   align-items: center;
   margin: 40px;
 }
+.level div {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  font-size: 15px;
+}
 
 .dot {
   width: 25px;
@@ -192,6 +199,10 @@
   margin: 12px 0;
 }
 /* 안전공지 */
+.subtitle-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .notice-table {
   table-layout: fixed;
   width: 332px;

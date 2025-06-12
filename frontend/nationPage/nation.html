@@ -2,7 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/nation.css" />
+    <link rel="stylesheet" href="nation.css" />
     <title>국가 상세 페이지</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
     <!-- /*네비게이션 바*/ -->
     <div class="navbar">
       <a href="../homPage/homePage.html" class="logo">
-        <img src="assets/img/TripGuard.png" alt="TripGuard 로고" />
+        <img src="../assets/img/TripGuard.png" alt="TripGuard 로고" />
       </a>
       <div class="search-bar">
         <input
@@ -27,7 +27,7 @@
           placeholder="국가명을 검색할 수 있습니다. (예:중국)"
         />
         <button id="searchBtn">
-          <img src="assets/img/Search.png" alt="검색" />
+          <img src="../assets/img/Search.png" alt="검색" />
         </button>
       </div>
     </div>
@@ -48,12 +48,12 @@
             <div><span class="dot black"></span> 여행금지</div>
             <div>
               <span class="dot exception"
-                ><img src="assets/img/exception.png"
+                ><img src="../assets/img/exception.png"
               /></span>
               특별여행주의보
             </div>
           </div>
-          <img src="assets/img/ChinaMap.svg" alt="중국 지도" />
+          <img src="../assets/img/ChinaMap.svg" alt="중국 지도" />
         </section>
         <!-- 탭 이동 섹션 -->
         <div class="tab-wrap">
@@ -67,7 +67,7 @@
 
           <!-- 재외공관 탭 영역 -->
           <section class="tab" id="embassy">
-            <div class="card">
+            <div class="card" data-name="주중국대사관 영사부">
               <h2>🏛️주중국대사관 영사부</h2>
               <span class="embassy-wrap">
                 <dl class="embassy-list">
@@ -83,7 +83,7 @@
                     <dd>+86-10-8532-0404</dd>
                   </div>
                   <div class="embassy-item">
-                    <dt>이메일</dt>
+                    <dt>긴급 전화번호</dt>
                     <dd>chinaconsul@mofa.go.kr</dd>
                   </div>
                   <div class="embassy-item">
@@ -103,13 +103,13 @@
                     href="https://maps.app.goo.gl/9WQgEg81u1nZJtjJA"
                     target="_blank"
                   >
-                    <img src="assets/img/embassy1.png" alt="지도이미지"
+                    <img src="../assets/img/embassy1.png" alt="지도이미지"
                   /></a>
                 </div>
               </span>
             </div>
 
-            <div class="card">
+            <div class="card" data-name="주홍콩총영사관">
               <h2>🏛️주홍콩총영사관</h2>
               <span class="embassy-wrap">
                 <dl class="embassy-list">
@@ -141,13 +141,13 @@
                   <a
                     href="https://maps.app.goo.gl/FpbD3ixso6tD6ZeK9"
                     target="_blank"
-                    ><img src="assets/img/embassy2.png" alt="지도이미지"
+                    ><img src="../assets/img/embassy2.png" alt="지도이미지"
                   /></a>
                 </div>
               </span>
             </div>
 
-            <div class="card">
+            <div class="card" data-name="주상하이총영사관">
               <h2>🏛️주상하이총영사관</h2>
               <span class="embassy-wrap">
                 <dl class="embassy-list">
@@ -179,12 +179,12 @@
                   <a
                     href="https://maps.app.goo.gl/2aR5VFmRDPHWYD1m6"
                     target="_blank"
-                    ><img src="assets/img/embassy3.png" alt="지도이미지"
+                    ><img src="../assets/img/embassy3.png" alt="지도이미지"
                   /></a>
                 </div>
               </span>
             </div>
-            <div class="card">
+            <div class="card" data-name="주칭다오총영사관">
               <h2>🏛️주칭다오총영사관</h2>
               <span class="embassy-wrap">
                 <dl class="embassy-list">
@@ -216,7 +216,7 @@
                     href="https://maps.app.goo.gl/WzHvHuPKV5K2DNmQ8"
                     target="_blank"
                   >
-                    <img src="assets/img/embassy4.png" alt="지도이미지"
+                    <img src="../assets/img/embassy4.png" alt="지도이미지"
                   /></a>
                 </div>
               </span>
@@ -238,12 +238,16 @@
             <div class="review-input">
               <div class="user-info">
                 <img
-                  src="assets/img/profile.svg"
+                  src="../assets/img/profile.svg"
                   alt="프로필이미지"
                   class="profile-img"
                 />
                 <div class="id">kali***</div>
-                <img src="assets/img/close.svg" alt="닫기" class="close-icon" />
+                <img
+                  src="../assets/img/close.svg"
+                  alt="닫기"
+                  class="close-icon"
+                />
               </div>
               <div class="input-area">
                 <input
@@ -266,7 +270,7 @@
       <!-- 국가 정보 섹션 -->
       <div class="side-section">
         <section class="nation-info">
-          <img src="assets/img/china.png" alt="중국 국기" class="flag-img" />
+          <img src="../assets/img/china.png" alt="중국 국기" class="flag-img" />
           <div class="info-text">
             <h4 class="subtitle">✅기본정보</h4>
 
@@ -298,7 +302,10 @@
 
         <!-- 안전 공지 섹션 -->
         <section class="notice">
-          <h4 class="subtitle">안전공지</h4>
+          <div class="subtitle-wrap">
+            <h4 class="subtitle">안전공지</h4>
+            <img src="../assets/img/arrow.svg" />
+          </div>
           <hr class="divider" />
           <table class="notice-table">
             <!-- js로 <tr> 추가 -->
