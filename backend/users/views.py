@@ -2,6 +2,7 @@ from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.http import require_http_methods
@@ -138,3 +139,15 @@ def signup_api_view(request):
         return JsonResponse({"success": True, "message": "회원가입에 성공했습니다."})
 
     return JsonResponse({"success": False, "message": "잘못된 요청입니다."}, status=400)
+
+def home_page_view(request):
+    return render(request, 'homePage.html')
+
+def login_page_view(request):
+    return render(request, 'login.html')
+
+def signup_page_view(request):
+    return render(request, 'join.html')
+
+def signup_complete_page_view(request):
+    return render(request, 'joinComplete.html')
