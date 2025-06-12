@@ -4,14 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchBtn = document.getElementById("searchBtn");
   const searchInput = document.getElementById("searchInput");
 
-  searchBtn.addEventListener("click", function () {
-    const keyword = searchInput.value.trim();
-    if (keyword === "중국") {
-      window.location.href = "/resultPage/result.html";
-    } else {
-      window.location.href = "/cantFind/cantFind.html";
-    }
-  });
 
    // 이메일 중복 확인을 위한 입력 이벤트
   const emailInput = document.getElementById("email");
@@ -50,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 회원가입 버튼 이벤트
   const joinBtn = document.querySelector(".btn-primary");
   joinBtn.addEventListener("click", async function () {
+
     const name = document.getElementById("username").value.trim();
     const nickname = document.getElementById("nickname").value.trim();
     const email = document.getElementById("email").value.trim();

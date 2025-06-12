@@ -43,17 +43,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 검색 버튼 이벤트
-  const searchBtn = document.getElementById("searchBtn");
-  const searchInput = document.getElementById("searchInput");
-  if (searchBtn && searchInput) {
-    searchBtn.addEventListener("click", () => {
-      const keyword = searchInput.value.trim();
-      if (keyword === "중국") {
-        window.location.href = "../resultPage/result.html";
-      } else {
-        window.location.href = "../cantFind/cantFind.html";
-      }
-    });
-  }
 });
