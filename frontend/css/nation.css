@@ -116,9 +116,31 @@
 }
 /* 국가지도 */
 .nation-map {
-  width: 868px;
-  height: 470px;
-  background-color: rgb(208, 208, 208);
+  display: flex;
+  gap: 65px;
+  align-items: center;
+  margin: 40px;
+}
+
+.dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.blue {
+  background-color: #5398f5;
+}
+.yellow {
+  background-color: #fcc33c;
+}
+.red {
+  background-color: #f54242;
+}
+.black {
+  background-color: #242424;
 }
 .side-section {
   width: 388px;
@@ -182,12 +204,11 @@
   padding-right: 7px;
 }
 .notice-table .title {
-  width: 211px;
+  width: 200px;
   font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 7px;
 }
 .notice-table .date {
   font-size: 15px;
@@ -221,7 +242,6 @@ dd {
 
 .tab-wrap {
   width: 868px;
-  padding-top: 24px;
   margin: 0 auto;
   margin-bottom: 70px;
 }
@@ -363,14 +383,35 @@ input {
 .submit-btn:hover {
   background-color: #0456d2;
 }
+.review-wrap {
+  position: relative;
+}
 .review-list {
   gap: 32px;
   margin-top: 32px;
   display: flex;
   flex-direction: column;
 }
+.review-list.blurred {
+  filter: blur(5px);
+}
+
+.overlay-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 100;
+  display: none;
+}
 .review-option {
   width: 28px;
+  cursor: pointer;
 }
 .option-wrapper {
   position: relative;

@@ -18,7 +18,6 @@ function toggleOptions(el) {
     menu.style.display = "none";
   }
 }
-//const submitBtn = document.getElementById("review-submit");
 const reviewInput = document.getElementById("review-input");
 const reviewList = document.getElementById("review-list");
 
@@ -71,7 +70,7 @@ const dummyReview = {
 // 페이지 로드시 바로 리스트에 추가 (테스트용)
 addReview(dummyReview);
 
-// 후기 등록 함수(리스트 추가)
+// 후기 등록 (리스트 추가)
 function addReview(review) {
   const reviewList = document.getElementById("review-list");
   const date = review.created_at.split(" ")[0].replace(/-/g, ".");
@@ -121,7 +120,7 @@ document.getElementById("review-list").addEventListener("click", function (e) {
   }
 });
 
-//수정하기 버튼
+//후기 수정하기
 function handleEditClick(button) {
   const reviewItem = button.closest(".review-item"); //현재 수정할 후기를 찾음
   const contentDiv = reviewItem.querySelector(".review-content");
@@ -133,7 +132,7 @@ function handleEditClick(button) {
   button.classList.add("save-mode"); // 기능 구분용 클래스 추가
 }
 
-//저장하기 버튼
+//후기 저장하기
 async function handleSaveClick(button) {
   const reviewItem = button.closest(".review-item");
   const input = reviewItem.querySelector(".edit-input");
@@ -156,7 +155,6 @@ async function handleSaveClick(button) {
 
     if (res.ok) {
       const contentDiv = reviewItem.querySelector(".review-content");
-      contentDiv.innerHTML = "";
       contentDiv.textContent = result.updated_review.content;
 
       button.textContent = "수정하기";
@@ -164,16 +162,16 @@ async function handleSaveClick(button) {
 
       alert("후기가 수정되었습니다!");
     } else if (res.status === 403) {
-      alert(result.message || "본인 후기만 수정할 수 있습니다.");
-    } else {
-      alert(result.error || "수정 실패");
+      alert(result.message);
+    } else if (res.status === 400) {
+      alert(result.error);
     }
   } catch (err) {
     alert("수정 요청 실패: 네트워크 오류");
   }
 }
 
-//삭제하기 버튼
+//후기 삭제하기
 async function handleDeleteClick(button) {
   const reviewItem = button.closest(".review-item");
   const reviewId = reviewItem.dataset.reviewId;
@@ -183,16 +181,16 @@ async function handleDeleteClick(button) {
 
   try {
     const res = await fetch(`/reviews/delete/${reviewId}/`, {
-      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
     });
+    const result = await res.json();
 
     if (res.ok) {
-      alert(result.message || "삭제 완료");
+      alert(result.message);
       reviewItem.remove();
     } else if (res.status === 403) {
-      alert(result.message || "본인 후기만 삭제할 수 있습니다.");
-    } else {
-      alert(result.message || "삭제 실패");
+      alert(result.message);
     }
   } catch (err) {
     console.error("삭제 요청 실패:", err);
@@ -267,4 +265,62 @@ reviewData.forEach((review) => {
     </div>
   `;
   reviewList.innerHTML += item;
+});
+
+//로그인 안한 경우 후기리스트 블러 처리
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const res = await fetch("/countries/api/detail/china/");
+    const data = await res.json();
+
+    if (!data.is_authenticated) {
+      document.getElementById("review-list").classList.add("blurred");
+      document.getElementById("login-required").style.display = "block";
+    }
+  } catch (err) {
+    console.error("데이터 로딩 실패:", err);
+  }
+});
+
+//안전공지
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const res = await fetch("/countries/api/detail/china/");
+    const data = await res.json();
+
+    // 현재 사용자의 닉네임 표시
+    if (data.is_authenticated && data.nickname) {
+      document.querySelector(".review-input .id").textContent = data.nickname;
+    }
+    const safetyList = data.country_safeties;
+    // const safetyList = [
+    //   {
+    //     title: "모의 공지사항 1",
+    //     content: "이건 테스트용 내용입니다.",
+    //     written_dt: "2025-06-10",
+    //     file_url: null,
+    //   },
+    //   {
+    //     title: "모의 공지사항 2",
+    //     content: "또 다른 테스트 내용입니다.",
+    //     written_dt: "2025-05-31",
+    //     file_url: "http://example.com/test.pdf",
+    //   },
+    // ];
+    const table = document.querySelector(".notice-table");
+
+    safetyList.forEach((item) => {
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td class="tag-notice">안내</td>
+        <td class="title">${item.title}</td>
+        <td class="date">${item.written_dt}</td>
+      `;
+
+      table.appendChild(row);
+    });
+  } catch (err) {
+    console.error("안전공지 로딩 실패:", err);
+  }
 });

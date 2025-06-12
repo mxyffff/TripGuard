@@ -40,7 +40,21 @@
     <div class="wrapper">
       <div class="container">
         <!-- 지도 섹션 -->
-        <section class="nation-map">지도입니다.</section>
+        <section class="nation-map">
+          <div class="level">
+            <div><span class="dot blue"></span> 여행유의</div>
+            <div><span class="dot yellow"></span> 여행자제</div>
+            <div><span class="dot red"></span> 출국권고</div>
+            <div><span class="dot black"></span> 여행금지</div>
+            <div>
+              <span class="dot exception"
+                ><img src="assets/img/exception.png"
+              /></span>
+              특별여행주의보
+            </div>
+          </div>
+          <img src="assets/img/ChinaMap.svg" alt="중국 지도" />
+        </section>
         <!-- 탭 이동 섹션 -->
         <div class="tab-wrap">
           <nav class="tabs">
@@ -85,7 +99,12 @@
                   </div>
                 </dl>
                 <div class="embassy-map">
-                  <img src="assets/img/embassy1.png" alt="지도이미지" />
+                  <a
+                    href="https://maps.app.goo.gl/9WQgEg81u1nZJtjJA"
+                    target="_blank"
+                  >
+                    <img src="assets/img/embassy1.png" alt="지도이미지"
+                  /></a>
                 </div>
               </span>
             </div>
@@ -119,7 +138,11 @@
                   </div>
                 </dl>
                 <div class="embassy-map">
-                  <img src="assets/img/embassy2.png" alt="지도이미지" />
+                  <a
+                    href="https://maps.app.goo.gl/FpbD3ixso6tD6ZeK9"
+                    target="_blank"
+                    ><img src="assets/img/embassy2.png" alt="지도이미지"
+                  /></a>
                 </div>
               </span>
             </div>
@@ -153,7 +176,11 @@
                   </div>
                 </dl>
                 <div class="embassy-map">
-                  <img src="assets/img/embassy3.png" alt="지도이미지" />
+                  <a
+                    href="https://maps.app.goo.gl/2aR5VFmRDPHWYD1m6"
+                    target="_blank"
+                    ><img src="assets/img/embassy3.png" alt="지도이미지"
+                  /></a>
                 </div>
               </span>
             </div>
@@ -185,7 +212,12 @@
                   </div>
                 </dl>
                 <div class="embassy-map">
-                  <img src="assets/img/embassy4.png" alt="지도이미지" />
+                  <a
+                    href="https://maps.app.goo.gl/WzHvHuPKV5K2DNmQ8"
+                    target="_blank"
+                  >
+                    <img src="assets/img/embassy4.png" alt="지도이미지"
+                  /></a>
                 </div>
               </span>
             </div>
@@ -214,12 +246,20 @@
                 <img src="assets/img/close.svg" alt="닫기" class="close-icon" />
               </div>
               <div class="input-area">
-                <input type="text"id="review-input" placeholder="한 줄 후기를 입력해주세요." />
+                <input
+                  type="text"
+                  id="review-input"
+                  placeholder="한 줄 후기를 입력해주세요."
+                />
                 <button id="review-submit" class="submit-btn">등록</button>
               </div>
             </div>
-
-            <div class="review-list" id="review-list"></div>
+            <div class="review-wrap">
+              <div class="review-list" id="review-list"></div>
+              <div class="overlay-message" id="login-required">
+                로그인이 필요합니다.
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -261,16 +301,11 @@
           <h4 class="subtitle">안전공지</h4>
           <hr class="divider" />
           <table class="notice-table">
-            <tr>
-              <td class="tag-notice">안내</td>
-              <td class="title">하얼빈 동계아시안게임 해외안전여행 공지사항</td>
-              <td class="date">2025.04.23</td>
-            </tr>
+            <!-- js로 <tr> 추가 -->
           </table>
         </section>
       </div>
     </div>
-    <!-- wrapper닫는태그 -->
 
     <!-- 푸터 -->
     <footer class="footer">
