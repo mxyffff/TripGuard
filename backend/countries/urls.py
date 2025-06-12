@@ -11,4 +11,5 @@ urlpatterns = [
     # 전체 국가 목록 (이름 + slug)을 JSON 형태로 응답하는 API
     # 예: /countries/api/list/
     path("api/list/", views.country_list_api, name="country_list_api"),
+
 ]

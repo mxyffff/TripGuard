@@ -144,3 +144,4 @@ def toggle_helpful_api(request, review_id):
         "is_helpful": is_helpful,
         "helpfulness_count": review.helpfulness.all().count()
     })
+
