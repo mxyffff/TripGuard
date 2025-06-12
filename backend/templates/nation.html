@@ -70,20 +70,7 @@
 
             <!-- 유의지역 탭 -->
             <section class="tab" id="danger" style="display: none">
-                <h2>소매치기 유의지역</h2>
-                <div class="location">
-                    <div class="location-item">베이징</div>
-                    <div class="location-item">상하이</div>
-                    <div class="location-item">광저우</div>
-                </div>
-                <p class="danger-content">:내용</p>
-                <hr class="danger-hr"/>
-
-                {% if request.user.is_authenticated %}
-                    <p>로그인 상태입니다. 사용자: {{ request.user.nickname }}</p>
-                {% else %}
-                    <p>로그아웃 상태입니다.</p>
-                {% endif %}
+                <!-- JS가 내부 내용 생성 -->
             </section>
 
             <!-- 후기 탭 -->

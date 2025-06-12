@@ -89,6 +89,40 @@ async function updateEmbassyTexts() {
 
 updateEmbassyTexts();
 
+//유의지역 공지
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    const res = await fetch("/countries/api/detail/china/");
+    const data = await res.json();
+
+    const categoryMap = data.category_map;
+    const dangerSection = document.getElementById("danger");
+
+    for (const category in categoryMap) {
+      const title = document.createElement("h2");
+      title.textContent = ` ${category} 유의지역`;
+      dangerSection.appendChild(title);
+
+      const contentWrapper = document.createElement("div");
+      contentWrapper.classList.add("danger-content");
+
+      categoryMap[category].forEach((item) => {
+        const p = document.createElement("p");
+        p.textContent = `- ${item}`;
+        contentWrapper.appendChild(p);
+      });
+
+      dangerSection.appendChild(contentWrapper);
+
+      const hr = document.createElement("hr");
+      hr.classList.add("danger-hr");
+      dangerSection.appendChild(hr);
+    }
+  } catch (err) {
+    console.error("유의지역 로딩 실패:", err);
+  }
+});
+
 const reviewInput = document.getElementById("review-input");
 const reviewList = document.getElementById("review-list");
 

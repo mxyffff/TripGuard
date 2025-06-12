@@ -38,6 +38,7 @@
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box; /*수정부분*/
+  z-index: 1000; /*수정*/
 }
 
 .logo img {
@@ -121,6 +122,12 @@
   align-items: center;
   margin: 40px;
 }
+.level div {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  font-size: 15px;
+}
 
 .dot {
   width: 25px;
@@ -192,6 +199,10 @@
   margin: 12px 0;
 }
 /* 안전공지 */
+.subtitle-wrap {
+  display: flex;
+  justify-content: space-between;
+}
 .notice-table {
   table-layout: fixed;
   width: 332px;
@@ -308,18 +319,6 @@ dd {
   box-sizing: border-box;
 }
 /* 유의지역 탭 */
-.location {
-  display: flex;
-  gap: 8px;
-  text-align: center;
-}
-.location-item {
-  padding: 8px 20px;
-  background-color: #eef5ff;
-  font-size: 17px;
-  box-sizing: border-box;
-  border-radius: 8px;
-}
 .danger-content {
   font-size: 19px;
 }
@@ -327,6 +326,14 @@ dd {
   background-color: #ededed;
   height: 1px;
   border: none;
+}
+#danger h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+#danger.tab {
+  padding: 0 10px;
+  margin-top: 32px;
 }
 /* 후기 탭 */
 .review-input {
