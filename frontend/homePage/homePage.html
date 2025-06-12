@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>TripGuard - 글로벌 안전 정보</title>
+        <link rel="stylesheet" href="homePage.css">
+    </head>
+    <body>
+        <!-- /*상단 로그인/회원가입*/ -->
+        <div class="container">
+            <div class="top-bar">
+            <div class="auth-buttons">
+                <a href="/loginPage/login.html">로그인</a>
+                <a href="/join/join.html">회원가입</a>
+            </div>
+        </div>
+
+        <!-- /*네비게이션 바*/ -->
+        <div class="navbar">
+            <a href="homePage.html" class="logo">
+                <img src="IMG/TripGuard.png" alt="TripGuard 로고">
+            </a>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="국가명을 검색할 수 있습니다. (예:중국)">
+                <button id="searchBtn"><img src="IMG/Search.png" alt="검색"></button>
+            </div>
+        </div>
+
+        <!-- /*맵 헤더*/ -->
+        <div class="map-header">
+            <div class="map-title-box">
+            <h2 class="map-title">글로벌 안전 정보</h2>
+            <p class="map-subtext">※ 지도를 클릭 하시면 상세페이지로 이동합니다.</p>
+            </div>
+            <div class="map-buttons">
+                <button class="zoom-btn">+ 확대하기</button>
+                <button class="zoom-btn">- 축소하기</button>
+            </div>
+        </div>
+
+            <!-- 지도 화면 -->
+            <div id="map-box"></div>
+            <div id="tooltip"></div>
+
+            <!-- 주의 표시 -->
+            <div class="legend">
+                <div class="legend-divider"></div>
+                <div class="legend-item"><span class="color safe"></span>여행유의</div>
+                <div class="legend-divider"></div>
+                <div class="legend-item"><span class="color caution"></span>여행자제</div>
+                <div class="legend-divider"></div>
+                <div class="legend-item"><span class="color STA"></span>특별여행주의보</div>
+                <div class="legend-divider"></div>
+                <div class="legend-item"><span class="color warning"></span>출국권고</div>
+                <div class="legend-divider"></div>
+                <div class="legend-item"><span class="color danger"></span>여행금지</div>
+                <div class="legend-divider"></div>
+            </div>
+        
+            <!-- 푸터 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section left">
+                    <div class="project-title">서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트</div>
+                    <div>4팀 TripGuard</div>
+                </div>
+            
+            <div class="footer-section">
+                <strong>PM</strong>
+                <div>첨단미디어디자인과 김주아</div>
+            </div>
+            <div class="footer-section">
+                <strong>FE</strong>
+                <div>디지털미디어학과 손예원</div>
+                <div>디지털미디어학과 주채빈</div>
+            </div>
+
+            <div class="footer-section">
+                <strong>BE</strong>
+                <div>문헌정보학과 양보윤</div>
+                <div>디지털미디어학과 이다겸</div>
+                <div>소프트웨어융합학과 박채린</div>
+            </div>
+        </div>
+            <div class="footer-line"></div>
+            <div class="footer-copy">© 2025 서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트 4팀 TripGuard.</div>
+        </footer> 
+    </div>
+<script defer src="homePage.js"></script>
+</body>
+</html>
