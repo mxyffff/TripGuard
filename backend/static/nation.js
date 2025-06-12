@@ -38,16 +38,27 @@ async function updateEmbassyTexts() {
             "상하이": "embassy3.png",
             "칭다오": "embassy4.png"
         };
+        // 🔧 공관명 키워드에 따른 지도 링크 매핑
+        const mapLinkMap = {
+            "대사관": "https://maps.app.goo.gl/9WQgEg81u1nZJtjJA",
+            "홍콩": "https://maps.app.goo.gl/6DqfBKdtdTMniQks8",
+            "상하이": "https://maps.app.goo.gl/NTNdPD5wx3u5jGez8",
+            "칭다오": "https://maps.app.goo.gl/74to7wzQxCBzJc8Z8"
+        };
 
         embassies.forEach((info, index) => {
             const card = document.createElement("div");
             card.className = "card";
 
-            // 🔧 공관 이름에 따라 지도 이미지 파일 선택
+            // 🔧 공관 이름에 따라 지도 이미지 파일 및 링크 선택
             let imageFile = "embassy1.png"; // 기본값
+            let mapLink = "https://maps.app.goo.gl/9WQgEg81u1nZJtjJA"; // 기본값
+
+            // 공관 이름에 따라 지도 이미지 파일 선택
             for (const keyword in mapImageMap) {
                 if (info.embassy_name.includes(keyword)) {
                     imageFile = mapImageMap[keyword];
+                    mapLink = mapLinkMap[keyword];
                     break;
                 }
             }
@@ -62,7 +73,7 @@ async function updateEmbassyTexts() {
             <div class="embassy-item"><dt>홈페이지</dt><dd><a href="${info.homepage_url || '#'}" target="_blank">${info.homepage_url ? "바로가기" : "정보 없음"}</a></dd></div>
           </dl>
           <div class="embassy-map">
-            <a href="https://maps.app.goo.gl/9WQgEg81u1nZJtjJA" target="_blank">
+            <a href="${mapLink}" target="_blank">
               <img src="/static/assets/img/${imageFile}" alt="지도이미지"/>
             </a>
           </div>
