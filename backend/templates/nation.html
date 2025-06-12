@@ -65,24 +65,7 @@
 
             <!-- 재외공관 탭 -->
             <section class="tab" id="embassy">
-                {% comment %} 예시로 1개만 보여줍니다. 실제로는 for문 등으로 반복 렌더링 예정 {% endcomment %}
-                <div class="card">
-                    <h2>🏛️주중국대사관 영사부</h2>
-                    <span class="embassy-wrap">
-                <dl class="embassy-list">
-                  <div class="embassy-item"><dt>주소</dt><dd>중국 북경시 조양구 제3대사관구 동방동로 20번지</dd></div>
-                  <div class="embassy-item"><dt>전화번호</dt><dd>+86-10-8532-0404</dd></div>
-                  <div class="embassy-item"><dt>이메일</dt><dd>chinaconsul@mofa.go.kr</dd></div>
-                  <div class="embassy-item"><dt>홈페이지</dt><dd><a href="http://overseas.mofa.go.kr/cn-ko/index.do"
-                                                                target="_blank">바로가기</a></dd></div>
-                </dl>
-                <div class="embassy-map">
-                  <a href="https://maps.app.goo.gl/9WQgEg81u1nZJtjJA" target="_blank">
-                    <img src="{% static 'assets/img/embassy1.png' %}" alt="지도이미지"/>
-                  </a>
-                </div>
-              </span>
-                </div>
+                <div id="embassy-cards"></div> <!-- 🔧 JS로 카드 생성될 영역 -->
             </section>
 
             <!-- 유의지역 탭 -->

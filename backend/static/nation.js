@@ -19,6 +19,65 @@ function toggleOptions(el) {
     }
 }
 
+//🔧 재외공관 api 연결
+async function updateEmbassyTexts() {
+    try {
+        const res = await fetch("http://localhost:8000/countries/api/detail/china/");
+        if (!res.ok) throw new Error("API 요청 실패");
+
+        const data = await res.json();
+        const embassies = data.embassies;
+
+        const container = document.getElementById("embassy-cards");
+        container.innerHTML = ""; // 초기화
+
+        // 🔧 공관명 키워드에 따른 지도 이미지 파일명 매핑
+        const mapImageMap = {
+            "대사관": "embassy1.png",
+            "홍콩": "embassy2.png",
+            "상하이": "embassy3.png",
+            "칭다오": "embassy4.png"
+        };
+
+        embassies.forEach((info, index) => {
+            const card = document.createElement("div");
+            card.className = "card";
+
+            // 🔧 공관 이름에 따라 지도 이미지 파일 선택
+            let imageFile = "embassy1.png"; // 기본값
+            for (const keyword in mapImageMap) {
+                if (info.embassy_name.includes(keyword)) {
+                    imageFile = mapImageMap[keyword];
+                    break;
+                }
+            }
+
+            card.innerHTML = `
+        <h2>🏛️${info.embassy_name}</h2>
+        <span class="embassy-wrap">
+          <dl class="embassy-list">
+            <div class="embassy-item"><dt>주소</dt><dd>${info.address || "정보 없음"}</dd></div>
+            <div class="embassy-item"><dt>전화번호</dt><dd>${info.tel_no || "정보 없음"}</dd></div>
+            <div class="embassy-item"><dt>긴급전화번호</dt><dd>${info.urgency_tel || "정보 없음"}</dd></div>
+            <div class="embassy-item"><dt>홈페이지</dt><dd><a href="${info.homepage_url || '#'}" target="_blank">${info.homepage_url ? "바로가기" : "정보 없음"}</a></dd></div>
+          </dl>
+          <div class="embassy-map">
+            <a href="https://maps.app.goo.gl/9WQgEg81u1nZJtjJA" target="_blank">
+              <img src="/static/assets/img/${imageFile}" alt="지도이미지"/>
+            </a>
+          </div>
+        </span>
+      `;
+            container.appendChild(card);
+        });
+    } catch (err) {
+        console.error("대사관 정보 로딩 실패:", err);
+        alert("대사관 정보를 불러오지 못했습니다.");
+    }
+}
+
+updateEmbassyTexts();
+
 const reviewInput = document.getElementById("review-input");
 const reviewList = document.getElementById("review-list");
 
@@ -181,34 +240,34 @@ async function handleDeleteClick(button) {
 
 // 도움이 돼요 클릭 이벤트
 reviewList.addEventListener("click", async function (e) {
-  if (e.target.closest(".likes")) {
-    const reviewItem = e.target.closest(".review-item");
-    const reviewId = reviewItem.dataset.reviewId;
+    if (e.target.closest(".likes")) {
+        const reviewItem = e.target.closest(".review-item");
+        const reviewId = reviewItem.dataset.reviewId;
 
-    try {
-      const res = await fetch(`/reviews/helpful/${reviewId}/`, {
-        method: "POST",
-      });
+        try {
+            const res = await fetch(`/reviews/helpful/${reviewId}/`, {
+                method: "POST",
+            });
 
-      const result = await res.json();
+            const result = await res.json();
 
-      if (res.ok) {
-        const likesDiv = reviewItem.querySelector(".likes");
-        likesDiv.innerHTML = `
+            if (res.ok) {
+                const likesDiv = reviewItem.querySelector(".likes");
+                likesDiv.innerHTML = `
           도움이 돼요
           <img src="/static/assets/img/like.svg" alt="도움이 돼요" />
           ${result.helpfulness_count}
         `;
-      } else if (res.status === 403) {
-        alert(result.error); // ✅ 여기에 정확한 메시지 출력됨
-      } else {
-        alert("도움 요청 실패: 서버 오류");
-      }
-    } catch (err) {
-      console.error("도움 요청 실패:", err);
-      alert("도움 요청 실패: 네트워크 오류");
+            } else if (res.status === 403) {
+                alert(result.error); // ✅ 여기에 정확한 메시지 출력됨
+            } else {
+                alert("도움 요청 실패: 서버 오류");
+            }
+        } catch (err) {
+            console.error("도움 요청 실패:", err);
+            alert("도움 요청 실패: 네트워크 오류");
+        }
     }
-  }
 });
 
 // 로그인 여부 확인 + 닉네임 및 안전공지 + 후기 목록 로딩
