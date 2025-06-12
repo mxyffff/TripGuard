@@ -1,5 +1,5 @@
 from django.http import JsonResponse, Http404  # JSON 응답을 위한 모듈
-from django.shortcuts import get_object_or_404  # 객체를 가져오거나 404 에러 반환
+from django.shortcuts import get_object_or_404, render  # 객체를 가져오거나 404 에러 반환
 from django.db.models import Q, Case, When, Value, IntegerField  # 복합 조건과 정렬을 위한 ORM 도구들
 from countries.models import Embassy, EmbassyHomepage, CountrySafety, SafetyNotice  # 관련 모델들 import
 from reviews.models import Review  # 리뷰 모델 import
@@ -144,3 +144,7 @@ def country_detail_api(request, slug):
 def country_list_api(request):
     countries = Embassy.objects.values("country_name", "country_en_name", "slug").distinct()
     return JsonResponse(list(countries), safe=False)
+
+# 프론트엔드 템플릿을 렌더링하는 뷰
+def nation_page_view(request):
+    return render(request, 'nation.html')

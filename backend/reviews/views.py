@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+import json
 
 from countries.models import Embassy
 from .models import Review, Helpfulness
@@ -23,22 +24,25 @@ def create_review_api(request, slug):
         - 로그인한 사용자만 가능
         - 후기 내용(content)이 공백이 아니어야 함
     """
+    try:
+        data = json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({"error": "잘못된 요청 형식입니다."}, status=400)
+
+    content = data.get("content", "").strip()
+    if not content:
+        return JsonResponse({"error": "내용이 비어 있습니다."}, status=400)
+
     embassies = Embassy.objects.filter(slug=slug)
     if not embassies.exists():
         return JsonResponse({"error": "해당 slug의 공관이 존재하지 않습니다."}, status=404)
 
+    # '대사관'이 포함된 공관 우선 선택
     embassy = (
             embassies.filter(embassy_name__icontains="대사관").first()
             or embassies.first()
     )
 
-    # POST 요청에서 content 추출 (공백 제거)
-    content = request.POST.get("content", "").strip()
-
-    if not content:
-        return JsonResponse({"error": "내용이 비어 있습니다."}, status=400)
-
-    # Review 객체 생성 (created_at, updated_at은 models에서 자동 처리)
     review = Review.objects.create(
         user=request.user,
         embassy=embassy,
@@ -56,6 +60,7 @@ def create_review_api(request, slug):
             "helpfulness": 0,
         }
     })
+
 
 @csrf_exempt
 @require_POST
@@ -90,17 +95,22 @@ def update_review_api(request, review_id):
         - 본인 후기만 수정 가능
         - 수정 내용이 공백이 아니어야 함
     """
+    try:
+        data = json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({"error": "잘못된 요청 형식입니다."}, status=400)
+
+    content = data.get("content", "").strip()
+    if not content:
+        return JsonResponse({"error": "수정할 내용이 비어 있습니다."}, status=400)
+
     review = get_object_or_404(Review, id=review_id)
 
     if request.user != review.user:
         return HttpResponseForbidden("본인 후기만 수정할 수 있습니다.")
 
-    content = request.POST.get("content", "").strip()
-    if not content:
-        return JsonResponse({"error": "수정할 내용이 비어 있습니다."}, status=400)
-
     review.content = content
-    review.updated_at = timezone.now()  # 명시적으로 수정 시각 갱신
+    review.updated_at = timezone.now()
     review.save()
 
     return JsonResponse({
@@ -125,10 +135,17 @@ def toggle_helpful_api(request, review_id):
         - 본인 후기에는 도움 누를 수 없음
         - 한 번 누르면 등록되고, 다시 누르면 취소됨
     """
+    # 실제로 body 안 쓰더라도, 오류 방지를 위해 dummy로 한 번 파싱
+    try:
+        if request.headers.get("Content-Type") == "application/json":
+            json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({"error": "요청 데이터 형식이 잘못되었습니다."}, status=400)
+
     review = get_object_or_404(Review, id=review_id)
 
     if request.user == review.user:
-        return HttpResponseForbidden("본인 글에는 도움을 누를 수 없습니다.")
+        return JsonResponse({"error": "자신의 댓글엔 좋아요를 누를 수 없습니다."}, status=403)
 
     existing = Helpfulness.objects.filter(user=request.user, review=review)
 

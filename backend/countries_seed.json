@@ -3969,6 +3969,54 @@
   }
 },
 {
+  "model": "countries.embassy",
+  "pk": 100,
+  "fields": {
+    "embassy_cd": "cn002",
+    "country_name": "중국",
+    "country_en_name": "China",
+    "slug": "china",
+    "embassy_name": "주 상하이 총 영사관",
+    "address": "Wanshan-Rd.No.60, Changning-district, Shanghai, China",
+    "tel_no": "(86) 21-6295-5000",
+    "urgency_tel": "(86) 138-1650-9503(4)",
+    "lat": null,
+    "lng": null
+  }
+},
+{
+  "model": "countries.embassy",
+  "pk": 101,
+  "fields": {
+    "embassy_cd": "cn003",
+    "country_name": "중국",
+    "country_en_name": "China",
+    "slug": "china",
+    "embassy_name": "주 칭다오 총 영사관",
+    "address": "No.88. Chunyang Road, Chengyang District, Qingdao City, Shandong Prov, China (266109)",
+    "tel_no": "(86-532)8897-6001",
+    "urgency_tel": "(86)186-6026-5087",
+    "lat": null,
+    "lng": null
+  }
+},
+{
+  "model": "countries.embassy",
+  "pk": 102,
+  "fields": {
+    "embassy_cd": "cn004",
+    "country_name": "중국",
+    "country_en_name": "China",
+    "slug": "china",
+    "embassy_name": "주 홍콩 총 영사관",
+    "address": "Consulate General of the Republic of Korea\r\n5F, Far East Finance Centre, 16 Harcourt Road, Admiralty, Hong Kong",
+    "tel_no": "(852)2529-4141",
+    "urgency_tel": "(852)9731-0092",
+    "lat": null,
+    "lng": null
+  }
+},
+{
   "model": "countries.embassyhomepage",
   "pk": 1,
   "fields": {
@@ -4326,6 +4374,30 @@
   "fields": {
     "embassy": 28,
     "url": "https://spb.mofa.go.kr/ru-stpetersburg-ko/index.do"
+  }
+},
+{
+  "model": "countries.embassyhomepage",
+  "pk": 46,
+  "fields": {
+    "embassy": 100,
+    "url": "http://overseas.mofa.go.kr/cn-shanghai-ko/index.do"
+  }
+},
+{
+  "model": "countries.embassyhomepage",
+  "pk": 47,
+  "fields": {
+    "embassy": 101,
+    "url": "http://overseas.mofa.go.kr/cn-qingdao-ko/index.do"
+  }
+},
+{
+  "model": "countries.embassyhomepage",
+  "pk": 48,
+  "fields": {
+    "embassy": 102,
+    "url": "http://overseas.mofa.go.kr/hk-ko/index.do"
   }
 }
 ]
