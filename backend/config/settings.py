@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "alerts",
     "rest_framework",
     "xmltodict",
+    'requests',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
