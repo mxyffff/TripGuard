@@ -19,6 +19,7 @@ function toggleOptions(el) {
   }
 }
 
+//🔧 재외공관 api 연결
 async function updateEmbassyTexts() {
   try {
     const res = await fetch(
@@ -82,18 +83,16 @@ document
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ content: content }),
+        body: JSON.stringify({ content }),
       });
 
-      const result = await response.json(); //응답을 js객체로 파싱
-
+      const result = await response.json();
+      
       if (response.ok) {
-        // 등록 성공 -> 리스트에 추가
         const review = result.review;
         addReview(review);
-        reviewInput.value = ""; // 입력칸 비우기
+        reviewInput.value = "";
       } else {
-        // 에러 -> 실패 메시지
         alert("등록 실패: " + (result.error || result.message));
       }
     } catch (error) {
@@ -149,6 +148,8 @@ document.getElementById("review-list").addEventListener("click", function (e) {
     handleSaveClick(e.target);
   } else if (e.target.classList.contains("delete-btn")) {
     handleDeleteClick(e.target);
+  } else if (e.target.closest(".likes")) {
+    handleHelpfulnessClick(e.target.closest(".review-item")); // ✅ "도움이 돼요" 처리 추가
   }
 });
 
@@ -161,7 +162,7 @@ function handleEditClick(button) {
   contentDiv.innerHTML = `<input type="text" class="edit-input" value="${originalContent}" />`;
   //기존 내용을 수정하도록
   button.textContent = "저장하기"; //수정버튼을 저장버튼으로 변경
-  button.classList.add("save-mode"); // 기능 구분용 클래스 추가
+  button.classList.add("save-mode"); // 🔧 저장 모드 추가
 }
 
 //후기 저장하기
@@ -193,10 +194,8 @@ async function handleSaveClick(button) {
       button.classList.remove("save-mode");
 
       alert("후기가 수정되었습니다!");
-    } else if (res.status === 403) {
-      alert(result.message);
-    } else if (res.status === 400) {
-      alert(result.error);
+    } else {
+      alert(result.message || result.error);
     }
   } catch (err) {
     alert("수정 요청 실패: 네트워크 오류");
@@ -214,6 +213,7 @@ async function handleDeleteClick(button) {
   try {
     const res = await fetch(`/reviews/delete/${reviewId}/`, {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
     });
     const result = await res.json();
 
@@ -221,7 +221,7 @@ async function handleDeleteClick(button) {
       alert(result.message);
       reviewItem.remove();
     } else {
-      alert(result.message);
+            alert(result.message || result.error);
     }
   } catch (err) {
     console.error("삭제 요청 실패:", err);
@@ -229,142 +229,72 @@ async function handleDeleteClick(button) {
   }
 }
 
-//기존 후기 목록
-const reviewData = [
-  {
-    userId: "kali***",
-    content: "베이징에서 소매치기 당할 뻔 했어요! 조심하세요!",
-    date: "2025.05.06",
-    likes: 35,
-  },
-  {
-    userId: "nana***",
-    content: "왕푸징 근처에서 휴대폰 도난당했어요...ㅠㅠ",
-    date: "2025.04.30",
-    likes: 12,
-  },
-  {
-    userId: "jay***",
-    content: "우다코 지하철에서 수상한 사람들 조심하세요.",
-    date: "2025.03.28",
-    likes: 8,
-  },
-  {
-    userId: "sejin***",
-    content: "심야에 택시앱 이용할 때는 꼭 차량번호 확인하고 탑승하세요.",
-    date: "2025.05.09",
-    likes: 27,
-  },
-  {
-    userId: "taemin***",
-    content:
-      "번화가에서 경찰이 여권 검사할 수 있으니 항상 사진이라도 소지하세요. 불심검문에 대비하면 좋아요!",
-    date: "2025.05.07",
-    likes: 31,
-  },
-];
+// 도움이 돼요 클릭 이벤트
+reviewList.addEventListener("click", async function (e) {
+  if (e.target.closest(".likes")) {
+    const reviewItem = e.target.closest(".review-item");
+    const reviewId = reviewItem.dataset.reviewId;
 
-reviewData.forEach((review) => {
-  const item = `
-    <div class="review-item" >
-      <div class="user-info">
-        <img src="../assets/img/profile.svg" alt="프로필이미지" class="profile-img" />
-        <div class="id">${review.userId}</div>
-        <div class="option-wrapper">
-          <img
-            src="../assets/img/option.svg"
-            alt="옵션"
-            class="review-option"
-            onclick="toggleOptions(this)"
-          />
-          <div class="option-menu" style="display: none">
-            <button class="edit-btn">수정하기</button>
-            <button class="delete-btn">삭제하기</button>
-          </div>
-        </div>
-      </div>
-      <div class="review-content">${review.content}</div>
-      <span class="info-wrap">
-        <div class="review-date">${review.date}</div>
-        <div class="likes">
+    try {
+      const res = await fetch(`/reviews/helpful/${reviewId}/`, {
+        method: "POST",
+      });
+
+      const result = await res.json();
+
+      if (res.ok) {
+        const likesDiv = reviewItem.querySelector(".likes");
+        likesDiv.innerHTML = `
           도움이 돼요
-          <img src="../assets/img/like.svg" alt="도움이 돼요" />
-          ${review.likes}
-        </div>
-      </span>
-      <hr class="review-hr"/>
-    </div>
-  `;
-  reviewList.innerHTML += item;
-});
-
-//로그인 안한 경우 후기리스트 블러 처리
-document.addEventListener("DOMContentLoaded", async function () {
-  try {
-    const res = await fetch("/countries/api/detail/china/");
-    const data = await res.json();
-
-    if (!data.is_authenticated) {
-      document.getElementById("review-list").classList.add("blurred");
-      document.getElementById("login-required").style.display = "block";
+          <img src="/static/assets/img/like.svg" alt="도움이 돼요" />
+          ${result.helpfulness_count}
+        `;
+      } else if (res.status === 403) {
+        alert(result.error); // ✅ 여기에 정확한 메시지 출력됨
+      } else {
+        alert("도움 요청 실패: 서버 오류");
+      }
+    } catch (err) {
+      console.error("도움 요청 실패:", err);
+      alert("도움 요청 실패: 네트워크 오류");
     }
-  } catch (err) {
-    console.error("데이터 로딩 실패:", err);
   }
 });
-
-//좋아요 버튼(도움이돼요)
-document.addEventListener("click", async (e) => {
-  const likesBtn = e.target.closest(".likes");
-  if (!likesBtn) return;
-
-  const wrapper = likesBtn.closest(".info-wrap");
-  const reviewId = wrapper.dataset.reviewId;
-
-  try {
-    const res = await fetch(`/reviews/helpful/${reviewId}/`, {
-      method: "POST",
-    });
-    const result = await res.json();
-
-    if (res.ok) {
-      likesEl.querySelector(".helpfulness-count").textContent =
-        result.helpfulness_count;
-    } else {
-      alert(result.message);
-    }
-  } catch (err) {
-    console.error("도움 요청 실패:", err);
-    alert("네트워크 오류");
-  }
-});
-
-//안전공지
+// 로그인 여부 확인 + 닉네임 및 안전공지 + 후기 목록 로딩
 document.addEventListener("DOMContentLoaded", async function () {
-  try {
-    const res = await fetch("/countries/api/detail/china/");
-    const data = await res.json();
+    try {
+        const res = await fetch("/countries/api/detail/china/");
+        const data = await res.json();
 
-    // 현재 사용자의 닉네임 표시(리뷰부분)
-    if (data.is_authenticated && data.nickname) {
-      document.querySelector(".review-input .id").textContent = data.nickname;
-    }
-    const safetyList = data.country_safeties;
+        if (!data.is_authenticated) {
+            document.getElementById("review-list").classList.add("blurred");
+            document.getElementById("login-required").style.display = "block";
+        }
 
-    const table = document.querySelector(".notice-table");
+        if (data.is_authenticated && data.nickname) {
+            document.querySelector(".review-input .id").textContent = data.nickname;
+        }
 
-    safetyList.forEach((item) => {
-      const row = document.createElement("tr");
+        // ✅ 후기 리스트 초기 로딩
+        const reviews = data.reviews;
+        reviewList.innerHTML = "";
+        reviews.forEach((review) => addReview(review));
 
-      row.innerHTML = `
+        // ✅ 안전 공지사항 불러오기
+        const safetyList = data.country_safeties;
+        const table = document.querySelector(".notice-table");
+
+        safetyList.forEach((item) => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
         <td class="tag-notice">안내</td>
         <td class="title">${item.title}</td>
         <td class="date">${item.written_dt}</td>
       `;
-
-      table.appendChild(row);
-    });
-  } catch (err) {
-    console.error("안전공지 로딩 실패:", err);
-  }
+            table.appendChild(row);
+        });
+    } catch (err) {
+        console.error("데이터 로딩 실패:", err);
+    }
 });
+
