@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <title>회원가입 - TripGuard 계정</title>
         <link rel="stylesheet" href="{% static 'css/join.css' %}">
-        <script defer src="{% static 'join.js' %}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script defer type="module" src="{% static 'join.js' %}"></script>
     </head>
     <body>
         <!-- /*상단 로그인/회원가입*/ -->
@@ -54,7 +55,7 @@
                     <label for="passwordConfirm"><span class="required">*</span>비밀번호 확인</label>
                     <input type="password" id="passwordConfirm" placeholder="비밀번호를 한 번 더 입력해 주세요.">
                 </div>
-                <button type="button" class="btn-primary" onclick="location.href='{% url 'users:signup_complete' %}'">가입하기</button>
+                <button type="button" class="btn-primary">가입하기</button>
             </form>
             </main>
 

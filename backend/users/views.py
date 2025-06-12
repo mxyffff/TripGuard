@@ -7,6 +7,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.http import require_http_methods
 from .models import User
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 # Create your views here.
 
@@ -107,20 +109,17 @@ def signup_api_view(request):
             return JsonResponse({"success": True, "message": "비밀번호가 일치합니다."})
 
     elif action == "signup":
-        email_checked = request.session.get('email_checked', False)
-        password_checked = request.session.get('password_checked', False)
-
-        if not email_checked:
-            return JsonResponse({"success": False, "message": "이메일 중복 확인을 해 주세요."}, status=400)
-
-        if not password_checked:
-            return JsonResponse({"success": False, "message": "비밀번호 일치 확인을 해 주세요."}, status=400)
-
         if not all([email, password, password2, name, nickname]):
             return JsonResponse({"success": False, "message": "모든 항목을 입력해 주세요."}, status=400)
 
         if not is_valid_email(email):
             return JsonResponse({"success": False, "message": "올바른 이메일 형식이 아닙니다."}, status=400)
+
+        if User.objects.filter(email=email).exists():
+            return JsonResponse({"success": False, "message": "이미 사용 중인 이메일입니다."}, status=409)
+
+        if password != password2:
+            return JsonResponse({"success": False, "message": "비밀번호가 일치하지 않습니다."}, status=400)
 
         if len(password) < 8:
             return JsonResponse({"success": False, "message": "비밀번호는 8자 이상이어야 합니다."}, status=400)

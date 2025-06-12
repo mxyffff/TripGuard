@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     try {
-      const response = await api.post("/auth/api/signup", new URLSearchParams({
+      const response = await api.post("/auth/api/signup/", new URLSearchParams({
         action: "check_email",
         email
       }));
@@ -33,11 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } catch (error) {
       console.error("이메일 중복 확인 오류:", error);
-      emailStatus.textContent = "서버 오류입니다. 다시 시도해주세요.";
+      emailStatus.textContent = "서버 오류입니다. 다시 시도해 주세요.";
       emailStatus.style.color = "red";
     }
   });
 
+  // 비밀번호 일치 확인을 위한 함수
+  async function checkPasswordMatch(password, password2) {
+    try {
+      const response = await api.post("/auth/api/signup/", new URLSearchParams({
+        action: "check_password",
+        password,
+        password2,
+      }));
+      return response.data.success;
+    } catch (error) {
+      console.error("비밀번호 일치 확인 오류: ", error);
+      return false;
+    }
+  }
 
   // 회원가입 버튼 이벤트
   const joinBtn = document.querySelector(".btn-primary");
@@ -55,13 +69,14 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    if (password !== password2) {
+    const passwordChecked = await checkPasswordMatch(password, password2);
+    if (!passwordChecked) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
     }
 
     try {
-      const response = await api.post("/auth/api/signup", new URLSearchParams({
+      const response = await api.post("/auth/api/signup/", new URLSearchParams({
         action: "signup",
         email,
         password,
@@ -72,13 +87,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.data.success) {
         alert("회원가입이 완료되었습니다.");
-        window.location.href = "/joinComplete/joinComplete.html";
+        window.location.href = "/auth/signup/complete/";
       } else {
         alert(response.data.message || "회원가입 실패");
       }
     } catch (error) {
-      console.error("회원가입 오류:", error);
-      alert("서버 오류입니다. 다시 시도해주세요.");
+      console.error("회원가입 오류: ", error);
+      alert("서버 오류입니다. 다시 시도해 주세요.");
     }
   });
 });
