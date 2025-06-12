@@ -123,6 +123,12 @@ def country_detail_api(request, slug):
         for r in reviews
     ]
 
+    # 로그인 여부 및 닉네임 정보 추가
+    user_data = {
+        "is_authenticated": request.user.is_authenticated,
+        "nickname": request.user.nickname if request.user.is_authenticated else None
+    }
+
     # 최종 JSON 응답 반환
     return JsonResponse({
         "country_name": country_ko,
@@ -130,7 +136,8 @@ def country_detail_api(request, slug):
         "embassies": embassy_list,
         "category_map": category_map,
         "country_safeties": safety_data,
-        "reviews": review_data
+        "reviews": review_data,
+        **user_data # 응답 병합
     }, json_dumps_params={'ensure_ascii': False})  # 한글 깨짐 방지 설정
 
 # 국가명별 slug 변수를 확인해볼 수 있는 api 함수
