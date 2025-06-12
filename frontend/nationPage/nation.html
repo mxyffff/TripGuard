@@ -1,0 +1,253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="{% static 'css/nation.css' %}" />
+    <title>국가 상세 페이지</title>
+  </head>
+  <body>
+    <!-- 로그인/회원가입 -->
+    <div class="container">
+      <div class="top-bar">
+        <div class="auth-buttons">
+          <a href="{% url 'users:login' %}">로그인</a>
+          <a href="{% url 'users:signup' %}">회원가입</a>
+        </div>
+      </div>
+    </div>
+    <!-- 네비게이션 바 -->
+    <div class="navbar">
+      <a href="/" class="logo">
+        <img
+          src="{% static 'assets/img/TripGuard.png' %}"
+          alt="TripGuard 로고"
+        />
+      </a>
+      <div class="search-bar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="국가명을 검색할 수 있습니다. (예:중국)"
+        />
+        <button id="searchBtn">
+          <img src="{% static 'assets/img/Search.png' %}" alt="검색" />
+        </button>
+      </div>
+    </div>
+
+    <!-- 국가명 -->
+    <section class="nation-header">
+      <h1 class="nation-title">중국</h1>
+      <p class="nation-subtitle">china</p>
+    </section>
+
+    <div class="wrapper">
+      <div class="container">
+        <!-- 지도 섹션 -->
+        <section class="nation-map">
+          <div class="level">
+            <div><span class="dot blue"></span> 여행유의</div>
+            <div><span class="dot yellow"></span> 여행자제</div>
+            <div><span class="dot red"></span> 출국권고</div>
+            <div><span class="dot black"></span> 여행금지</div>
+            <div>
+              <span class="dot exception">
+                <img
+                  src="{% static 'assets/img/exception.png' %}"
+                  alt="특별여행주의보"
+                />
+              </span>
+              특별여행주의보
+            </div>
+          </div>
+          <img src="{% static 'assets/img/ChinaMap.svg' %}" alt="중국 지도" />
+        </section>
+        <!-- 탭 이동 섹션 -->
+        <div class="tab-wrap">
+          <nav class="tabs">
+            <div class="select active" onclick="showTab('embassy', this)">
+              재외공관
+            </div>
+            <div class="select" onclick="showTab('danger', this)">유의지역</div>
+            <div class="select" onclick="showTab('review', this)">후기</div>
+          </nav>
+
+          <!-- 재외공관 탭 -->
+          <section class="tab" id="embassy">
+            {% comment %} 예시로 1개만 보여줍니다. 실제로는 for문 등으로 반복
+            렌더링 예정 {% endcomment %}
+            <div class="card">
+              <h2>🏛️주중국대사관 영사부</h2>
+              <span class="embassy-wrap">
+                <dl class="embassy-list">
+                  <div class="embassy-item">
+                    <dt>주소</dt>
+                    <dd>중국 북경시 조양구 제3대사관구 동방동로 20번지</dd>
+                  </div>
+                  <div class="embassy-item">
+                    <dt>전화번호</dt>
+                    <dd>+86-10-8532-0404</dd>
+                  </div>
+                  <div class="embassy-item">
+                    <dt>이메일</dt>
+                    <dd>chinaconsul@mofa.go.kr</dd>
+                  </div>
+                  <div class="embassy-item">
+                    <dt>홈페이지</dt>
+                    <dd>
+                      <a
+                        href="http://overseas.mofa.go.kr/cn-ko/index.do"
+                        target="_blank"
+                        >바로가기</a
+                      >
+                    </dd>
+                  </div>
+                </dl>
+                <div class="embassy-map">
+                  <a
+                    href="https://maps.app.goo.gl/9WQgEg81u1nZJtjJA"
+                    target="_blank"
+                  >
+                    <img
+                      src="{% static 'assets/img/embassy1.png' %}"
+                      alt="지도이미지"
+                    />
+                  </a>
+                </div>
+              </span>
+            </div>
+          </section>
+          <!-- 유의지역 탭 영역 -->
+          <section class="tab" id="danger" style="display: none">
+            <h2>소매치기 유의지역</h2>
+            <div class="location">
+              <div class="location-item">베이징</div>
+              <div class="location-item">상하이</div>
+              <div class="location-item">광저우</div>
+            </div>
+            <p class="danger-content">:내용</p>
+            <hr class="danger-hr" />
+
+            {% if request.user.is_authenticated %}
+            <p>로그인 상태입니다. 사용자: {{ request.user.nickname }}</p>
+            {% else %}
+            <p>로그아웃 상태입니다.</p>
+            {% endif %}
+          </section>
+
+          <!-- 후기 탭 -->
+          <section class="tab" id="review" style="display: none">
+            <div class="review-input">
+              <div class="user-info">
+                <img
+                  src="{% static 'assets/img/profile.svg' %}"
+                  alt="프로필"
+                  class="profile-img"
+                />
+                <div class="id">kali***</div>
+                <img
+                  src="{% static 'assets/img/close.svg' %}"
+                  alt="닫기"
+                  class="close-icon"
+                />
+              </div>
+              <div class="input-area">
+                <input
+                  type="text"
+                  id="review-input"
+                  placeholder="한 줄 후기를 입력해주세요."
+                />
+                <button id="review-submit" class="submit-btn">등록</button>
+              </div>
+            </div>
+            <div class="review-wrap">
+              <div class="review-list" id="review-list"></div>
+              <div class="overlay-message" id="login-required">
+                로그인이 필요합니다.
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <!-- 국가 정보 섹션 -->
+      <div class="side-section">
+        <section class="nation-info">
+          <img
+            src="{% static 'assets/img/china.png' %}"
+            alt="중국 국기"
+            class="flag-img"
+          />
+          <div class="info-text">
+            <h4 class="subtitle">✅기본정보</h4>
+
+            <dl class="info-list">
+              <div class="info-item">
+                <dt>국가명</dt>
+                <dd>중국(china)</dd>
+              </div>
+              <div class="info-item">
+                <dt>수도</dt>
+                <dd>베이징</dd>
+              </div>
+              <div class="info-item">
+                <dt>언어</dt>
+                <dd>보통화</dd>
+              </div>
+              <div class="info-item">
+                <dt>통화</dt>
+                <dd>위안</dd>
+              </div>
+              <div class="info-item">
+                <dt>국제전화번호</dt>
+                <dd>+86</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="source">[출처:외교부]</div>
+        </section>
+
+        <section class="notice">
+          <div class="subtitle-wrap">
+            <h4 class="subtitle">안전공지</h4>
+            <img src="../assets/img/arrow.svg" /> 
+            <!-- 화살표 추가 -->
+          </div>
+          <hr class="divider" />
+          <table class="notice-table">
+            <!-- JS로 <tr> 삽입 -->
+          </table>
+        </section>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section left">
+          <div class="project-title">서울여대 멋사 여기톤 토이 프로젝트</div>
+          <div>4팀 TripGuard</div>
+        </div>
+        <div class="footer-section">
+          <strong>PM</strong>
+          <div>김주아</div>
+        </div>
+        <div class="footer-section">
+          <strong>FE</strong>
+          <div>손예원</div>
+          <div>주채빈</div>
+        </div>
+        <div class="footer-section">
+          <strong>BE</strong>
+          <div>양보윤</div>
+          <div>이다겸</div>
+          <div>박채린</div>
+        </div>
+      </div>
+      <div class="footer-line"></div>
+      <div class="footer-copy">© 2025 TripGuard. All rights reserved.</div>
+    </footer>
+
+    <script src="{% static 'nation.js' %}"></script>
+  </body>
+</html>
