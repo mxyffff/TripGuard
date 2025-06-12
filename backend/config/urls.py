@@ -17,6 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from users.views import home_api_view
+from countries.views import nation_page_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("", home_api_view, name="home"),
@@ -25,4 +28,5 @@ urlpatterns = [
     path('auth/', include('users.urls', namespace="users")),
     path("reviews/", include("reviews.urls", namespace="reviews")),
     path('alerts/', include('alerts.urls')),  # ← alerts_returnjson에서 가져온 부분
-]
+    path("nation/", nation_page_view, name="nation_page_view") # 추가
+] + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
