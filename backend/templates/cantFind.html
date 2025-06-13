@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="csrf-token" content="{{ csrf_token }}">
     <title>검색 결과 없음 - TripGuard</title>
     <link rel="stylesheet" href="{% static 'css/cantFind.css' %}">
     <script defer src="{% static 'cantFind.js' %}"></script>

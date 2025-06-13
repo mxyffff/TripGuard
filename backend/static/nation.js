@@ -131,6 +131,7 @@ document.getElementById("review-submit").addEventListener("click", async functio
         const response = await fetch("/reviews/create/china/", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
+            credentials: "include",
             body: JSON.stringify({content}),
         });
         const result = await response.json();
@@ -284,15 +285,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         const res = await fetch("/countries/api/detail/china/");
         const data = await res.json();
 
-        if (!data.is_authenticated) {
-            reviewList.classList.add("blurred");
-            document.getElementById("login-required").style.display = "block";
-        } else if (data.nickname) {
-            document.querySelector(".review-input .id").textContent = data.nickname;
-        }
+        console.log("✅ API 응답:", data);
 
         reviewList.innerHTML = "";
-        data.reviews.forEach(addReview);
+        data.reviews.forEach(addReview); // 후기 먼저 로딩
 
         const table = document.querySelector(".notice-table");
         data.country_safeties.forEach((item) => {
@@ -304,6 +300,18 @@ document.addEventListener("DOMContentLoaded", async function () {
             `;
             table.appendChild(row);
         });
+
+        // 마지막에 닉네임 반영!!!
+        const nicknameBox = document.querySelector(".review-input .id");
+        console.log("📦 닉네임 반영 요소:", nicknameBox);
+
+        if (!data.is_authenticated) {
+            reviewList.classList.add("blurred");
+            document.getElementById("login-required").style.display = "block";
+        } else if (nicknameBox && data.nickname) {
+            nicknameBox.textContent = data.nickname;
+            console.log("🌟 닉네임 반영 성공:", data.nickname);
+        }
     } catch (err) {
         console.error("데이터 로딩 실패:", err);
     }

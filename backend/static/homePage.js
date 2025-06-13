@@ -143,15 +143,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (logoutBtn) {
         logoutBtn.addEventListener("click", async () => {
-            const res = await fetch("{% url 'users:logout' %}", {
+            const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+            const res = await fetch("/auth/logout/", {
                 method: "POST",
                 headers: {
-                    "X-CSRFToken": "{{ csrf_token }}", // 템플릿 내 csrf 토큰 사용
+                    "X-CSRFToken": csrfToken,
                 },
+                credentials: "include",
             });
 
             if (res.ok) {
-                location.reload(); // 페이지 다시 로드해서 로그인 상태 반영
+                // 그냥 현재 페이지 그대로 유지하면서 세션만 갱신!
+                window.location.reload();
             } else {
                 alert("로그아웃 실패");
             }

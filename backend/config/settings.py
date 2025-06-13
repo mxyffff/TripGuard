@@ -65,10 +65,6 @@ MIDDLEWARE = [
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
 
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'
-SESSION_COOKIE_SAMESITE = "None"
-SESSION_COOKIE_SECURE = False    # 개발 환경에서는 반드시 False!!!
-
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
@@ -85,6 +81,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [TEMPLATES_DIR],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
