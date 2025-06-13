@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  width: 1920px;
+  width: 100%; /*이거 설정 엄청 중요함!! 전체적인 화면사이즈를 100%으로 조정한다는 건데 이거 안하면 밑에서 아무리 사이즈 조정해도 화면크기 안맞음*/
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -14,7 +14,9 @@ body {
 }
 /* 상단 로그인 바 */
 .top-bar {
-  width: 1920px;
+  width: 100%; /*수정부분*/
+  max-width: 1920px; /*수정부분*/
+  top: 0; /*수정부분*/
   height: 56px;
   padding: 0 120px;
   display: flex;
@@ -22,6 +24,7 @@ body {
   align-items: center;
   position: fixed;
   background-color: white;
+  box-sizing: border-box; /*수정부분*/
 }
 
 .auth-buttons a {
@@ -37,16 +40,18 @@ body {
 
 /* 네비게이션 바 */
 .navbar {
-  width: 1920px;
+  width: 100%; /*수정부분*/
+  max-width: 1920px; /*수정부분*/
   height: 96px;
   padding: 0 120px;
-  background-color: #5398F5;
+  background-color: #5398f5;
   display: flex;
   align-items: center;
   position: fixed;
   top: 56px;
   left: 50%;
   transform: translateX(-50%);
+  box-sizing: border-box; /*수정부분*/
 }
 
 .logo img {
@@ -67,7 +72,6 @@ body {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10);
   background-color: white;
 }
-
 .join-container h2 {
   font-size: 30px;
   font-weight: 700;
@@ -129,16 +133,18 @@ form input:focus {
   transition: background-color 0.2s ease;
 }
 
-/* 푸터 */
 .footer {
-    width: 1920px;
-    padding: 42px 320px;
-    background-color: #09254B;
-    color: #8a8a8a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  width: 100%;
+  max-width: 1920px; /* 100%로 변경하고 max-width 제거 */
+  padding: 42px 320px;
+  margin-top: 50px;
+  background-color: #09254b;
+  color: #8a8a8a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 .footer-content {

@@ -37,3 +37,6 @@ def alert_detail(request, country_code):
 
 def homePage(request):
     return render(request, 'homePage.html')
+
+def cantFind(request):
+    return render(request, 'cantFind.html')

@@ -18,11 +18,10 @@ import os
 ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 
 # 백엔드 디렉토리 (TripGuard/backend/)
-BASE_DIR = ROOT_DIR / "backend"
+BASE_DIR = ROOT_DIR / 'backend'
 
 # 템플릿 디렉토리 (TripGuard/templates/)
-TEMPLATES_DIR = ROOT_DIR / "templates",
-TEMPLATES_DIR = BASE_DIR / "templates",
+TEMPLATES_DIR = BASE_DIR / 'templates'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -45,7 +44,6 @@ INSTALLED_APPS = [
     "alerts",
     'corsheaders',
     "rest_framework",
-    "render",
     "xmltodict",
     'django.contrib.admin',
     'django.contrib.auth',
@@ -67,6 +65,10 @@ MIDDLEWARE = [
 ]
 # CORS_ALLOW_ALL_ORIGINS = True
 
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+SESSION_COOKIE_SAMESITE = "None"
+SESSION_COOKIE_SECURE = False    # 개발 환경에서는 반드시 False!!!
+
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
@@ -82,7 +84,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [str(BASE_DIR / "templates")],
+        'DIRS': [TEMPLATES_DIR],
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',

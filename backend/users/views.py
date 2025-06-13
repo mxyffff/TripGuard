@@ -50,6 +50,7 @@ def login_api_view(request):
 
     if user:
         login(request, user)
+        request.session.modified = True
         return JsonResponse({
             "success": True,
             "message": "로그인에 성공했습니다.",
