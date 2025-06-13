@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="csrf-token" content="{{ csrf_token }}">
     <link rel="stylesheet" href="{% static 'css/nation.css' %}"/>
     <title>국가 상세 페이지</title>
 </head>
@@ -11,22 +11,24 @@
 <div class="container">
     <div class="top-bar">
         <div class="auth-buttons">
-            <a href="{% url 'users:login' %}">로그인</a>
-            <a href="{% url 'users:signup' %}">회원가입</a>
+            {% if user.is_authenticated %}
+                <button type="button" class="logout-button" id="logout-btn">로그아웃</button>
+            {% else %}
+                <a href="{% url 'users:login' %}">로그인</a>
+                <a href="{% url 'users:signup' %}">회원가입</a>
+            {% endif %}
         </div>
     </div>
 </div>
 
-<!-- 네비게이션 바 -->
+<!-- /*네비게이션 바*/ -->
 <div class="navbar">
-    <a href="/" class="logo">
-        <img src="{% static 'assets/img/TripGuard.png' %}" alt="TripGuard 로고"/>
+    <a href="{% url 'homePage' %}" class="logo">
+        <img src="{% static 'assets/img/TripGuard.png' %}" alt="TripGuard 로고">
     </a>
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="국가명을 검색할 수 있습니다. (예:중국)"/>
-        <button id="searchBtn">
-            <img src="{% static 'assets/img/Search.png' %}" alt="검색"/>
-        </button>
+        <input type="text" id="searchInput" placeholder="국가명을 검색할 수 있습니다. (예:중국)">
+        <button id="searchBtn" type="button"><img src="{% static 'assets/img/Search.png' %}" alt="검색"></button>
     </div>
 </div>
 
@@ -78,7 +80,7 @@
                 <div class="review-input">
                     <div class="user-info">
                         <img src="{% static 'assets/img/profile.svg' %}" alt="프로필" class="profile-img"/>
-                        <div class="id">kali***</div>
+                        <div class="id"></div>
                         <img src="{% static 'assets/img/close.svg' %}" alt="닫기" class="close-icon"/>
                     </div>
                     <div class="input-area">
@@ -164,5 +166,57 @@
 </footer>
 
 <script src="{% static 'nation.js' %}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("searchBtn");
+        const input = document.getElementById("searchInput");
+
+        function handleSearch() {
+            const keyword = input.value.trim();
+            if (keyword === "중국") {
+                window.location.href = "/nation/";
+            } else {
+                window.location.href = "/cantFind/";
+            }
+        }
+
+        // 1. 버튼 클릭 시 검색
+        if (btn) {
+            btn.addEventListener("click", handleSearch);
+        }
+
+        // 2. 엔터 키 입력 시 검색
+        if (input) {
+            input.addEventListener("keydown", function (e) {
+                if (e.key === "Enter") {
+                    handleSearch();
+                }
+            });
+        }
+
+        const logoutBtn = document.getElementById("logout-btn");
+
+        if (logoutBtn) {
+            logoutBtn.addEventListener("click", async () => {
+                const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+                const res = await fetch("/auth/logout/", {
+                    method: "POST",
+                    headers: {
+                        "X-CSRFToken": csrfToken,
+                    },
+                    credentials: "include",
+                });
+
+                if (res.ok) {
+                    // 그냥 현재 페이지 그대로 유지하면서 세션만 갱신!
+                    window.location.reload();
+                } else {
+                    alert("로그아웃 실패");
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

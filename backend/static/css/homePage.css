@@ -7,48 +7,65 @@ body {
 }
 
 .container {
-    width: 1920px;
+    width: 100%;
+    max-width: 1920px; /*수정부분*/
+    top: 0; /*수정부분*/
     margin: 0 auto;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /* 상단 로그인 바 */
 .top-bar {
-  width: 1920px;
-  height: 56px;
-  padding: 0 120px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: fixed;
-  background-color: white;
+    width: 100%; /*수정부분*/
+    max-width: 1920px; /*수정부분*/
+    top: 0; /*수정부분*/
+    height: 56px;
+    padding: 0 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    box-sizing: border-box; /*수정부분*/
 }
 
-.auth-buttons a {
-    font-size: 17px;
-    color: black;
-    margin-left: 30px;
-    text-decoration: none;
+.auth-buttons {
+  display: flex;
+  align-items: center;
 }
-.auth-buttons a:hover {
-  color: #0366FF;
-  transition: color 0.2s ease;
+
+/* a 링크와 동일한 스타일 */
+.auth-buttons a,
+.auth-buttons .logout-button {
+  font-size: 17px;
+  color: black;
+  margin-left: 30px;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
 }
 
 /* 네비게이션 바 */
 .navbar {
-  width: 1920px;
-  height: 96px;
-  padding: 0 120px;
-  background-color: #5398F5;
-  display: flex;
-  align-items: center;
-  position: fixed;
-  top: 56px;
-  left: 50%;
-  transform: translateX(-50%);
+    width: 100%; /*수정부분*/
+    max-width: 1920px; /*수정부분*/
+    height: 96px;
+    padding: 0 120px;
+    background-color: #5398f5;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box; /*수정부분*/
+    z-index: 1000; /*수정*/
 }
 
 .logo img {
@@ -60,14 +77,14 @@ body {
 }
 
 .search-bar {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-radius: 100px;
-  padding: 0px 20px;
-  width: 770px;
-  height: 48px;
-  margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 100px;
+    padding: 0px 20px;
+    width: 770px;
+    height: 48px;
+    margin: 0 auto;
 }
 
 .search-bar input {
@@ -134,6 +151,7 @@ body {
     height: 100%;
     display: block;
 }
+
 #map-box svg path:hover {
     cursor: pointer;
 }
@@ -170,16 +188,28 @@ body {
     border-radius: 50%;
 }
 
-.color.caution { background-color: #5398F5;}
-.color.warning { background-color: #FCC33C;}
+.color.caution {
+    background-color: #5398F5;
+}
+
+.color.warning {
+    background-color: #FCC33C;
+}
+
 .color.STA {
     background-image: url("/static/assets/img/Ellipse 2.svg");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     border: 1px solid white;
 }
-.color.alert { background-color: #FF0000;}
-.color.danger { background-color: #242424;}
+
+.color.alert {
+    background-color: #FF0000;
+}
+
+.color.danger {
+    background-color: #242424;
+}
 
 /* 푸터 */
 .footer {

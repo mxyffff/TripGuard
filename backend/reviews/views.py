@@ -53,7 +53,7 @@ def create_review_api(request, slug):
         "message": "후기 등록 성공",
         "review": {
             "id": review.id,
-            "nickname": request.user.nickname,
+            "nickname": review.user.nickname,
             "content": review.content,
             "created_at": review.created_at.strftime('%Y-%m-%d %H:%M:%S'),
             "updated_at": review.updated_at.strftime('%Y-%m-%d %H:%M:%S'),

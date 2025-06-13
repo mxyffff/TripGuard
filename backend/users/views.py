@@ -50,6 +50,7 @@ def login_api_view(request):
 
     if user:
         login(request, user)
+        request.session.modified = True
         return JsonResponse({
             "success": True,
             "message": "로그인에 성공했습니다.",
@@ -130,8 +131,8 @@ def signup_api_view(request):
         if len(nickname) < 1:
             return JsonResponse({"success": False, "message": "닉네임은 1자 이상이어야 합니다."}, status=400)
 
-        User.objects.create_user(email=email, password=password, name=name, nickname=nickname)
-
+        user = User.objects.create_user(email=email, password=password, name=name, nickname=nickname)
+        user.is_active = True
         request.session['email_checked'] = False
         request.session['password_checked'] = False
 
