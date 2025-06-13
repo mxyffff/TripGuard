@@ -5,8 +5,6 @@
     <meta charset="UTF-8" />
     <title>로그인 - TripGuard 계정</title>
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="{% static 'login.js' %}"></script>
 </head>
 <body>
     <div class="container">
@@ -18,7 +16,7 @@
         </div>
 
         <div class="navbar">
-            <a href="{% url 'homePage' %}" class="logo">
+            <a href="{% url 'home' %}" class="logo">
                 <img src="{% static 'assets/img/TripGuard.png' %}" alt="TripGuard 로고">
             </a>
         </div>
@@ -26,17 +24,22 @@
         <main class="login-container">
             <h2><strong>TripGuard와</strong><br>안전한 여행 시작해요!</h2>
 
-            <div>
-                <input type="email" id="email" class="input" placeholder="tripguard@gmail.com">
-                <input type="password" id="password" class="input" placeholder="Password">
+            <form method="post" action="{% url 'users:login' %}">
+                {% csrf_token %}
+                <input type="email" name="email" class="input" placeholder="tripguard@gmail.com" required>
+                <input type="password" name="password" class="input" placeholder="Password" required>
+                {% if error %}
+                <div id="error-message" class="error-message">{{ error }}</div>
+                {% else %}
                 <div id="error-message" class="error-message"></div>
+                {% endif %}
                 <div class="link-row">
                     <a href="#">아이디 찾기</a> |
                     <a href="#">비밀번호 찾기</a>
                 </div>
-                <button type="button" id="loginBtn" class="btn-primary">로그인</button>
+                <button type="submit" class="btn-primary">로그인</button>
                 <button type="button" class="btn-outline" onclick="location.href='{% url 'users:signup' %}'">회원가입</button>
-            </div>
+            </form>
         </main>
 
         <footer class="footer">

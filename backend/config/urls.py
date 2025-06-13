@@ -21,10 +21,10 @@ from django.urls import path, include
 
 from config import settings
 from countries.views import nation_page_view
-from users.views import home_api_view
+from users.views import home_page_view
 from alerts.views import cantFind
 urlpatterns = [
-    path("", home_api_view, name="home"),
+    path("", home_page_view, name="home"),
     path('admin/', admin.site.urls),
     path('countries/', include('countries.urls')),
     path('auth/', include('users.urls', namespace="users")),

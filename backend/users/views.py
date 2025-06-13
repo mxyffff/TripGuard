@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.http import require_http_methods
@@ -33,6 +33,25 @@ def home_api_view(request):
         "is_authenticated": request.user.is_authenticated,
         "user": user_data,
     })
+
+@require_http_methods(["GET", "POST"])
+def login_view(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        if not email or not password:
+            return render(request, "login.html", {"error_message": "이메일과 비밀번호를 모두 입력해 주세요."})
+
+        user = authenticate(request, username=email, password=password)
+        if user is not None:
+            login(request, user)
+            return redirect("home")  # 로그인 성공 시 홈으로 이동
+        else:
+            return render(request, "login.html", {"error_message": "이메일 또는 비밀번호가 잘못되었습니다."})
+
+    # GET 요청일 때
+    return render(request, "login.html")
 
 @csrf_exempt
 @require_http_methods(["POST"])
@@ -68,6 +87,7 @@ def login_api_view(request):
 def logout_api_view(request):
     logout(request)
     return JsonResponse({"success": True, "message": "로그아웃 되었습니다."})
+
 
 @csrf_exempt
 @require_http_methods(["GET", "POST"])
