@@ -19,10 +19,11 @@ from django.urls import path, include
 from users.views import home_api_view
 
 urlpatterns = [
-    path('alerts/', include('alerts.urls')), # ← alerts_returnjson에서 가져온 부분
+    path('alerts/', include('alerts.urls')),
+    path('api/', include('alerts.urls')),
     path("", home_api_view, name="home"),
     path('admin/', admin.site.urls),
     path('countries/', include('countries.urls')),
-    path('auth/', include('users.urls', namespace="users")),
-    path("reviews/", include("reviews.urls", namespace="reviews")),
+    path('auth/', include('users.urls', namespace="user")),
+    path('reviews/', include('reviews.urls', namespace="reviews")),
 ]
