@@ -81,6 +81,7 @@
   font-size: 14px;
   flex: 1;
   height: 20px;
+  background-color: white;
 }
 
 .search-bar button {
