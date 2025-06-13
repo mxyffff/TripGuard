@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from django.contrib.auth import authenticate, login, logout
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.http import require_http_methods
@@ -19,6 +19,12 @@ def is_valid_email(email):
     except ValidationError:
         return False
 
+def home_view(request):
+    context = {
+        "user": request.user
+    }
+    return render(request, "homePage.html", context)
+
 def home_api_view(request):
     if request.user.is_authenticated:
         user_data = {
@@ -33,6 +39,33 @@ def home_api_view(request):
         "is_authenticated": request.user.is_authenticated,
         "user": user_data,
     })
+
+@require_http_methods(["GET", "POST"])
+def login_view(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        if not email or not password:
+            context = {"error": "이메일과 비밀번호를 모두 입력해 주세요."}
+            return render(request, "login.html", context)
+
+        if not is_valid_email(email):
+            context = {"error": "올바른 이메일 형식이 아닙니다. 다시 입력해 주세요."}
+            return render(request, "login.html", context)
+
+        user = authenticate(username=email, password=password)
+        if user:
+            login(request, user)
+            return redirect("home")  # 로그인 성공 시 이동할 URL 이름
+
+        else:
+            context = {"error": "이메일 또는 비밀번호가 잘못되었습니다. 다시 입력해 주세요."}
+            return render(request, "login.html", context)
+
+    else:
+        # GET 요청 시 로그인 폼 보여주기
+        return render(request, "login.html")
 
 @csrf_exempt
 @require_http_methods(["POST"])
