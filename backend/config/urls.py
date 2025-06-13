@@ -15,7 +15,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.template.context_processors import static
+from django.conf.urls.static import static
 from django.urls import path, include
+
+from config import settings
+from countries.views import nation_page_view
 from users.views import home_api_view
 
 urlpatterns = [
@@ -27,4 +32,4 @@ urlpatterns = [
     path('alerts/', include('alerts.urls')), # ← alerts_returnjson에서 가져온 부분
     path('api/', include('alerts.urls')),
     path("nation/", nation_page_view, name="nation_page_view"), # 추가
-]   + static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS[0])
+]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
