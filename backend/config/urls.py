@@ -21,8 +21,13 @@ from django.urls import path, include
 
 from config import settings
 from countries.views import nation_page_view
+<<<<<<< HEAD
 from users.views import home_view
 
+=======
+from users.views import home_api_view
+from alerts.views import cantFind
+>>>>>>> origin/main
 urlpatterns = [
     path("", home_view, name="home"),
     path('admin/', admin.site.urls),
@@ -32,4 +37,5 @@ urlpatterns = [
     path('alerts/', include('alerts.urls')), # ← alerts_returnjson에서 가져온 부분
     path('api/', include('alerts.urls')),
     path("nation/", nation_page_view, name="nation_page_view"), # 추가
+    path("cantFind/", cantFind, name="cantFind"), # cantFind 추가
 ]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

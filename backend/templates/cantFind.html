@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>검색 결과 없음 - TripGuard</title>
+    <link rel="stylesheet" href="{% static 'css/cantFind.css' %}">
+    <script defer src="{% static 'cantFind.js' %}"></script>
+</head>
+<body>
+<!-- 상단 로그인/회원가입 -->
+<div class="container">
+    <div class="top-bar">
+        <div class="auth-buttons">
+            {% if user.is_authenticated %}
+                <button type="button" class="logout-button" id="logout-btn">로그아웃</button>
+            {% else %}
+                <a href="{% url 'users:login' %}">로그인</a>
+                <a href="{% url 'users:signup' %}">회원가입</a>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- 네비게이션 바 -->
+    <div class="navbar">
+        <a href="{% url 'homePage' %}" class="logo">
+            <img src="{% static 'assets/img/TripGuard.png' %}" alt="TripGuard 로고">
+        </a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="국가명을 검색할 수 있습니다. (예:중국)">
+            <button id="searchBtn" type="button">
+                <img src="{% static 'assets/img/Search.png' %}" alt="검색">
+            </button>
+        </div>
+    </div>
+
+    <!-- 검색 결과 없음 박스 -->
+    <main class="complete-container">
+        <div class="complete-box">
+            <img src="{% static 'assets/img/Search.png' %}" alt="검색 아이콘" class="search-icon">
+            <h2><strong>검색 결과 없음</strong></h2>
+            <p>모든 단어의 맞춤법이 정확한지 확인하거나 다른 검색어로 검색해보세요.</p>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section left">
+                <div class="project-title">서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트</div>
+                <div>4팀 TripGuard</div>
+            </div>
+
+            <div class="footer-section">
+                <strong>PM</strong>
+                <div>첨단미디어디자인과 김주아</div>
+            </div>
+            <div class="footer-section">
+                <strong>FE</strong>
+                <div>디지털미디어학과 손예원</div>
+                <div>디지털미디어학과 주채빈</div>
+            </div>
+
+            <div class="footer-section">
+                <strong>BE</strong>
+                <div>문헌정보학과 양보윤</div>
+                <div>디지털미디어학과 이다겸</div>
+                <div>소프트웨어융합학과 박채린</div>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="footer-copy">© 2025 서울여자대학교 멋쟁이사자처럼 여기톤 대비 토이프로젝트 4팀 TripGuard.</div>
+    </footer>
+</div>
+</body>
+</html>

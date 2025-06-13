@@ -11,22 +11,24 @@
 <div class="container">
     <div class="top-bar">
         <div class="auth-buttons">
-            <a href="{% url 'users:login' %}">로그인</a>
-            <a href="{% url 'users:signup' %}">회원가입</a>
+            {% if user.is_authenticated %}
+                <button type="button" class="logout-button" id="logout-btn">로그아웃</button>
+            {% else %}
+                <a href="{% url 'users:login' %}">로그인</a>
+                <a href="{% url 'users:signup' %}">회원가입</a>
+            {% endif %}
         </div>
     </div>
 </div>
 
-<!-- 네비게이션 바 -->
+<!-- /*네비게이션 바*/ -->
 <div class="navbar">
-    <a href="/" class="logo">
-        <img src="{% static 'assets/img/TripGuard.png' %}" alt="TripGuard 로고"/>
+    <a href="{% url 'homePage' %}" class="logo">
+        <img src="{% static 'assets/img/TripGuard.png' %}" alt="TripGuard 로고">
     </a>
     <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="국가명을 검색할 수 있습니다. (예:중국)"/>
-        <button id="searchBtn">
-            <img src="{% static 'assets/img/Search.png' %}" alt="검색"/>
-        </button>
+        <input type="text" id="searchInput" placeholder="국가명을 검색할 수 있습니다. (예:중국)">
+        <button id="searchBtn" type="button"><img src="{% static 'assets/img/Search.png' %}" alt="검색"></button>
     </div>
 </div>
 
@@ -164,5 +166,53 @@
 </footer>
 
 <script src="{% static 'nation.js' %}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("searchBtn");
+        const input = document.getElementById("searchInput");
+
+        function handleSearch() {
+            const keyword = input.value.trim();
+            if (keyword === "중국") {
+                window.location.href = "/nation/";
+            } else {
+                window.location.href = "/cantFind/";
+            }
+        }
+
+        // 1. 버튼 클릭 시 검색
+        if (btn) {
+            btn.addEventListener("click", handleSearch);
+        }
+
+        // 2. 엔터 키 입력 시 검색
+        if (input) {
+            input.addEventListener("keydown", function (e) {
+                if (e.key === "Enter") {
+                    handleSearch();
+                }
+            });
+        }
+
+        const logoutBtn = document.getElementById("logout-btn");
+
+        if (logoutBtn) {
+            logoutBtn.addEventListener("click", async () => {
+                const res = await fetch("{% url 'users:logout' %}", {
+                    method: "POST",
+                    headers: {
+                        "X-CSRFToken": "{{ csrf_token }}", // 템플릿 내 csrf 토큰 사용
+                    },
+                });
+
+                if (res.ok) {
+                    location.reload(); // 페이지 다시 로드해서 로그인 상태 반영
+                } else {
+                    alert("로그아웃 실패");
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>

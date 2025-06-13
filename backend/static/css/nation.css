@@ -13,13 +13,28 @@
   box-sizing: border-box; /*수정부분*/
 }
 
-.auth-buttons a {
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* a 링크와 동일한 스타일 */
+.auth-buttons a,
+.auth-buttons .logout-button {
   font-size: 17px;
   color: black;
   margin-left: 30px;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
 }
-.auth-buttons a:hover {
+
+/* hover 효과도 통일 */
+.auth-buttons a:hover,
+.auth-buttons .logout-button:hover {
   color: #0366ff;
   transition: color 0.2s ease;
 }
@@ -76,6 +91,7 @@
 }
 
 .search-bar button img {
+  pointer-events: none;
   width: 40px;
   height: 40px;
   display: block;
