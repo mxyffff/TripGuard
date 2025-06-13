@@ -21,7 +21,12 @@ ROOT_DIR = Path(__file__).resolve().parent.parent.parent
 BASE_DIR = ROOT_DIR / 'backend'
 
 # 템플릿 디렉토리 (TripGuard/templates/)
+<<<<<<< HEAD
 TEMPLATES_DIR = BASE_DIR / 'templates'
+=======
+TEMPLATES_DIR = ROOT_DIR / "templates",
+TEMPLATES_DIR = BASE_DIR / "templates",
+>>>>>>> d4bf1f29fefb75f6459cdbecf36af6a77f90ff0f
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -44,6 +49,7 @@ INSTALLED_APPS = [
     "alerts",
     'corsheaders',
     "rest_framework",
+    "render",
     "xmltodict",
     'django.contrib.admin',
     'django.contrib.auth',
@@ -80,7 +86,11 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [TEMPLATES_DIR],
+=======
+        'DIRS': [str(BASE_DIR / "templates")],
+>>>>>>> d4bf1f29fefb75f6459cdbecf36af6a77f90ff0f
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',

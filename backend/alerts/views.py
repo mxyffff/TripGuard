@@ -1,5 +1,5 @@
 from django.http import JsonResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from .models import Alert
 
 def alert_geojson(request):
@@ -13,7 +13,6 @@ def alert_geojson(request):
                 "alarm_level": alert.alarm_level,
                 "country_code": alert.country_code,
             },
-
         })
 
     return JsonResponse({
@@ -35,3 +34,6 @@ def alert_detail(request, country_code):
         "map_url": alert.map_url,
         "flag_url": alert.flag_url
     })
+
+def homePage(request):
+    return render(request, 'homePage.html')

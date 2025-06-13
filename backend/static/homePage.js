@@ -1,81 +1,61 @@
 const colorMap = {
-  safe: '#5398F5',
-  caution: '#FCC33C',
-  STA: 'url(#pattern-hatch)',
-  warning: '#EBEBEB',
-  danger: '#242424'
+  caution: '#5398F5',             // 1단계: 여행유의 (파란색)
+  warning: '#FCC33C',            // 2단계: 여행자제 (노란색)
+  alert: '#FF0000',              // 3단계: 출국권고 (빨간색)
+  danger: '#242424',             // 4단계: 여행금지 (검은색)
+  STA: 'url(#pattern-hatch)',  // 5단계: 특별여행주의보 (패턴)
 };
 
-// ISO 코드 → 위험 등급
-const countryRisk = {
-  USA: 'safe', CAN: 'safe', MEX: 'caution', BRA: 'caution', ARG: 'caution',
-  CHN: 'safe', IND: 'caution', ZAF: 'safe', FRA: 'safe', DEU: 'safe', KOR: 'danger', 
-  JPN: 'safe', GBR: 'safe', EGY: 'caution', IRN: 'danger', SYR: 'danger', AFG: 'danger', 
-  SAU: 'caution'
-};
+// alarm_level 숫자별 문자열 변환 함수
+function getRiskLevel(levelNum) {
+  switch(levelNum) {
+    case 1: return 'caution';   // 여행유의
+    case 2: return 'warning';   // 여행자제
+    case 3: return 'alert';     // 출국권고
+    case 4: return 'danger';    // 여행금지
+    case 5: return 'STA';       // 특별여행주의보
+  }
+}
 
-// ISO 코드 → 한글명 (툴팁용)
-const countryNamesKo = {
-  USA: '미국', CAN: '캐나다', MEX: '멕시코', BRA: '브라질', ARG: '아르헨티나',
-  CHN: '중국', IND: '인도', ZAF: '남아프리카공화국',
-  FRA: '프랑스', DEU: '독일', KOR: '대한민국', JPN: '일본', GBR: '영국',
-  EGY: '이집트', IRN: '이란', SYR: '시리아', AFG: '아프가니스탄', SAU: '사우디아라비아'
-};
-
-fetch('IMG/world_map_cleaned.svg')
+// SVG 불러와서 지도에 표시 + 위험도 색칠 + 이벤트 등록
+fetch("/static/assets/img/world_map_cleaned.svg")
   .then(res => res.text())
-  .then(svg => {
-    document.getElementById('map-box').innerHTML = svg;
-
+  .then(svgText => {
+    document.getElementById("map-box").innerHTML = svgText;
     const svgEl = document.querySelector('#map-box svg');
-    svgEl.setAttribute('width', '1268');
-    svgEl.style.height = 'auto';
 
-    const allPaths = svgEl.querySelectorAll('path[id]');
-    allPaths.forEach(el => {
-      const id = el.id;
-      const level = countryRisk[id];
+    fetch("/api/alert_geojson/")
+      .then(res => res.json())
+      .then(data => {
+        const countryRisk = {};
+        data.features.forEach(feature => {
+          countryRisk[feature.properties.country_code] = getRiskLevel(feature.properties.alarm_level);
+        });
 
-      // 색상 지정
-      el.setAttribute('fill', level ? colorMap[level] : '#e6e6e6');
-      el.style.transition = 'opacity 0.3s';
+        const allPaths = svgEl.querySelectorAll('path[id]');
+        allPaths.forEach(el => {
+          const id = el.id;
+          const level = countryRisk[id];
+          el.setAttribute('fill', level ? colorMap[level] : '#e6e6e6');
+          el.style.transition = 'opacity 0.3s';
 
-      el.addEventListener('mouseenter', () => {
-        highlightCountry(id);
-        showTooltip(id);
+          // 클릭 이벤트
+          el.addEventListener('click', () => {
+            if (id === 'CN') {
+              window.location.href = 'nation.html';
+            } else {
+              window.location.href = 'cantFind.html';
+            }
+          });
+
+          // 툴팁 이벤트
+          el.addEventListener('mouseenter', () => showTooltip(id));
+          el.addEventListener('mouseleave', hideTooltip);
+        });
       });
-
-      el.addEventListener('mouseleave', () => {
-        resetOpacity();
-        hideTooltip();
-      });
-
-      // 클릭 이벤트 처리
-      el.addEventListener('click', () => {
-        if (id === 'CHN') {
-          // 중국을 클릭했을 때 nation.html 페이지로 이동
-          window.location.href = '/nation/nation.html';
-        } else {
-          // 다른 나라를 클릭했을 때, 예를 들어 오류 페이지로 이동
-          window.location.href = '/cantFind/cantFind.html';
-        }
-      });
-    });
   });
-function highlightCountry(targetId) {
-  const paths = document.querySelectorAll('#map-box path[id]');
-  paths.forEach(p => {
-    p.style.opacity = (p.id === targetId) ? '1' : '0.2';
-  });
-}
 
-function resetOpacity() {
-  const paths = document.querySelectorAll('#map-box path[id]');
-  paths.forEach(p => {
-    p.style.opacity = '1';
-  });
-}
-
+// 툴팁 관련 함수
 function showTooltip(code) {
   const tooltip = document.getElementById('tooltip');
   tooltip.innerText = countryNamesKo[code] || code;
@@ -86,12 +66,14 @@ function hideTooltip() {
   document.getElementById('tooltip').style.display = 'none';
 }
 
+// 툴팁 위치 마우스 따라 이동
 document.addEventListener('mousemove', (e) => {
   const tooltip = document.getElementById('tooltip');
   tooltip.style.left = e.pageX + 10 + 'px';
   tooltip.style.top = e.pageY + 10 + 'px';
 });
 
+// 검색 버튼 이벤트 (DOMContentLoaded 안에)
 document.addEventListener("DOMContentLoaded", function () {
   const searchBtn = document.getElementById("searchBtn");
   const searchInput = document.getElementById("searchInput");
@@ -100,12 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const keyword = searchInput.value.trim();
 
     if (keyword === "중국") {
-      // 결과 있는 페이지로 이동 (예: result.html 또는 중국 상세 페이지 등)
-      window.location.href = "/nation/nation.html"; 
+      window.location.href = "nation.html";
     } else {
-      // 결과 없는 페이지로 이동
-      window.location.href = "/cantFind/cantFind.html";
+      window.location.href = "cantFind.html";
     }
   });
 });
-
