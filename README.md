@@ -1,5 +1,5 @@
 # TripGuard
-멋쟁이사자처럼 13기 여기톤 대비 토이 프로젝트입니다.
+2025 멋쟁이사자처럼 13기 여기톤 대비 토이 프로젝트입니다.
 ## 프로젝트 소개
 👉 [TripGuard 소개 Notion 페이지](https://darkened-ozraraptor-48a.notion.site/TripGuard-214f782ba89580daab5ce35e09ce0373?source=copy_link)
 
